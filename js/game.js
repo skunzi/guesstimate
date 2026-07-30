@@ -563,11 +563,13 @@
 
     function dismiss() {
       overlay.classList.add('hidden');
+      document.body.classList.remove('modal-open');
       localStorage.setItem('guessit_welcomed', 'true');
     }
 
     function show() {
       overlay.classList.remove('hidden');
+      document.body.classList.add('modal-open');
     }
 
     document.getElementById('welcome-got-it').addEventListener('click', dismiss);

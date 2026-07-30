@@ -31,7 +31,14 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   min-height: 100vh;
+  min-height: 100dvh;
   line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .app {
@@ -39,6 +46,7 @@ body {
   margin: 0 auto;
   padding: 0 16px;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -875,14 +883,203 @@ body {
   animation: slideUp 0.3s ease-out;
 }
 
-/* Responsive */
+/* Mobile: touch & interaction basics */
+@media (pointer: coarse) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn, .nav-btn, .calendar-day.has-round, .stat-card.clickable, .history-item {
+    touch-action: manipulation;
+  }
+
+  .btn:active {
+    transform: scale(0.96);
+  }
+
+  .btn-primary:active {
+    background: var(--color-primary-hover);
+    transform: scale(0.96);
+  }
+
+  .nav-btn:active:not(.active) {
+    background: var(--color-surface-alt);
+  }
+
+  .calendar-day.has-round:active {
+    background: var(--color-surface-alt);
+    transform: scale(0.95);
+  }
+
+  .stat-card.clickable:active {
+    transform: scale(0.97);
+  }
+
+  .btn-primary:hover {
+    transform: none;
+  }
+}
+
+/* Mobile: safe areas for notched phones */
+@supports (padding: env(safe-area-inset-top)) {
+  .app {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .toast {
+    bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Responsive: small phones */
 @media (max-width: 400px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logo-subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+  .nav-btn {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .category-title {
+    font-size: 1.05rem;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .guess-input {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .input-group {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .score-value {
+    font-size: 2.4rem;
+  }
+
+  .total-value {
+    font-size: 2.8rem;
+  }
+
+  .result-card {
+    padding: 16px;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card-body {
+    padding: 8px;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
 
+  .stat-card {
+    padding: 14px 12px;
+  }
+
+  .stat-value {
+    font-size: 1.6rem;
+  }
+
+  .calendar-day {
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+
   .calendar-legend {
     gap: 8px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .welcome-header {
+    padding: 16px 16px 12px;
+  }
+
+  .welcome-content {
+    padding: 16px;
+  }
+
+  .welcome-footer {
+    padding: 12px 16px 16px;
+  }
+
+  .welcome-title {
+    font-size: 1.2rem;
+  }
+
+  .welcome-steps li {
+    font-size: 0.85rem;
+    gap: 10px;
+  }
+
+  .history-item {
+    padding: 10px 12px;
+  }
+}
+
+/* Responsive: medium phones (up to 480px) */
+@media (max-width: 480px) {
+  .guess-input {
+    width: 100%;
+    max-width: 220px;
+    font-size: 1.1rem;
+    padding: 14px 16px;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    min-height: 48px;
+  }
+
+  .btn-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .submit-guess, .next-photo, .share-btn, .share-btn-review,
+  .play-another, .back-to-calendar, .go-calendar {
+    width: 100%;
+  }
+
+  .nav-btn {
+    min-height: 40px;
+  }
+
+  .calendar-day {
+    min-height: 36px;
+  }
+
+  .calendar-days {
+    gap: 3px;
+  }
+
+  .main {
+    padding: 16px 0;
+  }
+}
+
+/* Prevent iOS zoom on input focus (needs 16px+ font) */
+@media screen and (max-width: 600px) {
+  .guess-input {
+    font-size: max(1rem, 16px);
   }
 }
