@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guesstimate</title>
+  <link rel="icon" type="image/svg+xml" href="thumbnail.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Guesstimate">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1a1a2e">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="logo"><img src="logo.svg" alt="" class="logo-icon">Guesstimate</h1>
+      <p class="logo-subtitle">Daily Challenge</p>
+      <nav class="nav">
+        <button class="nav-btn active" data-view="game">Play</button>
+        <button class="nav-btn" data-view="calendar">Calendar</button>
+        <button class="nav-btn" data-view="stats">Stats</button>
+        <button class="nav-btn nav-btn-help" id="help-btn" title="How to Play">?</button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Game View -->
+      <section id="view-game" class="view active">
+        <div class="game-header">
+          <h2 class="category-title"></h2>
+          <div class="game-status">
+            <span class="game-round-counter">1/4</span>
+            <div class="progress-dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="game-running-score">0 pts</span>
+          </div>
+        </div>
+
+        <div class="game-area">
+          <div class="photo-container">
+            <img class="photo" src="" alt="Guess this!">
+          </div>
+
+          <div class="guess-section">
+            <p class="question-text"></p>
+            <div class="input-group">
+              <input type="number" class="guess-input" placeholder="Your guess..." min="0">
+              <span class="unit-label"></span>
+            </div>
+            <button class="btn btn-primary submit-guess">Submit Guess</button>
+          </div>
+
+          <div class="result-section hidden">
+            <div class="result-card">
+              <div class="result-score">
+                <span class="score-value">0</span>
+                <span class="score-label">points</span>
+              </div>
+              <div class="result-details">
+                <p class="result-answer"></p>
+                <p class="result-fun-fact"></p>
+              </div>
+              <button class="btn btn-primary next-photo">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="round-complete hidden">
+          <h2>Round Complete!</h2>
+          <div class="total-score">
+            <span class="total-value">0</span>
+            <span class="total-label">/ 4000 points</span>
+          </div>
+          <div class="round-summary"></div>
+          <div class="round-actions">
+            <button class="btn btn-primary share-btn">Share Result</button>
+            <button class="btn btn-secondary play-another">Play Another Day</button>
+          </div>
+        </div>
+
+        <div class="review-mode hidden">
+          <div class="review-header">
+            <h2 class="review-title"></h2>
+            <div class="review-total-score">
+              <span class="review-total-value">0</span>
+              <span class="review-total-label">/ 4000</span>
+            </div>
+          </div>
+          <div class="review-grid"></div>
+          <div class="review-actions">
+            <button class="btn btn-primary share-btn-review">Share Result</button>
+            <button class="btn btn-secondary back-to-calendar">Back to Calendar</button>
+          </div>
+        </div>
+
+        <div class="no-round hidden">
+          <h2>No Round Available</h2>
+          <p>Check back tomorrow or browse previous rounds in the calendar.</p>
+          <button class="btn btn-secondary go-calendar">Go to Calendar</button>
+        </div>
+      </section>
+
+      <!-- Calendar View -->
+      <section id="view-calendar" class="view">
+        <div class="calendar-header">
+          <button class="btn btn-icon prev-month">&larr;</button>
+          <h2 class="calendar-month-title"></h2>
+          <button class="btn btn-icon next-month">&rarr;</button>
+        </div>
+        <div class="calendar-grid">
+          <div class="calendar-weekdays">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+          <div class="calendar-days"></div>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-dot legend-how_many"></span> How Many?</span>
+          <span class="legend-item"><span class="legend-dot legend-how_tall"></span> How Tall?</span>
+          <span class="legend-item"><span class="legend-dot legend-how_old"></span> When Built?</span>
+          <span class="legend-item"><span class="legend-dot legend-played"></span> Played</span>
+        </div>
+      </section>
+
+      <!-- Stats View -->
+      <section id="view-stats" class="view">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value" id="stat-played">0</span>
+            <span class="stat-label">Rounds Played</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-average">0</span>
+            <span class="stat-label">Average Score</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-best">0</span>
+            <span class="stat-label">Best Round</span>
+            <span class="stat-date"></span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-worst">-</span>
+            <span class="stat-label">Worst Round</span>
+            <span class="stat-date"></span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-total-points">0</span>
+            <span class="stat-label">Total Points</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-perfect">0</span>
+            <span class="stat-label">Perfect Guesses</span>
+          </div>
+        </div>
+        <div class="stats-history">
+          <h3>Recent Rounds</h3>
+          <div class="history-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast hidden" id="toast"></div>
+
+  <!-- Welcome Modal (first visit) -->
+  <div class="welcome-overlay hidden" id="welcome-overlay">
+    <div class="welcome-modal">
+      <div class="welcome-header">
+        <h2 class="welcome-title">Guesstimate</h2>
+        <button class="welcome-close" id="welcome-close">&times;</button>
+      </div>
+      <div class="welcome-content">
+        <p class="welcome-subtitle">How to Play</p>
+        <ul class="welcome-steps">
+          <li>
+            <span class="welcome-step-icon">📷</span>
+            <span>Each day features a new category with <strong>4 photos</strong>. Guess the numeric value — capacity, height, or construction year.</span>
+          </li>
+          <li>
+            <span class="welcome-step-icon">🎯</span>
+            <span>The closer your guess, the more points you earn! Up to <strong>1000 points</strong> per photo.</span>
+          </li>
+          <li>
+            <span class="welcome-step-icon">📅</span>
+            <span>A new round every day. Missed one? Browse past rounds in the <strong>Calendar</strong>.</span>
+          </li>
+          <li>
+            <span class="welcome-step-icon">📊</span>
+            <span>Track your progress and share your scores with friends.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="welcome-footer">
+        <button class="btn btn-primary welcome-got-it" id="welcome-got-it">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>

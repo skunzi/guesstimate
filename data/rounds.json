@@ -1,0 +1,194 @@
+[
+  {
+    "date": "2026-07-26",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "age_and_height/eiffel_paris.jpg",
+        "subject": "Eiffel Tower, Paris",
+        "answer": 330,
+        "fun_fact": "Built in 1889, it was the world's tallest structure for 41 years until the Chrysler Building surpassed it."
+      },
+      {
+        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
+        "subject": "Lakhta Centre, St. Petersburg",
+        "answer": 462,
+        "fun_fact": "The tallest building in Europe and the northernmost skyscraper over 100 meters."
+      },
+      {
+        "file": "height/steinway_tower_new_york.jpeg",
+        "subject": "Steinway Tower, New York",
+        "answer": 435,
+        "fun_fact": "The most slender skyscraper in the world with a width-to-height ratio of 1:24."
+      },
+      {
+        "file": "height/beijing_cctv_tower.jpg",
+        "subject": "CCTV Headquarters, Beijing",
+        "answer": 234,
+        "fun_fact": "Its unusual looped shape earned it the nickname 'Big Pants' among locals."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-27",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/allianz_arena.jpg",
+        "subject": "Allianz Arena, Munich",
+        "answer": 75024,
+        "fun_fact": "Home to FC Bayern Munich, it can display the team colors across its entire exterior with 300,000 LEDs."
+      },
+      {
+        "file": "capacity/Al-Janoub-Stadium-1.jpg",
+        "subject": "Al Janoub Stadium, Qatar",
+        "answer": 40000,
+        "fun_fact": "Designed by Zaha Hadid, its retractable roof resembles the sails of a traditional dhow boat."
+      },
+      {
+        "file": "capacity/mercedes_benz_stadium_atlanta.jpg",
+        "subject": "Mercedes-Benz Stadium, Atlanta",
+        "answer": 71000,
+        "fun_fact": "Features a retractable roof inspired by the Roman Pantheon's oculus, made of eight translucent petals."
+      },
+      {
+        "file": "capacity_and_age/metlife.jpg",
+        "subject": "MetLife Stadium, New Jersey",
+        "answer": 82500,
+        "fun_fact": "Home to both the NY Giants and NY Jets — the only NFL stadium shared by two teams."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-28",
+    "category": "how_old",
+    "question": "When was this built?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age_and_height/St_Basils_Cathedral.jpg",
+        "subject": "St. Basil's Cathedral, Moscow",
+        "answer": 1561,
+        "fun_fact": "Commissioned by Ivan the Terrible to celebrate the capture of Kazan; legend says he blinded the architects so they could never build anything more beautiful."
+      },
+      {
+        "file": "age_and_height/Taj_Mahal.jpg",
+        "subject": "Taj Mahal, Agra",
+        "answer": 1653,
+        "fun_fact": "Took 22 years and 20,000 workers to complete; the white marble was transported from over 300 km away."
+      },
+      {
+        "file": "age/schloss_neuschwansteig.jpg",
+        "subject": "Neuschwanstein Castle, Bavaria",
+        "answer": 1886,
+        "fun_fact": "Never finished, yet inspired Disney's Sleeping Beauty Castle and is now visited by 1.4 million people yearly."
+      },
+      {
+        "file": "age/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg",
+        "subject": "Fushimi Inari Shrine, Kyoto",
+        "answer": 711,
+        "fun_fact": "Its famous paths feature over 10,000 vermilion torii gates donated by businesses seeking prosperity."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-29",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/sydney.jpg",
+        "subject": "Sydney Opera House",
+        "answer": 5738,
+        "fun_fact": "Contains multiple performance venues; the Concert Hall alone seats 2,679 people."
+      },
+      {
+        "file": "capacity/elbphilharmonie.jpg",
+        "subject": "Elbphilharmonie, Hamburg",
+        "answer": 2100,
+        "fun_fact": "The Grand Hall's vineyard-style seating means no audience member is more than 30 meters from the conductor."
+      },
+      {
+        "file": "capacity/Guangzhou_Opera_House.jpg",
+        "subject": "Guangzhou Opera House",
+        "answer": 1804,
+        "fun_fact": "Designed by Zaha Hadid, its shape resembles two pebbles on the banks of the Pearl River."
+      },
+      {
+        "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
+        "subject": "Walt Disney Concert Hall, Los Angeles",
+        "answer": 2265,
+        "fun_fact": "Its curved stainless steel exterior uses over 12,500 individually cut panels."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "category": "how_old",
+    "question": "When was this built?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age_and_height/eiffel_paris.jpg",
+        "subject": "Eiffel Tower, Paris",
+        "answer": 1889,
+        "fun_fact": "Originally intended to stand for only 20 years; it was saved because of its usefulness as a radio antenna."
+      },
+      {
+        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
+        "subject": "Lakhta Centre, St. Petersburg",
+        "answer": 2019,
+        "fun_fact": "Built on a reclaimed waterfront site, its twisted glass facade rotates 90 degrees from base to top."
+      },
+      {
+        "file": "age/dancing_house_prague.jpg",
+        "subject": "Dancing House, Prague",
+        "answer": 1996,
+        "fun_fact": "Designed by Frank Gehry and Vlado Milunic, it's nicknamed 'Fred and Ginger' after the famous dance duo."
+      },
+      {
+        "file": "age_and_height/michelangelo_david.jpg",
+        "subject": "Michelangelo's David, Florence",
+        "answer": 1504,
+        "fun_fact": "Carved from a single block of marble that had been rejected by two other sculptors over the previous 25 years."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "age_and_height/moscow_state_university.jpg",
+        "subject": "Moscow State University",
+        "answer": 240,
+        "fun_fact": "The main tower has 36 floors and is topped by a 57-meter spire crowned with a star."
+      },
+      {
+        "file": "age_and_height/Taj_Mahal.jpg",
+        "subject": "Taj Mahal, Agra",
+        "answer": 73,
+        "fun_fact": "Its central dome rises to 73 meters, surrounded by four minarets that lean slightly outward to protect the tomb if they fall."
+      },
+      {
+        "file": "height/Pyramid-of-Khafre-Giza-Egypt.jpg",
+        "subject": "Pyramid of Khafre, Giza",
+        "answer": 136,
+        "fun_fact": "Still retains some of its original smooth limestone casing at the apex, hinting at how all the pyramids once looked."
+      },
+      {
+        "file": "age_and_height/St_Basils_Cathedral.jpg",
+        "subject": "St. Basil's Cathedral, Moscow",
+        "answer": 65,
+        "fun_fact": "Each of its nine onion domes is unique in shape, size, and color — no two are alike."
+      }
+    ]
+  }
+]
