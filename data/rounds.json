@@ -312,10 +312,10 @@
         "fun_fact": "Its outer wall originally stood four stories tall; earthquakes and stone robbers reduced parts of it over the centuries."
       },
       {
-        "file": "age_and_height/michelangelo_david.jpg",
-        "subject": "Michelangelo's David, Florence",
-        "answer": 5,
-        "fun_fact": "Carved from a single block of marble that had been abandoned outdoors for 25 years, exposing it to rain and sun damage."
+        "file": "height/beijing_cctv_tower.jpg",
+        "subject": "CCTV Headquarters, Beijing",
+        "answer": 234,
+        "fun_fact": "Its unusual looped shape earned it the nickname 'Big Pants' among locals."
       }
     ]
   },
@@ -364,6 +364,12 @@
         "fun_fact": "Built in 1889, it was the world's tallest structure for 41 years until the Chrysler Building surpassed it."
       },
       {
+        "file": "age_and_height/michelangelo_david.jpg",
+        "subject": "Michelangelo's David, Florence",
+        "answer": 5,
+        "fun_fact": "Carved from a single block of marble that had been abandoned outdoors for 25 years, exposing it to rain and sun damage."
+      },
+      {
         "file": "age_and_height/St_Basils_Cathedral.jpg",
         "subject": "St. Basil's Cathedral, Moscow",
         "answer": 65,
@@ -374,12 +380,6 @@
         "subject": "AIDACosma",
         "answer": 67,
         "fun_fact": "One of the first cruise ships powered by liquefied natural gas, reducing particulate emissions by nearly 100%."
-      },
-      {
-        "file": "height/beijing_cctv_tower.jpg",
-        "subject": "CCTV Headquarters, Beijing",
-        "answer": 234,
-        "fun_fact": "Its unusual looped shape earned it the nickname 'Big Pants' among locals."
       }
     ]
   },
