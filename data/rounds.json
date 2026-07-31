@@ -9,7 +9,7 @@
         "file": "capacity/ICE_3.jpg",
         "subject": "ICE 3, Germany",
         "answer": 444,
-        "fun_fact": "Unlike earlier ICE trains, it has no separate locomotive — motors are distributed under the passenger cars for better acceleration."
+        "fun_fact": "Unlike earlier ICE trains, it has no separate locomotive \u2014 motors are distributed under the passenger cars for better acceleration."
       },
       {
         "file": "capacity/sydney_opera.jpg",
@@ -187,7 +187,7 @@
         "file": "capacity_and_age/metlife.jpg",
         "subject": "MetLife Stadium, New Jersey",
         "answer": 82500,
-        "fun_fact": "Home to both the NY Giants and NY Jets — the only NFL stadium shared by two teams."
+        "fun_fact": "Home to both the NY Giants and NY Jets \u2014 the only NFL stadium shared by two teams."
       }
     ]
   },
@@ -251,7 +251,7 @@
         "file": "capacity/London_Wembley.jpg",
         "subject": "Wembley Stadium, London",
         "answer": 90000,
-        "fun_fact": "Its iconic arch spans 317 meters and supports the entire north roof — no internal columns block any spectator's view."
+        "fun_fact": "Its iconic arch spans 317 meters and supports the entire north roof \u2014 no internal columns block any spectator's view."
       }
     ]
   },
@@ -283,7 +283,7 @@
         "file": "capacity/bejing_stadium.jpg",
         "subject": "Beijing National Stadium",
         "answer": 2008,
-        "fun_fact": "Known as the Bird's Nest, it used 42,000 tonnes of steel but no internal columns — the interlocking structure supports itself."
+        "fun_fact": "Known as the Bird's Nest, it used 42,000 tonnes of steel but no internal columns \u2014 the interlocking structure supports itself."
       }
     ]
   },
@@ -335,7 +335,7 @@
         "file": "capacity_and_height/icon_of_the_sea.jpeg",
         "subject": "Icon of the Seas",
         "answer": 7600,
-        "fun_fact": "At maximum capacity with crew, over 10,000 people are aboard — more than many small towns."
+        "fun_fact": "At maximum capacity with crew, over 10,000 people are aboard \u2014 more than many small towns."
       },
       {
         "file": "capacity/IGA_Stadium.jpeg",
@@ -399,7 +399,7 @@
         "file": "capacity_and_height/Oasis_of_the_Seas.jpg",
         "subject": "Oasis of the Seas",
         "answer": 6296,
-        "fun_fact": "When launched in 2009, it was so large that no existing dry dock could service it — one had to be specially modified."
+        "fun_fact": "When launched in 2009, it was so large that no existing dry dock could service it \u2014 one had to be specially modified."
       },
       {
         "file": "capacity/Al-Janoub-Stadium-1.jpg",
@@ -507,7 +507,7 @@
         "file": "age/original-iphone-2007.jpg",
         "subject": "Apple iPhone",
         "answer": 2007,
-        "fun_fact": "The original had no App Store, no copy-paste, and no GPS — all were added in later updates. It still sold 6 million units."
+        "fun_fact": "The original had no App Store, no copy-paste, and no GPS \u2014 all were added in later updates. It still sold 6 million units."
       }
     ]
   },
@@ -527,7 +527,7 @@
         "file": "age_and_height/St_Basils_Cathedral.jpg",
         "subject": "St. Basil's Cathedral, Moscow",
         "answer": 65,
-        "fun_fact": "Each of its nine onion domes is unique in shape, size, and color — no two are alike."
+        "fun_fact": "Each of its nine onion domes is unique in shape, size, and color \u2014 no two are alike."
       },
       {
         "file": "age_and_height/Taj_Mahal.jpg",
@@ -540,6 +540,38 @@
         "subject": "Moscow State University",
         "answer": 240,
         "fun_fact": "The main tower has 36 floors and is topped by a 57-meter spire crowned with a star."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "height/Tokyo_Mode_Gakuen_Cocoon_Tower.jpg",
+        "subject": "Mode Gakuen Cocoon Tower, Tokyo",
+        "answer": 204,
+        "fun_fact": "It is a fashion school, not an office building, and its cocoon-like lattice structure was chosen by public vote over two other designs."
+      },
+      {
+        "file": "height/ryugyong-hotel-traffic-officer-pyongyang.jpg",
+        "subject": "Ryugyong Hotel, Pyongyang",
+        "answer": 330,
+        "fun_fact": "Construction began in 1987 but the building has never opened to guests despite over 30 years of intermittent work."
+      },
+      {
+        "file": "height/petronas_twin_towers.jpeg",
+        "subject": "Petronas Twin Towers, Kuala Lumpur",
+        "answer": 452,
+        "fun_fact": "Each tower was built by a different construction company from a different country, and they had to adjust when the towers were found to be slightly off-center."
+      },
+      {
+        "file": "height/One_World_Trade_Center_NewYprk.jpg",
+        "subject": "One World Trade Center, New York",
+        "answer": 541,
+        "fun_fact": "Its spire brings the total height to exactly 1,776 feet, a deliberate reference to the year of American independence."
       }
     ]
   }
