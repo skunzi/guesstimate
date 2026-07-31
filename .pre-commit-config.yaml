@@ -29,6 +29,13 @@ repos:
         files: ^data/rounds\.json$
         pass_filenames: false
 
+      - id: validate-photo-reuse
+        name: Validate photo reuse
+        language: python
+        entry: python3 scripts/validate-photo-reuse.py
+        files: data/rounds.json
+        pass_filenames: false
+
       - id: html-validate
         name: Validate HTML
         language: node

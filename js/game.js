@@ -133,7 +133,7 @@
     } else if (category === 'how_tall') {
       return { min: 1, max: 900, step: 1, initial: 150, digits: 3 };
     } else {
-      return { min: 0, max: 120000, step: 500, initial: 30000, digits: 6 };
+      return { min: 0, max: 140000, step: 500, initial: 30000, digits: 6 };
     }
   }
 

@@ -12,10 +12,10 @@
         "fun_fact": "Unlike earlier ICE trains, it has no separate locomotive \u2014 motors are distributed under the passenger cars for better acceleration."
       },
       {
-        "file": "capacity/sydney_opera.jpg",
-        "subject": "Sydney Opera House",
-        "answer": 5738,
-        "fun_fact": "Contains multiple performance venues; the Concert Hall alone seats 2,679 people."
+        "file": "capacity/Narendra_Modi_Stadium.jpg",
+        "subject": "Narendra Modi Stadium, Ahmedabad",
+        "answer": 132000,
+        "fun_fact": "It features 11 distinct pitches on the square, a rare setup that allows both red and black soil pitches to be used for different matches in the same venue."
       },
       {
         "file": "capacity/NSW_Tennis_Centre.jpg",
@@ -70,10 +70,16 @@
     "unit": "meters",
     "photos": [
       {
-        "file": "height/bank_of_china_hongkong.jpg",
-        "subject": "Bank of China, Hong Kong",
-        "answer": 367,
-        "fun_fact": "Its triangular design was inspired by bamboo shoots, a symbol of growth and prosperity in Chinese culture."
+        "file": "age_and_height/moscow_state_university.jpg",
+        "subject": "Moscow State University",
+        "answer": 240,
+        "fun_fact": "The main tower has 36 floors and is topped by a 57-meter spire crowned with a star."
+      },
+      {
+        "file": "capacity/bejing_stadium.jpg",
+        "subject": "Beijing National Stadium",
+        "answer": 69,
+        "fun_fact": "The interwoven steel beams were inspired by Chinese ceramics and give the structure its 'Bird's Nest' nickname."
       },
       {
         "file": "capacity_and_height/icon_of_the_sea.jpeg",
@@ -86,12 +92,6 @@
         "subject": "Wembley Stadium, London",
         "answer": 133,
         "fun_fact": "Its steel lattice arch is the longest single-span roof structure in the world and is visible across London's skyline."
-      },
-      {
-        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
-        "subject": "Lakhta Centre, St. Petersburg",
-        "answer": 462,
-        "fun_fact": "The tallest building in Europe and the northernmost skyscraper over 100 meters."
       }
     ]
   },
@@ -111,7 +111,7 @@
         "file": "capacity/Guangzhou_Opera_House.jpg",
         "subject": "Guangzhou Opera House",
         "answer": 1804,
-        "fun_fact": "Designed by Zaha Hadid, its shape resembles two pebbles on the banks of the Pearl River."
+        "fun_fact": "Designed by Zaha Hadid, its twin-boulder shape was inspired by pebbles in the Pearl River, smoothed by centuries of flowing water."
       },
       {
         "file": "capacity/Arthur_Ashe_Stadium.jpg",
@@ -172,10 +172,10 @@
         "fun_fact": "Its double-decker design nearly doubles capacity compared to single-level TGVs while maintaining speeds over 300 km/h."
       },
       {
-        "file": "capacity/elbphilharmonie.jpg",
-        "subject": "Elbphilharmonie, Hamburg",
-        "answer": 2100,
-        "fun_fact": "The concert hall sits on top of an old cocoa warehouse; its wave-shaped glass facade mirrors the water of Hamburg's harbor."
+        "file": "capacity/rupp_arena_kentucky.jpeg",
+        "subject": "Rupp Arena, Kentucky",
+        "answer": 20500,
+        "fun_fact": "It once recorded a massive crowd roar of 126.4 decibels, hitting a temporary Guinness World Record for the loudest indoor sports crowd."
       },
       {
         "file": "capacity/wimbeldon_center_court.jpg",
@@ -230,10 +230,10 @@
     "unit": "people",
     "photos": [
       {
-        "file": "capacity_and_height/Queen_Mary_2.jpg",
-        "subject": "Queen Mary 2",
-        "answer": 2691,
-        "fun_fact": "Has its own planetarium, the only one at sea, housed in a dedicated auditorium called Illuminations."
+        "file": "capacity/beaver_stadium.jpeg",
+        "subject": "Beaver Stadium, Pennsylvania",
+        "answer": 106572,
+        "fun_fact": "The original structure was disassembled in 1959, moved one mile, and reassembled with 16,000 additional seats to form the current stadium."
       },
       {
         "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
@@ -344,10 +344,10 @@
         "fun_fact": "Home to the Canadian Open, one of the oldest tennis tournaments in the world, first held in 1881."
       },
       {
-        "file": "capacity/bejing_stadium.jpg",
-        "subject": "Beijing National Stadium",
-        "answer": 80000,
-        "fun_fact": "After the 2008 Olympics its capacity was reduced from 91,000 by removing temporary seating and adding luxury boxes."
+        "file": "capacity/Estadio_Santiago_Bernabeu.jpg",
+        "subject": "Santiago Bernabeu, Madrid",
+        "answer": 78297,
+        "fun_fact": "Its 2024 renovation added a retractable pitch that slides under the stands, allowing the stadium to host concerts without damaging the grass."
       }
     ]
   },
@@ -364,10 +364,10 @@
         "fun_fact": "One of the first cruise ships powered by liquefied natural gas, reducing particulate emissions by nearly 100%."
       },
       {
-        "file": "capacity/bejing_stadium.jpg",
-        "subject": "Beijing National Stadium",
-        "answer": 69,
-        "fun_fact": "The interwoven steel beams were inspired by Chinese ceramics and give the structure its 'Bird's Nest' nickname."
+        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
+        "subject": "Lakhta Centre, St. Petersburg",
+        "answer": 462,
+        "fun_fact": "The tallest building in Europe and the northernmost skyscraper over 100 meters."
       },
       {
         "file": "height/Pyramid-of-Khafre-Giza-Egypt.jpg",
@@ -390,10 +390,10 @@
     "unit": "people",
     "photos": [
       {
-        "file": "capacity/Guangzhou_Opera_House.jpg",
-        "subject": "Guangzhou Opera House",
-        "answer": 1804,
-        "fun_fact": "Designed by Zaha Hadid, its twin-boulder shape was inspired by pebbles in the Pearl River, smoothed by centuries of flowing water."
+        "file": "capacity/the_sphere_las_vegas.jpeg",
+        "subject": "The Sphere, Las Vegas",
+        "answer": 18600,
+        "fun_fact": "Its interior LED screen is the largest in the world, covering 580,000 square feet and wrapping around the audience for an immersive experience."
       },
       {
         "file": "capacity_and_height/Oasis_of_the_Seas.jpg",
@@ -454,6 +454,12 @@
     "unit": "people",
     "photos": [
       {
+        "file": "capacity_and_height/Queen_Mary_2.jpg",
+        "subject": "Queen Mary 2",
+        "answer": 2691,
+        "fun_fact": "Has its own planetarium, the only one at sea, housed in a dedicated auditorium called Illuminations."
+      },
+      {
         "file": "capacity_and_height/AIDAcosma.jpg",
         "subject": "AIDACosma",
         "answer": 5228,
@@ -466,16 +472,10 @@
         "fun_fact": "The Grand Hall's vineyard-style seating means no audience member is more than 30 meters from the conductor."
       },
       {
-        "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
-        "subject": "Walt Disney Concert Hall, Los Angeles",
-        "answer": 2265,
-        "fun_fact": "Its curved stainless steel exterior uses over 12,500 individually cut panels."
-      },
-      {
-        "file": "capacity/Estadio_Santiago_Bernabeu.jpg",
-        "subject": "Santiago Bernabeu, Madrid",
-        "answer": 78297,
-        "fun_fact": "Its 2024 renovation added a retractable pitch that slides under the stands, allowing the stadium to host concerts without damaging the grass."
+        "file": "capacity/bejing_stadium.jpg",
+        "subject": "Beijing National Stadium",
+        "answer": 80000,
+        "fun_fact": "After the 2008 Olympics its capacity was reduced from 91,000 by removing temporary seating and adding luxury boxes."
       }
     ]
   },
@@ -536,10 +536,10 @@
         "fun_fact": "Its central dome rises to 73 meters, surrounded by four minarets that lean slightly outward to protect the tomb if they fall."
       },
       {
-        "file": "age_and_height/moscow_state_university.jpg",
-        "subject": "Moscow State University",
-        "answer": 240,
-        "fun_fact": "The main tower has 36 floors and is topped by a 57-meter spire crowned with a star."
+        "file": "height/bank_of_china_hongkong.jpg",
+        "subject": "Bank of China, Hong Kong",
+        "answer": 367,
+        "fun_fact": "Its triangular design was inspired by bamboo shoots, a symbol of growth and prosperity in Chinese culture."
       }
     ]
   },
