@@ -1,5 +1,325 @@
 [
   {
+    "date": "2026-07-15",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/NSW_Tennis_Centre.jpg",
+        "subject": "Ken Rosewall Arena, Sydney",
+        "answer": 10500,
+        "fun_fact": "Named after Australian tennis legend Ken Rosewall, it hosted tennis and volleyball events during the 2000 Sydney Olympics."
+      },
+      {
+        "file": "capacity/airbus-a380-1.jpg",
+        "subject": "Airbus A380",
+        "answer": 853,
+        "fun_fact": "In an all-economy configuration it can seat 853 passengers, making it the largest commercial passenger aircraft ever built."
+      },
+      {
+        "file": "capacity/TGV_Duplex.jpg",
+        "subject": "TGV Duplex, France",
+        "answer": 510,
+        "fun_fact": "Its double-decker design nearly doubles capacity compared to single-level TGVs while maintaining speeds over 300 km/h."
+      },
+      {
+        "file": "capacity/ICE_3.jpg",
+        "subject": "ICE 3, Germany",
+        "answer": 444,
+        "fun_fact": "Unlike earlier ICE trains, it has no separate locomotive — motors are distributed under the passenger cars for better acceleration."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-16",
+    "category": "how_old",
+    "question": "How old is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "capacity/coloseum_rome.jpg",
+        "subject": "Colosseum, Rome",
+        "answer": 80,
+        "fun_fact": "Could be flooded for mock naval battles called naumachiae; the hypogeum below the arena held gladiators and wild animals."
+      },
+      {
+        "file": "age_and_height/moscow_state_university.jpg",
+        "subject": "Moscow State University",
+        "answer": 1953,
+        "fun_fact": "One of the 'Seven Sisters' skyscrapers ordered by Stalin; prisoners from the Gulag were used in its construction."
+      },
+      {
+        "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
+        "subject": "Walt Disney Concert Hall, Los Angeles",
+        "answer": 2003,
+        "fun_fact": "Its reflective steel panels once focused sunlight so intensely that nearby sidewalks reached dangerous temperatures, requiring some panels to be sanded down."
+      },
+      {
+        "file": "capacity/bejing_stadium.jpg",
+        "subject": "Beijing National Stadium",
+        "answer": 2008,
+        "fun_fact": "Known as the Bird's Nest, it used 42,000 tonnes of steel but no internal columns — the interlocking structure supports itself."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-17",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "capacity_and_height/icon_of_the_sea.jpeg",
+        "subject": "Icon of the Seas",
+        "answer": 72,
+        "fun_fact": "The world's largest cruise ship, it has the largest waterpark at sea with six waterslides and a swim-up bar."
+      },
+      {
+        "file": "capacity_and_height/AIDAcosma.jpg",
+        "subject": "AIDACosma",
+        "answer": 67,
+        "fun_fact": "One of the first cruise ships powered by liquefied natural gas, reducing particulate emissions by nearly 100%."
+      },
+      {
+        "file": "capacity_and_height/Oasis_of_the_Seas.jpg",
+        "subject": "Oasis of the Seas",
+        "answer": 65,
+        "fun_fact": "Contains seven distinct neighborhoods including Central Park with over 12,000 living plants and trees."
+      },
+      {
+        "file": "capacity_and_height/Queen_Mary_2.jpg",
+        "subject": "Queen Mary 2",
+        "answer": 62,
+        "fun_fact": "The only ocean liner still in regular transatlantic service, designed to handle 15-meter waves in the North Atlantic."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-18",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity_and_height/icon_of_the_sea.jpeg",
+        "subject": "Icon of the Seas",
+        "answer": 7600,
+        "fun_fact": "At maximum capacity with crew, over 10,000 people are aboard — more than many small towns."
+      },
+      {
+        "file": "capacity_and_height/Oasis_of_the_Seas.jpg",
+        "subject": "Oasis of the Seas",
+        "answer": 6296,
+        "fun_fact": "When launched in 2009, it was so large that no existing dry dock could service it — one had to be specially modified."
+      },
+      {
+        "file": "capacity_and_height/AIDAcosma.jpg",
+        "subject": "AIDACosma",
+        "answer": 5228,
+        "fun_fact": "Features a beach club with a retractable glass roof that opens over the rear pool deck."
+      },
+      {
+        "file": "capacity_and_height/Queen_Mary_2.jpg",
+        "subject": "Queen Mary 2",
+        "answer": 2691,
+        "fun_fact": "Has its own planetarium, the only one at sea, housed in a dedicated auditorium called Illuminations."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-19",
+    "category": "how_old",
+    "question": "How old is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Enigma.jpg",
+        "subject": "Enigma Machine",
+        "answer": 1923,
+        "fun_fact": "Originally sold for commercial use; the military version's code was cracked by Polish mathematicians before Alan Turing's team at Bletchley Park."
+      },
+      {
+        "file": "age/vw-kaefer-1953.jpg",
+        "subject": "Volkswagen Beetle",
+        "answer": 1938,
+        "fun_fact": "Over 21 million were produced, making it the longest-running and most-manufactured car on a single platform in history."
+      },
+      {
+        "file": "age/Lamborghini_Countach.png",
+        "subject": "Lamborghini Countach",
+        "answer": 1974,
+        "fun_fact": "Its name comes from a Piedmontese exclamation of astonishment; the rear visibility was so poor that drivers had to open the door to reverse."
+      },
+      {
+        "file": "age/Dmc_de_lorean_1.jpg",
+        "subject": "DeLorean DMC-12",
+        "answer": 1981,
+        "fun_fact": "Only about 9,000 were ever made before the company went bankrupt; the unpainted stainless steel body means no two panels look exactly alike."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-20",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/michigan_stadium.jpeg",
+        "subject": "Michigan Stadium, Ann Arbor",
+        "answer": 107601,
+        "fun_fact": "Known as 'The Big House', it was deliberately built below ground level to reduce visible exterior mass and construction costs."
+      },
+      {
+        "file": "capacity/London_Wembley.jpg",
+        "subject": "Wembley Stadium, London",
+        "answer": 90000,
+        "fun_fact": "Its iconic arch spans 317 meters and supports the entire north roof — no internal columns block any spectator's view."
+      },
+      {
+        "file": "capacity/bejing_stadium.jpg",
+        "subject": "Beijing National Stadium",
+        "answer": 80000,
+        "fun_fact": "After the 2008 Olympics its capacity was reduced from 91,000 by removing temporary seating and adding luxury boxes."
+      },
+      {
+        "file": "capacity/Estadio_Santiago_Bernabeu.jpg",
+        "subject": "Santiago Bernabeu, Madrid",
+        "answer": 78297,
+        "fun_fact": "Its 2024 renovation added a retractable pitch that slides under the stands, allowing the stadium to host concerts without damaging the grass."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "category": "how_old",
+    "question": "How old is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/apple_II.jpg",
+        "subject": "Apple II",
+        "answer": 1977,
+        "fun_fact": "One of the first mass-produced personal computers; its open architecture let hobbyists add expansion cards, creating an entire accessory ecosystem."
+      },
+      {
+        "file": "age/c64.jpg",
+        "subject": "Commodore 64",
+        "answer": 1982,
+        "fun_fact": "Holds the Guinness record for best-selling single computer model with an estimated 12.5 to 17 million units sold."
+      },
+      {
+        "file": "age/first_gameboy.jpeg",
+        "subject": "Nintendo Game Boy",
+        "answer": 1989,
+        "fun_fact": "Its low-resolution green screen was chosen over color to extend battery life to over 30 hours on 4 AA batteries."
+      },
+      {
+        "file": "age/nintendo64.jpg",
+        "subject": "Nintendo 64",
+        "answer": 1996,
+        "fun_fact": "One of the last major consoles to use cartridges instead of CDs; this limited game sizes but eliminated load times entirely."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-22",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/Yankee_Stadium.jpg",
+        "subject": "Yankee Stadium, New York",
+        "answer": 46537,
+        "fun_fact": "The original 1923 stadium was nicknamed 'The House That Ruth Built' after Babe Ruth; this new stadium opened in 2009 across the street."
+      },
+      {
+        "file": "capacity/Arthur_Ashe_Stadium.jpg",
+        "subject": "Arthur Ashe Stadium, New York",
+        "answer": 23771,
+        "fun_fact": "The largest tennis venue in the world; its retractable roof weighs 7,000 tonnes and can close in under 7 minutes."
+      },
+      {
+        "file": "capacity/wimbeldon_center_court.jpg",
+        "subject": "Wimbledon Centre Court, London",
+        "answer": 14979,
+        "fun_fact": "The grass is cut to exactly 8 millimeters during the tournament and the roof can close in about 10 minutes."
+      },
+      {
+        "file": "capacity/IGA_Stadium.jpeg",
+        "subject": "Stade IGA, Montreal",
+        "answer": 11812,
+        "fun_fact": "Home to the Canadian Open, one of the oldest tennis tournaments in the world, first held in 1881."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "category": "how_old",
+    "question": "How old is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Tamagotchi.jpeg",
+        "subject": "Tamagotchi",
+        "answer": 1996,
+        "fun_fact": "Created by Aki Maita at Bandai, it sold 40 million units in its first year and was briefly banned in schools worldwide."
+      },
+      {
+        "file": "age/first_ipod.jpeg",
+        "subject": "Apple iPod",
+        "answer": 2001,
+        "fun_fact": "Steve Jobs announced it with '1,000 songs in your pocket'; its scroll wheel was inspired by a Bang & Olufsen telephone."
+      },
+      {
+        "file": "age/original-iphone-2007.jpg",
+        "subject": "Apple iPhone",
+        "answer": 2007,
+        "fun_fact": "The original had no App Store, no copy-paste, and no GPS — all were added in later updates. It still sold 6 million units."
+      },
+      {
+        "file": "capacity_and_age/metlife.jpg",
+        "subject": "MetLife Stadium, New Jersey",
+        "answer": 2010,
+        "fun_fact": "Cost $1.6 billion to build with no public funding, making it one of the most expensive stadiums ever built entirely with private money."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-24",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "capacity/London_Wembley.jpg",
+        "subject": "Wembley Stadium, London",
+        "answer": 133,
+        "fun_fact": "Its steel lattice arch is the longest single-span roof structure in the world and is visible across London's skyline."
+      },
+      {
+        "file": "capacity/bejing_stadium.jpg",
+        "subject": "Beijing National Stadium",
+        "answer": 69,
+        "fun_fact": "The interwoven steel beams were inspired by Chinese ceramics and give the structure its 'Bird's Nest' nickname."
+      },
+      {
+        "file": "capacity/coloseum_rome.jpg",
+        "subject": "Colosseum, Rome",
+        "answer": 48,
+        "fun_fact": "Its outer wall originally stood four stories tall; earthquakes and stone robbers reduced parts of it over the centuries."
+      },
+      {
+        "file": "age_and_height/michelangelo_david.jpg",
+        "subject": "Michelangelo's David, Florence",
+        "answer": 5,
+        "fun_fact": "Carved from a single block of marble that had been abandoned outdoors for 25 years, exposing it to rain and sun damage."
+      }
+    ]
+  },
+  {
     "date": "2026-07-26",
     "category": "how_tall",
     "question": "How tall is this structure?",
@@ -102,7 +422,7 @@
     "unit": "people",
     "photos": [
       {
-        "file": "capacity/sydney.jpg",
+        "file": "capacity/sydney_opera.jpg",
         "subject": "Sydney Opera House",
         "answer": 5738,
         "fun_fact": "Contains multiple performance venues; the Concert Hall alone seats 2,679 people."
