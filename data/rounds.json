@@ -320,6 +320,38 @@
     ]
   },
   {
+    "date": "2026-07-25",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/sydney_opera.jpg",
+        "subject": "Sydney Opera House",
+        "answer": 5738,
+        "fun_fact": "Its iconic roof shells are covered with over 1 million tiles, self-cleaning thanks to their smooth Swedish-made ceramic glaze."
+      },
+      {
+        "file": "capacity/elbphilharmonie.jpg",
+        "subject": "Elbphilharmonie, Hamburg",
+        "answer": 2100,
+        "fun_fact": "The concert hall sits on top of an old cocoa warehouse; its wave-shaped glass facade mirrors the water of Hamburg's harbor."
+      },
+      {
+        "file": "capacity/Guangzhou_Opera_House.jpg",
+        "subject": "Guangzhou Opera House",
+        "answer": 1804,
+        "fun_fact": "Designed by Zaha Hadid, its twin-boulder shape was inspired by pebbles in the Pearl River, smoothed by centuries of flowing water."
+      },
+      {
+        "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
+        "subject": "Walt Disney Concert Hall, Los Angeles",
+        "answer": 2265,
+        "fun_fact": "Frank Gehry's stainless-steel curves initially reflected so much sunlight that nearby sidewalks reached dangerously high temperatures."
+      }
+    ]
+  },
+  {
     "date": "2026-07-26",
     "category": "how_tall",
     "question": "How tall is this structure?",

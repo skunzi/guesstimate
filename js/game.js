@@ -5,7 +5,7 @@
   const SCORE_CONSTANTS = {
     how_many: 1.5,
     how_tall: 3,
-    how_old: 20
+    how_old: 3
   };
 
   let rounds = [];
@@ -50,12 +50,14 @@
 
   function calculateScore(guess, answer, category) {
     const k = SCORE_CONSTANTS[category] || 5;
-    const errorRatio = Math.abs(guess - answer) / answer;
     var score;
-    if (category === 'how_many' || category === 'how_tall') {
-      score = Math.round(1000 * Math.exp(-k * errorRatio));
+    if (category === 'how_old') {
+      var age = Math.max(1, new Date().getFullYear() - answer);
+      var error = Math.abs(guess - answer);
+      score = Math.round(1000 * Math.exp(-k * error / age));
     } else {
-      score = Math.max(0, Math.round(1000 * (1 - errorRatio * k)));
+      var errorRatio = Math.abs(guess - answer) / answer;
+      score = Math.round(1000 * Math.exp(-k * errorRatio));
     }
     return Math.max(0, Math.min(1000, score));
   }
