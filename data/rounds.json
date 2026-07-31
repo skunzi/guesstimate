@@ -76,10 +76,10 @@
         "fun_fact": "The world's largest cruise ship, it has the largest waterpark at sea with six waterslides and a swim-up bar."
       },
       {
-        "file": "capacity_and_height/AIDAcosma.jpg",
-        "subject": "AIDACosma",
-        "answer": 67,
-        "fun_fact": "One of the first cruise ships powered by liquefied natural gas, reducing particulate emissions by nearly 100%."
+        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
+        "subject": "Lakhta Centre, St. Petersburg",
+        "answer": 462,
+        "fun_fact": "The tallest building in Europe and the northernmost skyscraper over 100 meters."
       },
       {
         "file": "capacity_and_height/Oasis_of_the_Seas.jpg",
@@ -364,16 +364,16 @@
         "fun_fact": "Built in 1889, it was the world's tallest structure for 41 years until the Chrysler Building surpassed it."
       },
       {
-        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
-        "subject": "Lakhta Centre, St. Petersburg",
-        "answer": 462,
-        "fun_fact": "The tallest building in Europe and the northernmost skyscraper over 100 meters."
+        "file": "age_and_height/St_Basils_Cathedral.jpg",
+        "subject": "St. Basil's Cathedral, Moscow",
+        "answer": 65,
+        "fun_fact": "Each of its nine onion domes is unique in shape, size, and color — no two are alike."
       },
       {
-        "file": "height/steinway_tower_new_york.jpeg",
-        "subject": "Steinway Tower, New York",
-        "answer": 435,
-        "fun_fact": "The most slender skyscraper in the world with a width-to-height ratio of 1:24."
+        "file": "capacity_and_height/AIDAcosma.jpg",
+        "subject": "AIDACosma",
+        "answer": 67,
+        "fun_fact": "One of the first cruise ships powered by liquefied natural gas, reducing particulate emissions by nearly 100%."
       },
       {
         "file": "height/beijing_cctv_tower.jpg",
@@ -536,10 +536,10 @@
         "fun_fact": "Still retains some of its original smooth limestone casing at the apex, hinting at how all the pyramids once looked."
       },
       {
-        "file": "age_and_height/St_Basils_Cathedral.jpg",
-        "subject": "St. Basil's Cathedral, Moscow",
-        "answer": 65,
-        "fun_fact": "Each of its nine onion domes is unique in shape, size, and color — no two are alike."
+        "file": "height/steinway_tower_new_york.jpeg",
+        "subject": "Steinway Tower, New York",
+        "answer": 435,
+        "fun_fact": "The most slender skyscraper in the world with a width-to-height ratio of 1:24."
       }
     ]
   }
