@@ -52,7 +52,7 @@
     const k = SCORE_CONSTANTS[category] || 5;
     var score;
     if (category === 'how_old') {
-      var age = Math.max(1, new Date().getFullYear() - answer);
+      var age = Math.max(30, new Date().getFullYear() - answer);
       var error = Math.abs(guess - answer);
       score = Math.round(1000 * Math.exp(-k * error / age));
     } else {
@@ -129,11 +129,11 @@
 
   function getSliderConfig(category) {
     if (category === 'how_old') {
-      return { min: 500, max: 2030, step: 1, initial: 1900, digits: 4 };
+      return { min: 0, max: 2030, step: 1, initial: 1900, digits: 4 };
     } else if (category === 'how_tall') {
-      return { min: 10, max: 900, step: 1, initial: 150, digits: 3 };
+      return { min: 1, max: 900, step: 1, initial: 150, digits: 3 };
     } else {
-      return { min: 500, max: 120000, step: 500, initial: 30000, digits: 6 };
+      return { min: 0, max: 120000, step: 500, initial: 30000, digits: 6 };
     }
   }
 

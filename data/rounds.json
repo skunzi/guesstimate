@@ -34,7 +34,7 @@
   {
     "date": "2026-07-16",
     "category": "how_old",
-    "question": "How old is this?",
+    "question": "From which year is this?",
     "unit": "year",
     "photos": [
       {
@@ -70,10 +70,10 @@
     "unit": "meters",
     "photos": [
       {
-        "file": "age_and_height/michelangelo_david.jpg",
-        "subject": "Michelangelo's David, Florence",
-        "answer": 5,
-        "fun_fact": "Carved from a single block of marble that had been abandoned outdoors for 25 years, exposing it to rain and sun damage."
+        "file": "height/bank_of_china_hongkong.jpg",
+        "subject": "Bank of China, Hong Kong",
+        "answer": 367,
+        "fun_fact": "Its triangular design was inspired by bamboo shoots, a symbol of growth and prosperity in Chinese culture."
       },
       {
         "file": "capacity_and_height/icon_of_the_sea.jpeg",
@@ -130,7 +130,7 @@
   {
     "date": "2026-07-19",
     "category": "how_old",
-    "question": "How old is this?",
+    "question": "From which year is this?",
     "unit": "year",
     "photos": [
       {
@@ -194,11 +194,11 @@
   {
     "date": "2026-07-21",
     "category": "how_old",
-    "question": "How old is this?",
+    "question": "From which year is this?",
     "unit": "year",
     "photos": [
       {
-        "file": "age_and_height/michelangelo_david.jpg",
+        "file": "age/michelangelo_david.jpg",
         "subject": "Michelangelo's David, Florence",
         "answer": 1504,
         "fun_fact": "Carved from a single block of marble that had been rejected by two other sculptors over the previous 25 years."
@@ -258,7 +258,7 @@
   {
     "date": "2026-07-23",
     "category": "how_old",
-    "question": "How old is this?",
+    "question": "From which year is this?",
     "unit": "year",
     "photos": [
       {
@@ -418,7 +418,7 @@
   {
     "date": "2026-07-28",
     "category": "how_old",
-    "question": "How old is this?",
+    "question": "From which year is this?",
     "unit": "year",
     "photos": [
       {
@@ -482,7 +482,7 @@
   {
     "date": "2026-07-30",
     "category": "how_old",
-    "question": "How old is this?",
+    "question": "From which year is this?",
     "unit": "year",
     "photos": [
       {
