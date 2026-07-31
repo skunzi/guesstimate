@@ -1,0 +1,38 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-json
+        files: ^data/rounds\.json$
+
+  - repo: https://github.com/eslint/eslint
+    rev: v8.57.1
+    hooks:
+      - id: eslint
+        files: \.js$
+
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: v16.12.0
+    hooks:
+      - id: stylelint
+        files: \.css$
+        additional_dependencies:
+          - stylelint@17.14.1
+          - stylelint-config-standard@40.0.0
+
+  - repo: local
+    hooks:
+      - id: validate-rounds-schema
+        name: Validate rounds.json schema
+        language: python
+        entry: python3 scripts/validate-rounds.py
+        files: ^data/rounds\.json$
+        pass_filenames: false
+
+      - id: html-validate
+        name: Validate HTML
+        language: node
+        entry: html-validate
+        files: \.html$
+        additional_dependencies:
+          - html-validate@10.17.0

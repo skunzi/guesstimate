@@ -1,0 +1,19 @@
+{
+  "name": "guess_it",
+  "version": "1.0.0",
+  "description": "## Concept",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "pre-commit install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "html-validate": "^10.17.0",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
