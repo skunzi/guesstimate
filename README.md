@@ -35,6 +35,24 @@
 * Feedback/reveal: After guessing, show the answer with a fun fact or context 
 * reveal photos one at a time. Let the player guess after each — later photos could be easier (closer shot, different angle)
 
+## Running locally
+
+This is a static site with no build step. Serve it with any HTTP server:
+
+```bash
+python3 -m http.server 8000
+```
+
+or
+
+```bash
+npx serve .
+```
+
+Then open http://localhost:8000 in your browser.
+
+A local server is required because the game fetches `data/rounds.json` at startup, which won't work from a `file://` URL due to browser security restrictions.
+
 ## Technical details
 
 * use localStorage for user statistic

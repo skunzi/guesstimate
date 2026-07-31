@@ -224,8 +224,20 @@
     const guessSection = document.querySelector('.guess-section');
     const resultSection = document.querySelector('.result-section');
 
+    guessSection.classList.add('hidden');
+    resultSection.classList.add('hidden');
+
+    img.style.opacity = '0';
+    img.onload = function () {
+      img.style.opacity = '1';
+      guessSection.classList.remove('hidden');
+    };
     img.src = 'media/' + photo.file;
     img.alt = 'Guess this!';
+    if (img.complete) {
+      img.style.opacity = '1';
+      guessSection.classList.remove('hidden');
+    }
     questionText.textContent = currentRound.question;
     unitLabel.textContent = currentRound.unit;
 
@@ -238,9 +250,6 @@
     createDigitBoxes(config.digits);
     setDigitBoxesValue(config.initial, config.digits);
     setupDigitNavigation();
-
-    guessSection.classList.remove('hidden');
-    resultSection.classList.add('hidden');
   }
 
   function submitGuess() {
@@ -507,16 +516,13 @@
 
       const round = getRoundByDate(dateStr);
 
-      if (round) {
+      if (round && dateStr <= today) {
         dayEl.classList.add('has-round');
         dayEl.classList.add('cat-' + round.category);
         if (storage.played[dateStr]) {
           dayEl.classList.add('played');
-        } else if (dateStr > today) {
-          dayEl.classList.add('future');
         }
         dayEl.addEventListener('click', function () {
-          if (dateStr > today) return;
           if (storage.played[dateStr]) {
             switchToView('game');
             showReview(round, storage.played[dateStr]);
