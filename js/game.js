@@ -120,8 +120,96 @@
     switch (category) {
       case 'how_many': return 'How Many?';
       case 'how_tall': return 'How Tall?';
-      case 'how_old': return 'When Was It Built?';
+      case 'how_old': return 'How Old Is It?';
       default: return category;
+    }
+  }
+
+  function getSliderConfig(category) {
+    if (category === 'how_old') {
+      return { min: 500, max: 2030, step: 1, initial: 1900, digits: 4 };
+    } else if (category === 'how_tall') {
+      return { min: 10, max: 900, step: 1, initial: 150, digits: 3 };
+    } else {
+      return { min: 500, max: 120000, step: 500, initial: 30000, digits: 6 };
+    }
+  }
+
+  function createDigitBoxes(count) {
+    var container = document.querySelector('.digit-inputs');
+    container.innerHTML = '';
+    for (var i = 0; i < count; i++) {
+      var input = document.createElement('input');
+      input.type = 'text';
+      input.inputMode = 'numeric';
+      input.pattern = '[0-9]';
+      input.maxLength = 1;
+      input.className = 'digit-box';
+      input.dataset.index = i;
+      container.appendChild(input);
+    }
+  }
+
+  function setDigitBoxesValue(value, digitCount) {
+    var str = String(value).padStart(digitCount, '0');
+    var boxes = document.querySelectorAll('.digit-box');
+    for (var i = 0; i < boxes.length; i++) {
+      boxes[i].value = str[i] || '';
+    }
+  }
+
+  function getDigitBoxesValue() {
+    var boxes = document.querySelectorAll('.digit-box');
+    var str = '';
+    for (var i = 0; i < boxes.length; i++) {
+      str += boxes[i].value || '0';
+    }
+    return parseInt(str, 10);
+  }
+
+  function setupDigitNavigation() {
+    var boxes = document.querySelectorAll('.digit-box');
+    boxes.forEach(function (box, idx) {
+      box.addEventListener('input', function () {
+        var val = box.value.replace(/[^0-9]/g, '');
+        box.value = val.slice(-1);
+        if (val && idx < boxes.length - 1) {
+          boxes[idx + 1].focus();
+          boxes[idx + 1].select();
+        }
+        syncSliderFromDigits();
+      });
+
+      box.addEventListener('keydown', function (e) {
+        if (e.key === 'Backspace' && !box.value && idx > 0) {
+          boxes[idx - 1].focus();
+          boxes[idx - 1].select();
+        } else if (e.key === 'ArrowLeft' && idx > 0) {
+          e.preventDefault();
+          boxes[idx - 1].focus();
+          boxes[idx - 1].select();
+        } else if (e.key === 'ArrowRight' && idx < boxes.length - 1) {
+          e.preventDefault();
+          boxes[idx + 1].focus();
+          boxes[idx + 1].select();
+        } else if (e.key === 'Enter') {
+          submitGuess();
+        }
+      });
+
+      box.addEventListener('focus', function () {
+        box.select();
+      });
+    });
+  }
+
+  function syncSliderFromDigits() {
+    var val = getDigitBoxesValue();
+    var slider = document.querySelector('.guess-slider');
+    if (currentRound) {
+      var config = getSliderConfig(currentRound.category);
+      var clamped = Math.max(config.min, Math.min(config.max, val));
+      slider.value = clamped;
     }
   }
 
@@ -130,7 +218,7 @@
     const img = document.querySelector('.photo');
     const questionText = document.querySelector('.question-text');
     const unitLabel = document.querySelector('.unit-label');
-    const guessInput = document.querySelector('.guess-input');
+    const guessSlider = document.querySelector('.guess-slider');
     const guessSection = document.querySelector('.guess-section');
     const resultSection = document.querySelector('.result-section');
 
@@ -139,27 +227,27 @@
     questionText.textContent = currentRound.question;
     unitLabel.textContent = currentRound.unit;
 
-    if (currentRound.category === 'how_old') {
-      guessInput.placeholder = 'e.g. 1990';
-    } else if (currentRound.category === 'how_tall') {
-      guessInput.placeholder = 'e.g. 200';
-    } else {
-      guessInput.placeholder = 'e.g. 50000';
-    }
+    var config = getSliderConfig(currentRound.category);
+    guessSlider.min = config.min;
+    guessSlider.max = config.max;
+    guessSlider.step = config.step;
+    guessSlider.value = config.initial;
 
-    guessInput.value = '';
+    createDigitBoxes(config.digits);
+    setDigitBoxesValue(config.initial, config.digits);
+    setupDigitNavigation();
+
     guessSection.classList.remove('hidden');
     resultSection.classList.add('hidden');
-    guessInput.focus();
   }
 
   function submitGuess() {
-    const guessInput = document.querySelector('.guess-input');
-    const guess = parseInt(guessInput.value, 10);
+    var guess = getDigitBoxesValue();
 
     if (isNaN(guess) || guess < 0) {
-      guessInput.classList.add('shake');
-      setTimeout(function () { guessInput.classList.remove('shake'); }, 300);
+      var container = document.querySelector('.digit-inputs');
+      container.classList.add('shake');
+      setTimeout(function () { container.classList.remove('shake'); }, 300);
       return;
     }
 
@@ -195,7 +283,7 @@
 
     let answerText = '';
     if (currentRound.category === 'how_old') {
-      answerText = photo.subject + ' was built in ' + answer + '. You guessed ' + guess + '.';
+      answerText = photo.subject + ' is from ' + answer + '. You guessed ' + guess + '.';
     } else if (currentRound.category === 'how_tall') {
       answerText = photo.subject + ' is ' + answer + 'm tall. You guessed ' + guess + 'm.';
     } else {
@@ -597,9 +685,15 @@
 
     // Game controls
     document.querySelector('.submit-guess').addEventListener('click', submitGuess);
-    document.querySelector('.guess-input').addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') submitGuess();
+
+    var slider = document.querySelector('.guess-slider');
+    slider.addEventListener('input', function () {
+      if (currentRound) {
+        var config = getSliderConfig(currentRound.category);
+        setDigitBoxesValue(slider.value, config.digits);
+      }
     });
+
     document.querySelector('.next-photo').addEventListener('click', nextPhoto);
     document.querySelector('.share-btn').addEventListener('click', shareResult);
     document.querySelector('.play-another').addEventListener('click', function () {

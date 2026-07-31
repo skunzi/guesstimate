@@ -66,7 +66,7 @@
   {
     "date": "2026-07-28",
     "category": "how_old",
-    "question": "When was this built?",
+    "question": "How old is this?",
     "unit": "year",
     "photos": [
       {
@@ -130,7 +130,7 @@
   {
     "date": "2026-07-30",
     "category": "how_old",
-    "question": "When was this built?",
+    "question": "How old is this?",
     "unit": "year",
     "photos": [
       {
