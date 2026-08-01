@@ -29,9 +29,11 @@
 
   function loadStorage() {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { played: {} };
+      var data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { played: {} };
+      if (!data.inProgress) data.inProgress = {};
+      return data;
     } catch {
-      return { played: {} };
+      return { played: {}, inProgress: {} };
     }
   }
 
@@ -43,6 +45,13 @@
     const data = loadStorage();
     const total = scores.reduce((a, b) => a + b, 0);
     data.played[date] = { scores, guesses, total, category, playedAt: Date.now() };
+    delete data.inProgress[date];
+    saveStorage(data);
+  }
+
+  function saveProgress(date, scores, guesses, photoIndex, category) {
+    const data = loadStorage();
+    data.inProgress[date] = { scores, guesses, photoIndex, category };
     saveStorage(data);
   }
 
@@ -95,11 +104,17 @@
 
   // --- Game Flow ---
 
-  function startRound(round) {
+  function startRound(round, progress) {
     currentRound = round;
-    currentPhotoIndex = 0;
-    roundScores = [];
-    roundGuesses = [];
+    if (progress && progress.photoIndex < 4) {
+      currentPhotoIndex = progress.photoIndex;
+      roundScores = progress.scores.slice();
+      roundGuesses = progress.guesses.slice();
+    } else {
+      currentPhotoIndex = 0;
+      roundScores = [];
+      roundGuesses = [];
+    }
 
     const gameArea = document.querySelector('.game-area');
     const roundComplete = document.querySelector('.round-complete');
@@ -129,12 +144,25 @@
 
   function getSliderConfig(category) {
     if (category === 'how_old') {
-      return { min: 0, max: 2030, step: 1, initial: 1900, digits: 4 };
+      return { min: 0, max: 2030, step: 1, initial: 1900, digits: 4, power: 0.4, sliderSteps: 1000 };
     } else if (category === 'how_tall') {
       return { min: 1, max: 900, step: 1, initial: 150, digits: 3 };
     } else {
-      return { min: 0, max: 140000, step: 500, initial: 30000, digits: 6 };
+      return { min: 0, max: 140000, step: 100, initial: 30000, digits: 6, power: 2.5, sliderSteps: 1000 };
     }
+  }
+
+  function sliderToValue(pos, config) {
+    if (!config.power) return pos;
+    var ratio = pos / config.sliderSteps;
+    var value = config.min + Math.pow(ratio, config.power) * (config.max - config.min);
+    return Math.round(value / config.step) * config.step;
+  }
+
+  function valueToSlider(value, config) {
+    if (!config.power) return value;
+    var ratio = (value - config.min) / (config.max - config.min);
+    return Math.round(Math.pow(Math.max(0, ratio), 1 / config.power) * config.sliderSteps);
   }
 
   function createDigitBoxes(count) {
@@ -211,7 +239,7 @@
     if (currentRound) {
       var config = getSliderConfig(currentRound.category);
       var clamped = Math.max(config.min, Math.min(config.max, val));
-      slider.value = clamped;
+      slider.value = config.power ? valueToSlider(clamped, config) : clamped;
     }
   }
 
@@ -242,10 +270,17 @@
     unitLabel.textContent = currentRound.unit;
 
     var config = getSliderConfig(currentRound.category);
-    guessSlider.min = config.min;
-    guessSlider.max = config.max;
-    guessSlider.step = config.step;
-    guessSlider.value = config.initial;
+    if (config.power) {
+      guessSlider.min = 0;
+      guessSlider.max = config.sliderSteps;
+      guessSlider.step = 1;
+      guessSlider.value = valueToSlider(config.initial, config);
+    } else {
+      guessSlider.min = config.min;
+      guessSlider.max = config.max;
+      guessSlider.step = config.step;
+      guessSlider.value = config.initial;
+    }
 
     createDigitBoxes(config.digits);
     setDigitBoxesValue(config.initial, config.digits);
@@ -267,6 +302,8 @@
     const score = calculateScore(guess, answer, currentRound.category);
     roundScores.push(score);
     roundGuesses.push(guess);
+
+    saveProgress(currentRound.date, roundScores, roundGuesses, currentPhotoIndex + 1, currentRound.category);
 
     showResult(score, answer, photo, guess);
   }
@@ -521,6 +558,8 @@
         dayEl.classList.add('cat-' + round.category);
         if (storage.played[dateStr]) {
           dayEl.classList.add('played');
+        } else if (storage.inProgress[dateStr]) {
+          dayEl.classList.add('in-progress');
         }
         dayEl.addEventListener('click', function () {
           if (storage.played[dateStr]) {
@@ -529,7 +568,7 @@
             return;
           }
           switchToView('game');
-          startRound(round);
+          startRound(round, storage.inProgress[dateStr] || null);
         });
       }
 
@@ -629,7 +668,7 @@
     var storage = loadStorage();
 
     if (todayRound && !storage.played[today]) {
-      startRound(todayRound);
+      startRound(todayRound, storage.inProgress[today] || null);
     } else if (todayRound && storage.played[today]) {
       showReview(todayRound, storage.played[today]);
     } else {
@@ -698,7 +737,8 @@
     slider.addEventListener('input', function () {
       if (currentRound) {
         var config = getSliderConfig(currentRound.category);
-        setDigitBoxesValue(slider.value, config.digits);
+        var displayValue = sliderToValue(parseInt(slider.value), config);
+        setDigitBoxesValue(displayValue, config.digits);
       }
     });
 
@@ -731,7 +771,7 @@
     const storage = loadStorage();
 
     if (todayRound && !storage.played[today]) {
-      startRound(todayRound);
+      startRound(todayRound, storage.inProgress[today] || null);
     } else if (todayRound && storage.played[today]) {
       showReview(todayRound, storage.played[today]);
     } else {
