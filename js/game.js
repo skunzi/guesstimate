@@ -732,6 +732,15 @@
 
     document.getElementById('welcome-got-it').addEventListener('click', dismiss);
     document.getElementById('welcome-close').addEventListener('click', dismiss);
+    document.getElementById('welcome-feedback').addEventListener('click', function () {
+      var email = 'info@offclock.dev';
+      navigator.clipboard.writeText(email).then(function () {
+        var btn = document.getElementById('welcome-feedback');
+        var original = btn.textContent;
+        btn.textContent = '✓ Email copied to clipboard!';
+        setTimeout(function () { btn.textContent = original; }, 2000);
+      });
+    });
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) dismiss();
     });

@@ -933,10 +933,16 @@ body.modal-open {
   border-top: 1px solid var(--color-border);
 }
 
-.welcome-got-it {
+.welcome-footer .btn {
   width: 100%;
   padding: 14px;
   font-size: 1.05rem;
+}
+
+.welcome-feedback {
+  margin-bottom: 10px;
+  font-size: 0.95rem !important;
+  padding: 12px !important;
 }
 
 @keyframes fadeIn {

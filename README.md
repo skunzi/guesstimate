@@ -19,7 +19,8 @@
   * show a photo and the user should guess the age
   * Buildings, Vehicle
   * Historical artefacts
-  * People
+  * Games, video consoles
+  * Devices, iconic gadgets
 * The closer the guess the more points
 * Correct guess: 1000 points
 * The worse the guess to less points
