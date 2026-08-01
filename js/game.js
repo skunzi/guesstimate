@@ -243,6 +243,8 @@
     }
   }
 
+  var photoLoadTimeout = null;
+
   function showCurrentPhoto() {
     const photo = currentRound.photos[currentPhotoIndex];
     const img = document.querySelector('.photo');
@@ -255,16 +257,37 @@
     guessSection.classList.add('hidden');
     resultSection.classList.add('hidden');
 
-    img.style.opacity = '0';
-    img.onload = function () {
+    if (photoLoadTimeout) {
+      clearTimeout(photoLoadTimeout);
+      photoLoadTimeout = null;
+    }
+
+    var revealed = false;
+    function revealGuessSection() {
+      if (revealed) return;
+      revealed = true;
+      if (photoLoadTimeout) { clearTimeout(photoLoadTimeout); photoLoadTimeout = null; }
       img.style.opacity = '1';
       guessSection.classList.remove('hidden');
+    }
+
+    var retried = false;
+    img.style.opacity = '0';
+    img.onload = revealGuessSection;
+    img.onerror = function () {
+      if (!retried) {
+        retried = true;
+        img.src = 'media/' + photo.file + '?retry=' + Date.now();
+      } else {
+        revealGuessSection();
+      }
     };
     img.src = 'media/' + photo.file;
     img.alt = 'Guess this!';
-    if (img.complete) {
-      img.style.opacity = '1';
-      guessSection.classList.remove('hidden');
+    if (img.complete && img.naturalWidth > 0) {
+      revealGuessSection();
+    } else {
+      photoLoadTimeout = setTimeout(revealGuessSection, 8000);
     }
     questionText.textContent = currentRound.question;
     unitLabel.textContent = currentRound.unit;
