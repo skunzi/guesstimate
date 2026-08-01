@@ -25,7 +25,7 @@ List all images in the subfolders of `media/new/`. The subfolder determines whic
 
 ### 2. Identify each photo
 
-Look at each image file to identify what it shows (building, vehicle, venue, object, etc.). Use the filename as a hint but visually confirm by reading the image.
+Use the filename to identify what the image shows. Don't look at the image itself, only determine by the filename the content.
 
 ### 3. Research facts for each photo
 

@@ -574,5 +574,261 @@
         "fun_fact": "Its spire brings the total height to exactly 1,776 feet, a deliberate reference to the year of American independence."
       }
     ]
+  },
+  {
+    "date": "2026-08-02",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "age_and_height/elephant_tower_bangkok.jpeg",
+        "subject": "Elephant Tower, Bangkok",
+        "answer": 102,
+        "fun_fact": "CNN ranked it among the world's most unconventional skyscrapers, beating many sleek supertall buildings."
+      },
+      {
+        "file": "height/The-Gherkin_london.jpg",
+        "subject": "The Gherkin, London",
+        "answer": 180,
+        "fun_fact": "During construction, a 1,600-year-old Roman teenage girl's skeleton was unearthed on the site."
+      },
+      {
+        "file": "height/Marina_Bay_Sands.jpg",
+        "subject": "Marina Bay Sands, Singapore",
+        "answer": 200,
+        "fun_fact": "Over 500 adjustable jack legs beneath the rooftop pool compensate for the towers gradually settling into the earth."
+      },
+      {
+        "file": "height/Bahrain_World_Trade_Center.jpg",
+        "subject": "Bahrain World Trade Center, Manama",
+        "answer": 240,
+        "fun_fact": "Its sail-shaped towers funnel wind to three turbines that supply up to 15% of the building's electricity."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-03",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/ponte-vecchio.jpg",
+        "subject": "Ponte Vecchio, Florence",
+        "answer": 1345,
+        "fun_fact": "Hitler specifically ordered it spared when German troops destroyed all other Florence bridges in 1944."
+      },
+      {
+        "file": "age/1946-vespa-98.jpg",
+        "subject": "Vespa 98, Italy",
+        "answer": 1946,
+        "fun_fact": "Piaggio pivoted from building warplanes to scooters after their aircraft factory was bombed in WWII."
+      },
+      {
+        "file": "age/beatles_Abbey_Road.jpg",
+        "subject": "Abbey Road, The Beatles",
+        "answer": 1969,
+        "fun_fact": "It was the last album the Beatles recorded together, though Let It Be was released later."
+      },
+      {
+        "file": "age/Dark_Side_of_the_Moon.png",
+        "subject": "The Dark Side of the Moon, Pink Floyd",
+        "answer": 1973,
+        "fun_fact": "It spent a record 937 total weeks on the Billboard 200 chart over multiple decades."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "height/Bitexco_Financial_Tower.jpeg",
+        "subject": "Bitexco Financial Tower, Ho Chi Minh City",
+        "answer": 262,
+        "fun_fact": "Its 250-ton helipad was manufactured in South Korea and required road closures to hoist into place."
+      },
+      {
+        "file": "height/the_shard_london.jpg",
+        "subject": "The Shard, London",
+        "answer": 310,
+        "fun_fact": "During construction, a fox named Romeo was found living near the top, surviving on builders' food scraps."
+      },
+      {
+        "file": "height/chrysler_building.jpeg",
+        "subject": "Chrysler Building, New York",
+        "answer": 319,
+        "fun_fact": "Its spire was secretly assembled inside the building, then raised in just 90 minutes to beat a rival for tallest title."
+      },
+      {
+        "file": "height/Burj_al_Arab.jpg",
+        "subject": "Burj Al Arab, Dubai",
+        "answer": 321,
+        "fun_fact": "Its site was called 'Chicago Beach,' named after the Chicago Bridge and Iron Company that once welded oil tanks there."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-05",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/ping_pong_original_video_game.png",
+        "subject": "Pong, Atari",
+        "answer": 1972,
+        "fun_fact": "The first arcade prototype broke because its coin mechanism jammed from too many quarters."
+      },
+      {
+        "file": "age/pacman.jpg",
+        "subject": "Pac-Man, Namco",
+        "answer": 1980,
+        "fun_fact": "Creator Toru Iwatani was inspired by looking at a pizza with one slice removed."
+      },
+      {
+        "file": "age/super_mario_bros.jpg",
+        "subject": "Super Mario Bros, Nintendo",
+        "answer": 1985,
+        "fun_fact": "Clouds and bushes in the game are the same graphic, just recolored green or white."
+      },
+      {
+        "file": "age/super-nintendo.jpg",
+        "subject": "Super Nintendo",
+        "answer": 1990,
+        "fun_fact": "Its custom Sony-designed sound chip could handle eight simultaneous audio channels, revolutionary for the era."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-06",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "height/empire_state_building.jpg",
+        "subject": "Empire State Building, New York",
+        "answer": 381,
+        "fun_fact": "It has its own ZIP code (10118), one of only 43 New York City buildings with their own postal code."
+      },
+      {
+        "file": "height/shanghai_World_Financial_Center.jpeg",
+        "subject": "Shanghai World Financial Center, Shanghai",
+        "answer": 492,
+        "fun_fact": "Its top aperture was originally circular but was redesigned because citizens thought it resembled Japan's rising sun flag."
+      },
+      {
+        "file": "height/Taipei_101.jpg",
+        "subject": "Taipei 101, Taipei",
+        "answer": 508,
+        "fun_fact": "Its 660-ton tuned mass damper became so popular that it inspired a mascot character franchise called Damper Baby."
+      },
+      {
+        "file": "height/Merdeka-118.jpg",
+        "subject": "Merdeka 118, Kuala Lumpur",
+        "answer": 679,
+        "fun_fact": "Its triangular form mimics Tunku Abdul Rahman's raised fist while chanting 'Merdeka!' at independence in 1957."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-07",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/super_mario_world.png",
+        "subject": "Super Mario World, Nintendo",
+        "answer": 1990,
+        "fun_fact": "Yoshi was originally conceived for the NES but required the SNES hardware to be realized."
+      },
+      {
+        "file": "age/nirvana_nevermind.jpg",
+        "subject": "Nevermind, Nirvana",
+        "answer": 1991,
+        "fun_fact": "It unexpectedly dethroned Michael Jackson's Dangerous from the Billboard number-one spot in January 1992."
+      },
+      {
+        "file": "age/playstation_1.jpg",
+        "subject": "PlayStation 1, Sony",
+        "answer": 1994,
+        "fun_fact": "It originated from a failed Nintendo partnership, turning Sony from ally to gaming's fiercest rival."
+      },
+      {
+        "file": "age/super_mario_64.jpg",
+        "subject": "Super Mario 64, Nintendo",
+        "answer": 1996,
+        "fun_fact": "Shigeru Miyamoto spent months just perfecting Mario's movement before any levels were designed."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-08",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Pokemon-Red-Edition.jpg",
+        "subject": "Pokemon Red, Nintendo",
+        "answer": 1996,
+        "fun_fact": "Development took six years and nearly bankrupted Game Freak, with staff working without pay."
+      },
+      {
+        "file": "age_and_height/elephant_tower_bangkok.jpeg",
+        "subject": "Elephant Tower, Bangkok",
+        "answer": 1997,
+        "fun_fact": "The 32-story building incorporates functional rooms inside the elephant's eyes and tusks."
+      },
+      {
+        "file": "age/metal_gear_solid.jpg",
+        "subject": "Metal Gear Solid, Konami",
+        "answer": 1998,
+        "fun_fact": "One boss fight required players to plug the controller into port 2 to win."
+      },
+      {
+        "file": "age/nokia_3210.jpg",
+        "subject": "Nokia 3210",
+        "answer": 1999,
+        "fun_fact": "It was the first Nokia phone with a fully internal antenna and sold over 160 million units."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-09",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/grand_theft_auto_2.jpg",
+        "subject": "Grand Theft Auto 2, Rockstar Games",
+        "answer": 1999,
+        "fun_fact": "A real 8-minute live-action short film was produced as a promotional tie-in for launch."
+      },
+      {
+        "file": "age/nokia_1100.png",
+        "subject": "Nokia 1100",
+        "answer": 2003,
+        "fun_fact": "With over 250 million units sold, it remains the best-selling single handset model in history."
+      },
+      {
+        "file": "age/need_for_speed_underground.jpg",
+        "subject": "Need for Speed: Underground, EA",
+        "answer": 2003,
+        "fun_fact": "It was the first Need for Speed game to completely remove police chases from gameplay."
+      },
+      {
+        "file": "age/minecraft.jpg",
+        "subject": "Minecraft, Mojang",
+        "answer": 2009,
+        "fun_fact": "Notch created the first playable version in just six days during May 2009."
+      }
+    ]
   }
 ]
