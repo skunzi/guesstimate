@@ -659,11 +659,15 @@
     sortedDates.forEach(function (date) {
       const entry = data.played[date];
       const item = document.createElement('div');
-      item.className = 'history-item';
+      item.className = 'history-item clickable';
       item.innerHTML =
         '<span class="history-date">' + date + '</span>' +
         '<span class="history-category">' + getCategoryLabel(entry.category) + '</span>' +
         '<span class="history-score">' + entry.total + '</span>';
+      item.onclick = function () {
+        var round = getRoundByDate(date);
+        if (round) { switchToView('game'); showReview(round, data.played[date]); }
+      };
       historyList.appendChild(item);
     });
   }
