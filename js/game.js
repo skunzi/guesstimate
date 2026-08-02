@@ -61,7 +61,7 @@
     const k = SCORE_CONSTANTS[category] || 5;
     var score;
     if (category === 'how_old') {
-      var age = Math.max(30, new Date().getFullYear() - answer);
+      var age = Math.max(60, new Date().getFullYear() - answer);
       var error = Math.abs(guess - answer);
       score = Math.round(1000 * Math.exp(-k * error / age));
     } else {
