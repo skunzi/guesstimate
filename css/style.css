@@ -958,9 +958,12 @@ body.modal-open {
 }
 
 .welcome-feedback {
-  margin-bottom: 10px;
-  font-size: 0.95rem !important;
-  padding: 12px !important;
+  margin-top: 12px;
+  font-size: 0.85rem !important;
+  padding: 10px !important;
+  opacity: 0.7;
+  background: transparent !important;
+  border: none !important;
 }
 
 @keyframes fadeIn {
