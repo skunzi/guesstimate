@@ -2,12 +2,14 @@
 """
 Reorder photos in data/rounds.json while respecting:
 1. Photos stay in the same category as before
-2. A photo appearing in multiple categories has at least 7 days between usages
+2. A photo appearing in multiple categories has at least N days between usages
 3. Answers within a single round are spread out (not clustered)
 """
 
+import argparse
 import json
 import random
+import sys
 from datetime import datetime
 from itertools import combinations
 from pathlib import Path
@@ -15,6 +17,7 @@ from pathlib import Path
 ROUNDS_FILE = Path(__file__).parent.parent / "data" / "rounds.json"
 MAX_ATTEMPTS = 50
 random.seed(42)
+display_rng = random.Random(7)
 
 
 def load_rounds():
@@ -99,7 +102,7 @@ def collect_photo_pool(rounds):
     return pool
 
 
-def reorder_photos(rounds):
+def reorder_photos(rounds, min_gap_days):
     """
     Main reordering algorithm using backtracking-friendly greedy approach.
     Each photo must be used exactly as many times as in the original.
@@ -131,14 +134,13 @@ def reorder_photos(rounds):
         for date_str, category in schedule:
             current_date = datetime.strptime(date_str, "%Y-%m-%d")
 
-            # Get photos that are still available (have remaining uses) and pass 7-day check
             available = []
             for key, info in pool[category].items():
                 if remaining[category].get(key, 0) <= 0:
                     continue
                 if key in last_used:
                     last_date = datetime.strptime(last_used[key], "%Y-%m-%d")
-                    if (current_date - last_date).days < 7:
+                    if (current_date - last_date).days < min_gap_days:
                         continue
                 available.append(info["photo"])
 
@@ -192,7 +194,11 @@ def reorder_photos(rounds):
                 break
 
             # Shuffle so answers aren't in order
-            random.shuffle(best_combo)
+            for _ in range(10):
+                display_rng.shuffle(best_combo)
+                answers = [p["answer"] for p in best_combo]
+                if answers != sorted(answers) and answers != sorted(answers, reverse=True):
+                    break
 
             # Update tracking
             for p in best_combo:
@@ -215,19 +221,31 @@ def reorder_photos(rounds):
             continue
 
         # Validate
-        issues = validate_result(result, rounds)
+        issues = validate_result(result, rounds, min_gap_days)
         if not issues:
             return result
         if best_issues is None or len(issues) < len(best_issues):
             best_issues = issues
             best_result = result
 
-    if best_result:
-        return best_result
-    return rounds
+    if not best_result:
+        raise RuntimeError(
+            f"Failed to reorder photos: no attempt could fill all rounds "
+            f"with min_gap_days={min_gap_days}. Try a smaller gap."
+        )
+
+    # Ensure photos within each round aren't sorted by answer
+    for r in best_result:
+        photos = r["photos"]
+        for _ in range(10):
+            display_rng.shuffle(photos)
+            answers = [p["answer"] for p in photos]
+            if answers != sorted(answers) and answers != sorted(answers, reverse=True):
+                break
+    return best_result
 
 
-def validate_result(result, original_rounds):
+def validate_result(result, original_rounds, min_gap_days):
     """Validate all constraints. Returns list of issues."""
     issues = []
 
@@ -249,7 +267,6 @@ def validate_result(result, original_rounds):
                     f"Photo {photo_key(p)} on {r['date']} not in original category {cat}"
                 )
 
-    # Check 7-day gap
     photo_dates = {}
     for r in result:
         date = datetime.strptime(r["date"], "%Y-%m-%d")
@@ -257,9 +274,9 @@ def validate_result(result, original_rounds):
             key = photo_key(p)
             if key in photo_dates:
                 gap = (date - photo_dates[key]).days
-                if gap < 7:
+                if gap < min_gap_days:
                     issues.append(
-                        f"Photo {key} on {r['date']}: only {gap} days since last use (need >= 7)"
+                        f"Photo {key} on {r['date']}: only {gap} days since last use (need >= {min_gap_days})"
                     )
             photo_dates[key] = date
 
@@ -286,22 +303,39 @@ def print_summary(rounds):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Reorder photos in rounds.json")
+    parser.add_argument(
+        "min_gap_days",
+        type=int,
+        help="Minimum number of days between reuses of the same photo",
+    )
+    args = parser.parse_args()
+
     print("Loading rounds.json...")
     rounds = load_rounds()
-    print(f"Found {len(rounds)} rounds\n")
+    print(f"Found {len(rounds)} rounds")
+    print(f"Minimum gap: {args.min_gap_days} days\n")
 
     print("Reordering photos (trying up to {} random seeds)...".format(MAX_ATTEMPTS))
-    new_rounds = reorder_photos(rounds)
+    new_rounds = reorder_photos(rounds, args.min_gap_days)
 
     print("\nValidating final result...")
-    issues = validate_result(new_rounds, rounds)
-    if issues:
-        print(f"\n{len(issues)} remaining issue(s):")
-        for issue in issues:
-            print(f"  - {issue}")
-    else:
-        print("All constraints satisfied!")
+    issues = validate_result(new_rounds, rounds, args.min_gap_days)
+    errors = [i for i in issues if "Poor diversity" not in i]
+    warnings = [i for i in issues if "Poor diversity" in i]
 
+    if warnings:
+        print(f"\n{len(warnings)} warning(s):")
+        for w in warnings:
+            print(f"  - {w}")
+
+    if errors:
+        print(f"\n{len(errors)} error(s):", file=sys.stderr)
+        for e in errors:
+            print(f"  - {e}", file=sys.stderr)
+        sys.exit(1)
+
+    print("\nAll constraints satisfied!")
     print_summary(new_rounds)
 
     save_rounds(new_rounds)

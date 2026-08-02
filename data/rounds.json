@@ -1,358 +1,38 @@
 [
   {
     "date": "2026-07-08",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
-      {
-        "file": "age/ponte-vecchio.jpg",
-        "subject": "Ponte Vecchio, Florence",
-        "answer": 1345,
-        "fun_fact": "Hitler specifically ordered it spared when German troops destroyed all other Florence bridges in 1944."
-      },
-      {
-        "file": "age/1946-vespa-98.jpg",
-        "subject": "Vespa 98, Italy",
-        "answer": 1946,
-        "fun_fact": "Piaggio pivoted from building warplanes to scooters after their aircraft factory was bombed in WWII."
-      },
-      {
-        "file": "age/beatles_Abbey_Road.jpg",
-        "subject": "Abbey Road, The Beatles",
-        "answer": 1969,
-        "fun_fact": "It was the last album the Beatles recorded together, though Let It Be was released later."
-      },
-      {
-        "file": "age/Dark_Side_of_the_Moon.png",
-        "subject": "The Dark Side of the Moon, Pink Floyd",
-        "answer": 1973,
-        "fun_fact": "It spent a record 937 total weeks on the Billboard 200 chart over multiple decades."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-09",
     "category": "how_tall",
     "question": "How tall is this structure?",
     "unit": "meters",
     "photos": [
       {
-        "file": "height/Bitexco_Financial_Tower.jpeg",
-        "subject": "Bitexco Financial Tower, Ho Chi Minh City",
-        "answer": 262,
-        "fun_fact": "Its 250-ton helipad was manufactured in South Korea and required road closures to hoist into place."
-      },
-      {
-        "file": "height/the_shard_london.jpg",
-        "subject": "The Shard, London",
-        "answer": 310,
-        "fun_fact": "During construction, a fox named Romeo was found living near the top, surviving on builders' food scraps."
-      },
-      {
-        "file": "height/chrysler_building.jpeg",
-        "subject": "Chrysler Building, New York",
-        "answer": 319,
-        "fun_fact": "Its spire was secretly assembled inside the building, then raised in just 90 minutes to beat a rival for tallest title."
-      },
-      {
-        "file": "height/Burj_al_Arab.jpg",
-        "subject": "Burj Al Arab, Dubai",
-        "answer": 321,
-        "fun_fact": "Its site was called 'Chicago Beach,' named after the Chicago Bridge and Iron Company that once welded oil tanks there."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-10",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
-      {
-        "file": "age/ping_pong_original_video_game.png",
-        "subject": "Pong, Atari",
-        "answer": 1972,
-        "fun_fact": "The first arcade prototype broke because its coin mechanism jammed from too many quarters."
-      },
-      {
-        "file": "age/pacman.jpg",
-        "subject": "Pac-Man, Namco",
-        "answer": 1980,
-        "fun_fact": "Creator Toru Iwatani was inspired by looking at a pizza with one slice removed."
-      },
-      {
-        "file": "age/super_mario_bros.jpg",
-        "subject": "Super Mario Bros, Nintendo",
-        "answer": 1985,
-        "fun_fact": "Clouds and bushes in the game are the same graphic, just recolored green or white."
-      },
-      {
-        "file": "age/super-nintendo.jpg",
-        "subject": "Super Nintendo",
-        "answer": 1990,
-        "fun_fact": "Its custom Sony-designed sound chip could handle eight simultaneous audio channels, revolutionary for the era."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-11",
-    "category": "how_tall",
-    "question": "How tall is this structure?",
-    "unit": "meters",
-    "photos": [
-      {
-        "file": "height/empire_state_building.jpg",
-        "subject": "Empire State Building, New York",
-        "answer": 381,
-        "fun_fact": "It has its own ZIP code (10118), one of only 43 New York City buildings with their own postal code."
-      },
-      {
-        "file": "height/shanghai_World_Financial_Center.jpeg",
-        "subject": "Shanghai World Financial Center, Shanghai",
-        "answer": 492,
-        "fun_fact": "Its top aperture was originally circular but was redesigned because citizens thought it resembled Japan's rising sun flag."
-      },
-      {
-        "file": "height/Taipei_101.jpg",
-        "subject": "Taipei 101, Taipei",
-        "answer": 508,
-        "fun_fact": "Its 660-ton tuned mass damper became so popular that it inspired a mascot character franchise called Damper Baby."
+        "file": "capacity_and_height/Queen_Mary_2.jpg",
+        "subject": "Queen Mary 2",
+        "answer": 62,
+        "fun_fact": "The only ocean liner still in regular transatlantic service, designed to handle 15-meter waves in the North Atlantic."
       },
       {
         "file": "height/Merdeka-118.jpg",
         "subject": "Merdeka 118, Kuala Lumpur",
         "answer": 679,
         "fun_fact": "Its triangular form mimics Tunku Abdul Rahman's raised fist while chanting 'Merdeka!' at independence in 1957."
+      },
+      {
+        "file": "height/Pyramid-of-Khafre-Giza-Egypt.jpg",
+        "subject": "Pyramid of Khafre, Giza",
+        "answer": 136,
+        "fun_fact": "Still retains some of its original smooth limestone casing at the apex, hinting at how all the pyramids once looked."
+      },
+      {
+        "file": "height/chrysler_building.jpeg",
+        "subject": "Chrysler Building, New York",
+        "answer": 319,
+        "fun_fact": "Its spire was secretly assembled inside the building, then raised in just 90 minutes to beat a rival for tallest title."
       }
     ]
   },
   {
-    "date": "2026-07-12",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
-      {
-        "file": "age/super_mario_world.png",
-        "subject": "Super Mario World, Nintendo",
-        "answer": 1990,
-        "fun_fact": "Yoshi was originally conceived for the NES but required the SNES hardware to be realized."
-      },
-      {
-        "file": "age/nirvana_nevermind.jpg",
-        "subject": "Nevermind, Nirvana",
-        "answer": 1991,
-        "fun_fact": "It unexpectedly dethroned Michael Jackson's Dangerous from the Billboard number-one spot in January 1992."
-      },
-      {
-        "file": "age/playstation_1.jpg",
-        "subject": "PlayStation 1, Sony",
-        "answer": 1994,
-        "fun_fact": "It originated from a failed Nintendo partnership, turning Sony from ally to gaming's fiercest rival."
-      },
-      {
-        "file": "age/super_mario_64.jpg",
-        "subject": "Super Mario 64, Nintendo",
-        "answer": 1996,
-        "fun_fact": "Shigeru Miyamoto spent months just perfecting Mario's movement before any levels were designed."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-13",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
-      {
-        "file": "age/Pokemon-Red-Edition.jpg",
-        "subject": "Pokemon Red, Nintendo",
-        "answer": 1996,
-        "fun_fact": "Development took six years and nearly bankrupted Game Freak, with staff working without pay."
-      },
-      {
-        "file": "age_and_height/elephant_tower_bangkok.jpeg",
-        "subject": "Elephant Tower, Bangkok",
-        "answer": 1997,
-        "fun_fact": "The 32-story building incorporates functional rooms inside the elephant's eyes and tusks."
-      },
-      {
-        "file": "age/metal_gear_solid.jpg",
-        "subject": "Metal Gear Solid, Konami",
-        "answer": 1998,
-        "fun_fact": "One boss fight required players to plug the controller into port 2 to win."
-      },
-      {
-        "file": "age/nokia_3210.jpg",
-        "subject": "Nokia 3210",
-        "answer": 1999,
-        "fun_fact": "It was the first Nokia phone with a fully internal antenna and sold over 160 million units."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-14",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
-      {
-        "file": "age/grand_theft_auto_2.jpg",
-        "subject": "Grand Theft Auto 2, Rockstar Games",
-        "answer": 1999,
-        "fun_fact": "A real 8-minute live-action short film was produced as a promotional tie-in for launch."
-      },
-      {
-        "file": "age/nokia_1100.png",
-        "subject": "Nokia 1100",
-        "answer": 2003,
-        "fun_fact": "With over 250 million units sold, it remains the best-selling single handset model in history."
-      },
-      {
-        "file": "age/need_for_speed_underground.jpg",
-        "subject": "Need for Speed: Underground, EA",
-        "answer": 2003,
-        "fun_fact": "It was the first Need for Speed game to completely remove police chases from gameplay."
-      },
-      {
-        "file": "age/minecraft.jpg",
-        "subject": "Minecraft, Mojang",
-        "answer": 2009,
-        "fun_fact": "Notch created the first playable version in just six days during May 2009."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-15",
-    "category": "how_many",
-    "question": "How many people can it hold?",
-    "unit": "people",
-    "photos": [
-      {
-        "file": "capacity/ICE_3.jpg",
-        "subject": "ICE 3, Germany",
-        "answer": 444,
-        "fun_fact": "Unlike earlier ICE trains, it has no separate locomotive — motors are distributed under the passenger cars for better acceleration."
-      },
-      {
-        "file": "capacity/Narendra_Modi_Stadium.jpg",
-        "subject": "Narendra Modi Stadium, Ahmedabad",
-        "answer": 132000,
-        "fun_fact": "It features 11 distinct pitches on the square, a rare setup that allows both red and black soil pitches to be used for different matches in the same venue."
-      },
-      {
-        "file": "capacity/NSW_Tennis_Centre.jpg",
-        "subject": "Ken Rosewall Arena, Sydney",
-        "answer": 10500,
-        "fun_fact": "Named after Australian tennis legend Ken Rosewall, it hosted tennis and volleyball events during the 2000 Sydney Olympics."
-      },
-      {
-        "file": "capacity/allianz_arena.jpg",
-        "subject": "Allianz Arena, Munich",
-        "answer": 75024,
-        "fun_fact": "Home to FC Bayern Munich, it can display the team colors across its entire exterior with 300,000 LEDs."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-16",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
-      {
-        "file": "capacity/coloseum_rome.jpg",
-        "subject": "Colosseum, Rome",
-        "answer": 80,
-        "fun_fact": "Could be flooded for mock naval battles called naumachiae; the hypogeum below the arena held gladiators and wild animals."
-      },
-      {
-        "file": "age/Enigma.jpg",
-        "subject": "Enigma Machine",
-        "answer": 1923,
-        "fun_fact": "Originally sold for commercial use; the military version's code was cracked by Polish mathematicians before Alan Turing's team at Bletchley Park."
-      },
-      {
-        "file": "age/apple_II.jpg",
-        "subject": "Apple II",
-        "answer": 1977,
-        "fun_fact": "One of the first mass-produced personal computers; its open architecture let hobbyists add expansion cards, creating an entire accessory ecosystem."
-      },
-      {
-        "file": "capacity_and_age/metlife.jpg",
-        "subject": "MetLife Stadium, New Jersey",
-        "answer": 2010,
-        "fun_fact": "Cost $1.6 billion to build with no public funding, making it one of the most expensive stadiums ever built entirely with private money."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-17",
-    "category": "how_tall",
-    "question": "How tall is this structure?",
-    "unit": "meters",
-    "photos": [
-      {
-        "file": "age_and_height/moscow_state_university.jpg",
-        "subject": "Moscow State University",
-        "answer": 240,
-        "fun_fact": "The main tower has 36 floors and is topped by a 57-meter spire crowned with a star."
-      },
-      {
-        "file": "capacity/bejing_stadium.jpg",
-        "subject": "Beijing National Stadium",
-        "answer": 69,
-        "fun_fact": "The interwoven steel beams were inspired by Chinese ceramics and give the structure its 'Bird's Nest' nickname."
-      },
-      {
-        "file": "capacity_and_height/icon_of_the_sea.jpeg",
-        "subject": "Icon of the Seas",
-        "answer": 72,
-        "fun_fact": "The world's largest cruise ship, it has the largest waterpark at sea with six waterslides and a swim-up bar."
-      },
-      {
-        "file": "capacity/London_Wembley.jpg",
-        "subject": "Wembley Stadium, London",
-        "answer": 133,
-        "fun_fact": "Its steel lattice arch is the longest single-span roof structure in the world and is visible across London's skyline."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-18",
-    "category": "how_many",
-    "question": "How many people can it hold?",
-    "unit": "people",
-    "photos": [
-      {
-        "file": "capacity/airbus-a380-1.jpg",
-        "subject": "Airbus A380",
-        "answer": 853,
-        "fun_fact": "In an all-economy configuration it can seat 853 passengers, making it the largest commercial passenger aircraft ever built."
-      },
-      {
-        "file": "capacity/Guangzhou_Opera_House.jpg",
-        "subject": "Guangzhou Opera House",
-        "answer": 1804,
-        "fun_fact": "Designed by Zaha Hadid, its twin-boulder shape was inspired by pebbles in the Pearl River, smoothed by centuries of flowing water."
-      },
-      {
-        "file": "capacity/Arthur_Ashe_Stadium.jpg",
-        "subject": "Arthur Ashe Stadium, New York",
-        "answer": 23771,
-        "fun_fact": "The largest tennis venue in the world; its retractable roof weighs 7,000 tonnes and can close in under 7 minutes."
-      },
-      {
-        "file": "capacity/michigan_stadium.jpeg",
-        "subject": "Michigan Stadium, Ann Arbor",
-        "answer": 107601,
-        "fun_fact": "Known as 'The Big House', it was deliberately built below ground level to reduce visible exterior mass and construction costs."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-19",
+    "date": "2026-07-09",
     "category": "how_old",
     "question": "From which year is this?",
     "unit": "year",
@@ -364,196 +44,36 @@
         "fun_fact": "Its famous paths feature over 10,000 vermilion torii gates donated by businesses seeking prosperity."
       },
       {
-        "file": "age/vw-kaefer-1953.jpg",
-        "subject": "Volkswagen Beetle",
-        "answer": 1938,
-        "fun_fact": "Over 21 million were produced, making it the longest-running and most-manufactured car on a single platform in history."
+        "file": "age/grand_theft_auto_2.jpg",
+        "subject": "Grand Theft Auto 2, Rockstar Games",
+        "answer": 1999,
+        "fun_fact": "A real 8-minute live-action short film was produced as a promotional tie-in for launch."
       },
       {
-        "file": "age/c64.jpg",
-        "subject": "Commodore 64",
-        "answer": 1982,
-        "fun_fact": "Holds the Guinness record for best-selling single computer model with an estimated 12.5 to 17 million units sold."
+        "file": "capacity/coloseum_rome.jpg",
+        "subject": "Colosseum, Rome",
+        "answer": 80,
+        "fun_fact": "Could be flooded for mock naval battles called naumachiae; the hypogeum below the arena held gladiators and wild animals."
       },
-      {
-        "file": "age/dancing_house_prague.jpg",
-        "subject": "Dancing House, Prague",
-        "answer": 1996,
-        "fun_fact": "Designed by Frank Gehry and Vlado Milunic, it's nicknamed 'Fred and Ginger' after the famous dance duo."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-20",
-    "category": "how_many",
-    "question": "How many people can it hold?",
-    "unit": "people",
-    "photos": [
-      {
-        "file": "capacity/TGV_Duplex.jpg",
-        "subject": "TGV Duplex, France",
-        "answer": 510,
-        "fun_fact": "Its double-decker design nearly doubles capacity compared to single-level TGVs while maintaining speeds over 300 km/h."
-      },
-      {
-        "file": "capacity/rupp_arena_kentucky.jpeg",
-        "subject": "Rupp Arena, Kentucky",
-        "answer": 20500,
-        "fun_fact": "It once recorded a massive crowd roar of 126.4 decibels, hitting a temporary Guinness World Record for the loudest indoor sports crowd."
-      },
-      {
-        "file": "capacity/wimbeldon_center_court.jpg",
-        "subject": "Wimbledon Centre Court, London",
-        "answer": 14979,
-        "fun_fact": "The grass is cut to exactly 8 millimeters during the tournament and the roof can close in about 10 minutes."
-      },
-      {
-        "file": "capacity_and_age/metlife.jpg",
-        "subject": "MetLife Stadium, New Jersey",
-        "answer": 82500,
-        "fun_fact": "Home to both the NY Giants and NY Jets — the only NFL stadium shared by two teams."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-21",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
       {
         "file": "age/michelangelo_david.jpg",
         "subject": "Michelangelo's David, Florence",
         "answer": 1504,
         "fun_fact": "Carved from a single block of marble that had been rejected by two other sculptors over the previous 25 years."
-      },
-      {
-        "file": "age/Dmc_de_lorean_1.jpg",
-        "subject": "DeLorean DMC-12",
-        "answer": 1981,
-        "fun_fact": "Only about 9,000 were ever made before the company went bankrupt; the unpainted stainless steel body means no two panels look exactly alike."
-      },
-      {
-        "file": "age/first_gameboy.jpeg",
-        "subject": "Nintendo Game Boy",
-        "answer": 1989,
-        "fun_fact": "Its low-resolution green screen was chosen over color to extend battery life to over 30 hours on 4 AA batteries."
-      },
-      {
-        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
-        "subject": "Lakhta Centre, St. Petersburg",
-        "answer": 2019,
-        "fun_fact": "Built on a reclaimed waterfront site, its twisted glass facade rotates 90 degrees from base to top."
       }
     ]
   },
   {
-    "date": "2026-07-22",
+    "date": "2026-07-10",
     "category": "how_many",
     "question": "How many people can it hold?",
     "unit": "people",
     "photos": [
       {
-        "file": "capacity/beaver_stadium.jpeg",
-        "subject": "Beaver Stadium, Pennsylvania",
-        "answer": 106572,
-        "fun_fact": "The original structure was disassembled in 1959, moved one mile, and reassembled with 16,000 additional seats to form the current stadium."
-      },
-      {
-        "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
-        "subject": "Walt Disney Concert Hall, Los Angeles",
-        "answer": 2265,
-        "fun_fact": "Frank Gehry's stainless-steel curves initially reflected so much sunlight that nearby sidewalks reached dangerously high temperatures."
-      },
-      {
-        "file": "capacity/Yankee_Stadium.jpg",
-        "subject": "Yankee Stadium, New York",
-        "answer": 46537,
-        "fun_fact": "The original 1923 stadium was nicknamed 'The House That Ruth Built' after Babe Ruth; this new stadium opened in 2009 across the street."
-      },
-      {
-        "file": "capacity/London_Wembley.jpg",
-        "subject": "Wembley Stadium, London",
-        "answer": 90000,
-        "fun_fact": "Its iconic arch spans 317 meters and supports the entire north roof — no internal columns block any spectator's view."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-23",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
-      {
-        "file": "age_and_height/St_Basils_Cathedral.jpg",
-        "subject": "St. Basil's Cathedral, Moscow",
-        "answer": 1561,
-        "fun_fact": "Commissioned by Ivan the Terrible to celebrate the capture of Kazan; legend says he blinded the architects so they could never build anything more beautiful."
-      },
-      {
-        "file": "age/Lamborghini_Countach.png",
-        "subject": "Lamborghini Countach",
-        "answer": 1974,
-        "fun_fact": "Its name comes from a Piedmontese exclamation of astonishment; the rear visibility was so poor that drivers had to open the door to reverse."
-      },
-      {
-        "file": "age/Tamagotchi.jpeg",
-        "subject": "Tamagotchi",
-        "answer": 1996,
-        "fun_fact": "Created by Aki Maita at Bandai, it sold 40 million units in its first year and was briefly banned in schools worldwide."
-      },
-      {
-        "file": "capacity/bejing_stadium.jpg",
-        "subject": "Beijing National Stadium",
-        "answer": 2008,
-        "fun_fact": "Known as the Bird's Nest, it used 42,000 tonnes of steel but no internal columns — the interlocking structure supports itself."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-24",
-    "category": "how_tall",
-    "question": "How tall is this structure?",
-    "unit": "meters",
-    "photos": [
-      {
-        "file": "capacity/coloseum_rome.jpg",
-        "subject": "Colosseum, Rome",
-        "answer": 48,
-        "fun_fact": "Its outer wall originally stood four stories tall; earthquakes and stone robbers reduced parts of it over the centuries."
-      },
-      {
-        "file": "capacity_and_height/Queen_Mary_2.jpg",
-        "subject": "Queen Mary 2",
-        "answer": 62,
-        "fun_fact": "The only ocean liner still in regular transatlantic service, designed to handle 15-meter waves in the North Atlantic."
-      },
-      {
-        "file": "height/beijing_cctv_tower.jpg",
-        "subject": "CCTV Headquarters, Beijing",
-        "answer": 234,
-        "fun_fact": "Its unusual looped shape earned it the nickname 'Big Pants' among locals."
-      },
-      {
-        "file": "age_and_height/eiffel_paris.jpg",
-        "subject": "Eiffel Tower, Paris",
-        "answer": 330,
-        "fun_fact": "Built in 1889, it was the world's tallest structure for 41 years until the Chrysler Building surpassed it."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-25",
-    "category": "how_many",
-    "question": "How many people can it hold?",
-    "unit": "people",
-    "photos": [
-      {
-        "file": "capacity/sydney_opera.jpg",
-        "subject": "Sydney Opera House",
-        "answer": 5738,
-        "fun_fact": "Its iconic roof shells are covered with over 1 million tiles, self-cleaning thanks to their smooth Swedish-made ceramic glaze."
+        "file": "capacity/ICE_3.jpg",
+        "subject": "ICE 3, Germany",
+        "answer": 444,
+        "fun_fact": "Unlike earlier ICE trains, it has no separate locomotive — motors are distributed under the passenger cars for better acceleration."
       },
       {
         "file": "capacity_and_height/icon_of_the_sea.jpeg",
@@ -562,85 +82,21 @@
         "fun_fact": "It is the world's largest cruise ship, featuring five times the gross tonnage of the Titanic and a massive waterpark with six slides"
       },
       {
-        "file": "capacity/IGA_Stadium.jpeg",
-        "subject": "Stade IGA, Montreal",
-        "answer": 11812,
-        "fun_fact": "Home to the Canadian Open, one of the oldest tennis tournaments in the world, first held in 1881."
+        "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
+        "subject": "Walt Disney Concert Hall, Los Angeles",
+        "answer": 2265,
+        "fun_fact": "Frank Gehry's stainless-steel curves initially reflected so much sunlight that nearby sidewalks reached dangerously high temperatures."
       },
       {
-        "file": "capacity/Estadio_Santiago_Bernabeu.jpg",
-        "subject": "Santiago Bernabeu, Madrid",
-        "answer": 78297,
-        "fun_fact": "Its 2024 renovation added a retractable pitch that slides under the stands, allowing the stadium to host concerts without damaging the grass."
+        "file": "capacity/Narendra_Modi_Stadium.jpg",
+        "subject": "Narendra Modi Stadium, Ahmedabad",
+        "answer": 132000,
+        "fun_fact": "It features 11 distinct pitches on the square, a rare setup that allows both red and black soil pitches to be used for different matches in the same venue."
       }
     ]
   },
   {
-    "date": "2026-07-26",
-    "category": "how_tall",
-    "question": "How tall is this structure?",
-    "unit": "meters",
-    "photos": [
-      {
-        "file": "capacity_and_height/AIDAcosma.jpg",
-        "subject": "AIDACosma",
-        "answer": 67,
-        "fun_fact": "One of the first cruise ships powered by liquefied natural gas, reducing particulate emissions by nearly 100%."
-      },
-      {
-        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
-        "subject": "Lakhta Centre, St. Petersburg",
-        "answer": 462,
-        "fun_fact": "The tallest building in Europe and the northernmost skyscraper over 100 meters."
-      },
-      {
-        "file": "height/Pyramid-of-Khafre-Giza-Egypt.jpg",
-        "subject": "Pyramid of Khafre, Giza",
-        "answer": 136,
-        "fun_fact": "Still retains some of its original smooth limestone casing at the apex, hinting at how all the pyramids once looked."
-      },
-      {
-        "file": "height/steinway_tower_new_york.jpeg",
-        "subject": "Steinway Tower, New York",
-        "answer": 435,
-        "fun_fact": "The most slender skyscraper in the world with a width-to-height ratio of 1:24."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-27",
-    "category": "how_many",
-    "question": "How many people can it hold?",
-    "unit": "people",
-    "photos": [
-      {
-        "file": "capacity/the_sphere_las_vegas.jpeg",
-        "subject": "The Sphere, Las Vegas",
-        "answer": 18600,
-        "fun_fact": "Its interior LED screen is the largest in the world, covering 580,000 square feet and wrapping around the audience for an immersive experience."
-      },
-      {
-        "file": "capacity_and_height/Oasis_of_the_Seas.jpg",
-        "subject": "Oasis of the Seas",
-        "answer": 6296,
-        "fun_fact": "When launched in 2009, it was so large that no existing dry dock could service it — one had to be specially modified."
-      },
-      {
-        "file": "capacity/Al-Janoub-Stadium-1.jpg",
-        "subject": "Al Janoub Stadium, Qatar",
-        "answer": 40000,
-        "fun_fact": "Designed by Zaha Hadid, its retractable roof resembles the sails of a traditional dhow boat."
-      },
-      {
-        "file": "capacity/mercedes_benz_stadium_atlanta.jpg",
-        "subject": "Mercedes-Benz Stadium, Atlanta",
-        "answer": 71000,
-        "fun_fact": "Features a retractable roof inspired by the Roman Pantheon's oculus, made of eight translucent petals."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-28",
+    "date": "2026-07-11",
     "category": "how_old",
     "question": "From which year is this?",
     "unit": "year",
@@ -658,85 +114,21 @@
         "fun_fact": "Originally intended to stand for only 20 years; it was saved because of its usefulness as a radio antenna."
       },
       {
-        "file": "age/first_ipod.jpeg",
-        "subject": "Apple iPod",
-        "answer": 2001,
-        "fun_fact": "Steve Jobs announced it with '1,000 songs in your pocket'; its scroll wheel was inspired by a Bang & Olufsen telephone."
-      },
-      {
-        "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
-        "subject": "Walt Disney Concert Hall, Los Angeles",
-        "answer": 2003,
-        "fun_fact": "Its reflective steel panels once focused sunlight so intensely that nearby sidewalks reached dangerous temperatures, requiring some panels to be sanded down."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-29",
-    "category": "how_many",
-    "question": "How many people can it hold?",
-    "unit": "people",
-    "photos": [
-      {
-        "file": "capacity_and_height/Queen_Mary_2.jpg",
-        "subject": "Queen Mary 2",
-        "answer": 2691,
-        "fun_fact": "Has its own planetarium, the only one at sea, housed in a dedicated auditorium called Illuminations."
-      },
-      {
-        "file": "capacity_and_height/AIDAcosma.jpg",
-        "subject": "AIDACosma",
-        "answer": 5228,
-        "fun_fact": "Features a beach club with a retractable glass roof that opens over the rear pool deck."
-      },
-      {
-        "file": "capacity/elbphilharmonie.jpg",
-        "subject": "Elbphilharmonie, Hamburg",
-        "answer": 2100,
-        "fun_fact": "The Grand Hall's vineyard-style seating means no audience member is more than 30 meters from the conductor."
-      },
-      {
-        "file": "capacity/bejing_stadium.jpg",
-        "subject": "Beijing National Stadium",
-        "answer": 80000,
-        "fun_fact": "After the 2008 Olympics its capacity was reduced from 91,000 by removing temporary seating and adding luxury boxes."
-      }
-    ]
-  },
-  {
-    "date": "2026-07-30",
-    "category": "how_old",
-    "question": "From which year is this?",
-    "unit": "year",
-    "photos": [
-      {
-        "file": "age/schloss_neuschwansteig.jpg",
-        "subject": "Neuschwanstein Castle, Bavaria",
-        "answer": 1886,
-        "fun_fact": "Never finished, yet inspired Disney's Sleeping Beauty Castle and is now visited by 1.4 million people yearly."
-      },
-      {
-        "file": "age_and_height/moscow_state_university.jpg",
-        "subject": "Moscow State University",
-        "answer": 1953,
-        "fun_fact": "One of the 'Seven Sisters' skyscrapers ordered by Stalin; prisoners from the Gulag were used in its construction."
+        "file": "age/ponte-vecchio.jpg",
+        "subject": "Ponte Vecchio, Florence",
+        "answer": 1345,
+        "fun_fact": "Hitler specifically ordered it spared when German troops destroyed all other Florence bridges in 1944."
       },
       {
         "file": "age/nintendo64.jpg",
         "subject": "Nintendo 64",
         "answer": 1996,
         "fun_fact": "One of the last major consoles to use cartridges instead of CDs; this limited game sizes but eliminated load times entirely."
-      },
-      {
-        "file": "age/original-iphone-2007.jpg",
-        "subject": "Apple iPhone",
-        "answer": 2007,
-        "fun_fact": "The original had no App Store, no copy-paste, and no GPS — all were added in later updates. It still sold 6 million units."
       }
     ]
   },
   {
-    "date": "2026-07-31",
+    "date": "2026-07-12",
     "category": "how_tall",
     "question": "How tall is this structure?",
     "unit": "meters",
@@ -748,36 +140,10 @@
         "fun_fact": "Contains seven distinct neighborhoods including Central Park with over 12,000 living plants and trees."
       },
       {
-        "file": "age_and_height/St_Basils_Cathedral.jpg",
-        "subject": "St. Basil's Cathedral, Moscow",
-        "answer": 65,
-        "fun_fact": "Each of its nine onion domes is unique in shape, size, and color — no two are alike."
-      },
-      {
-        "file": "age_and_height/Taj_Mahal.jpg",
-        "subject": "Taj Mahal, Agra",
-        "answer": 73,
-        "fun_fact": "Its central dome rises to 73 meters, surrounded by four minarets that lean slightly outward to protect the tomb if they fall."
-      },
-      {
-        "file": "height/bank_of_china_hongkong.jpg",
-        "subject": "Bank of China, Hong Kong",
-        "answer": 367,
-        "fun_fact": "Its triangular design was inspired by bamboo shoots, a symbol of growth and prosperity in Chinese culture."
-      }
-    ]
-  },
-  {
-    "date": "2026-08-01",
-    "category": "how_tall",
-    "question": "How tall is this structure?",
-    "unit": "meters",
-    "photos": [
-      {
-        "file": "height/Tokyo_Mode_Gakuen_Cocoon_Tower.jpg",
-        "subject": "Mode Gakuen Cocoon Tower, Tokyo",
-        "answer": 204,
-        "fun_fact": "It is a fashion school, not an office building, and its cocoon-like lattice structure was chosen by public vote over two other designs."
+        "file": "height/One_World_Trade_Center_NewYprk.jpg",
+        "subject": "One World Trade Center, New York",
+        "answer": 541,
+        "fun_fact": "Its spire brings the total height to exactly 1,776 feet, a deliberate reference to the year of American independence."
       },
       {
         "file": "height/ryugyong-hotel-traffic-officer-pyongyang.jpg",
@@ -786,21 +152,111 @@
         "fun_fact": "Construction began in 1987 but the building has never opened to guests despite over 30 years of intermittent work."
       },
       {
-        "file": "height/petronas_twin_towers.jpeg",
-        "subject": "Petronas Twin Towers, Kuala Lumpur",
-        "answer": 452,
-        "fun_fact": "Each tower was built by a different construction company from a different country, and they had to adjust when the towers were found to be slightly off-center."
-      },
-      {
-        "file": "height/One_World_Trade_Center_NewYprk.jpg",
-        "subject": "One World Trade Center, New York",
-        "answer": 541,
-        "fun_fact": "Its spire brings the total height to exactly 1,776 feet, a deliberate reference to the year of American independence."
+        "file": "height/The-Gherkin_london.jpg",
+        "subject": "The Gherkin, London",
+        "answer": 180,
+        "fun_fact": "During construction, a 1,600-year-old Roman teenage girl's skeleton was unearthed on the site."
       }
     ]
   },
   {
-    "date": "2026-08-02",
+    "date": "2026-07-13",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/schloss_neuschwansteig.jpg",
+        "subject": "Neuschwanstein Castle, Bavaria",
+        "answer": 1886,
+        "fun_fact": "Never finished, yet inspired Disney's Sleeping Beauty Castle and is now visited by 1.4 million people yearly."
+      },
+      {
+        "file": "age/1946-vespa-98.jpg",
+        "subject": "Vespa 98, Italy",
+        "answer": 1946,
+        "fun_fact": "Piaggio pivoted from building warplanes to scooters after their aircraft factory was bombed in WWII."
+      },
+      {
+        "file": "age/Pokemon-Red-Edition.jpg",
+        "subject": "Pokemon Red, Nintendo",
+        "answer": 1996,
+        "fun_fact": "Development took six years and nearly bankrupted Game Freak, with staff working without pay."
+      },
+      {
+        "file": "age_and_height/St_Basils_Cathedral.jpg",
+        "subject": "St. Basil's Cathedral, Moscow",
+        "answer": 1561,
+        "fun_fact": "Commissioned by Ivan the Terrible to celebrate the capture of Kazan; legend says he blinded the architects so they could never build anything more beautiful."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-14",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/airbus-a380-1.jpg",
+        "subject": "Airbus A380",
+        "answer": 853,
+        "fun_fact": "In an all-economy configuration it can seat 853 passengers, making it the largest commercial passenger aircraft ever built."
+      },
+      {
+        "file": "capacity/Arthur_Ashe_Stadium.jpg",
+        "subject": "Arthur Ashe Stadium, New York",
+        "answer": 23771,
+        "fun_fact": "The largest tennis venue in the world; its retractable roof weighs 7,000 tonnes and can close in under 7 minutes."
+      },
+      {
+        "file": "capacity_and_height/AIDAcosma.jpg",
+        "subject": "AIDACosma",
+        "answer": 5228,
+        "fun_fact": "Features a beach club with a retractable glass roof that opens over the rear pool deck."
+      },
+      {
+        "file": "capacity/beaver_stadium.jpeg",
+        "subject": "Beaver Stadium, Pennsylvania",
+        "answer": 106572,
+        "fun_fact": "The original structure was disassembled in 1959, moved one mile, and reassembled with 16,000 additional seats to form the current stadium."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-15",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
+        "subject": "Lakhta Centre, St. Petersburg",
+        "answer": 2019,
+        "fun_fact": "Built on a reclaimed waterfront site, its twisted glass facade rotates 90 degrees from base to top."
+      },
+      {
+        "file": "age/Enigma.jpg",
+        "subject": "Enigma Machine",
+        "answer": 1923,
+        "fun_fact": "Originally sold for commercial use; the military version's code was cracked by Polish mathematicians before Alan Turing's team at Bletchley Park."
+      },
+      {
+        "file": "age/super-nintendo.jpg",
+        "subject": "Super Nintendo",
+        "answer": 1990,
+        "fun_fact": "Its custom Sony-designed sound chip could handle eight simultaneous audio channels, revolutionary for the era."
+      },
+      {
+        "file": "age_and_height/moscow_state_university.jpg",
+        "subject": "Moscow State University",
+        "answer": 1953,
+        "fun_fact": "One of the 'Seven Sisters' skyscrapers ordered by Stalin; prisoners from the Gulag were used in its construction."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-16",
     "category": "how_tall",
     "question": "How tall is this structure?",
     "unit": "meters",
@@ -812,10 +268,132 @@
         "fun_fact": "CNN ranked it among the world's most unconventional skyscrapers, beating many sleek supertall buildings."
       },
       {
-        "file": "height/The-Gherkin_london.jpg",
-        "subject": "The Gherkin, London",
-        "answer": 180,
-        "fun_fact": "During construction, a 1,600-year-old Roman teenage girl's skeleton was unearthed on the site."
+        "file": "capacity/coloseum_rome.jpg",
+        "subject": "Colosseum, Rome",
+        "answer": 48,
+        "fun_fact": "Its outer wall originally stood four stories tall; earthquakes and stone robbers reduced parts of it over the centuries."
+      },
+      {
+        "file": "height/Taipei_101.jpg",
+        "subject": "Taipei 101, Taipei",
+        "answer": 508,
+        "fun_fact": "Its 660-ton tuned mass damper became so popular that it inspired a mascot character franchise called Damper Baby."
+      },
+      {
+        "file": "height/Tokyo_Mode_Gakuen_Cocoon_Tower.jpg",
+        "subject": "Mode Gakuen Cocoon Tower, Tokyo",
+        "answer": 204,
+        "fun_fact": "It is a fashion school, not an office building, and its cocoon-like lattice structure was chosen by public vote over two other designs."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-17",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/super_mario_world.png",
+        "subject": "Super Mario World, Nintendo",
+        "answer": 1990,
+        "fun_fact": "Yoshi was originally conceived for the NES but required the SNES hardware to be realized."
+      },
+      {
+        "file": "age/vw-kaefer-1953.jpg",
+        "subject": "Volkswagen Beetle",
+        "answer": 1938,
+        "fun_fact": "Over 21 million were produced, making it the longest-running and most-manufactured car on a single platform in history."
+      },
+      {
+        "file": "age/Dark_Side_of_the_Moon.png",
+        "subject": "The Dark Side of the Moon, Pink Floyd",
+        "answer": 1973,
+        "fun_fact": "It spent a record 937 total weeks on the Billboard 200 chart over multiple decades."
+      },
+      {
+        "file": "capacity_and_age/metlife.jpg",
+        "subject": "MetLife Stadium, New Jersey",
+        "answer": 2010,
+        "fun_fact": "Cost $1.6 billion to build with no public funding, making it one of the most expensive stadiums ever built entirely with private money."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-18",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity_and_height/Queen_Mary_2.jpg",
+        "subject": "Queen Mary 2",
+        "answer": 2691,
+        "fun_fact": "Has its own planetarium, the only one at sea, housed in a dedicated auditorium called Illuminations."
+      },
+      {
+        "file": "capacity/michigan_stadium.jpeg",
+        "subject": "Michigan Stadium, Ann Arbor",
+        "answer": 107601,
+        "fun_fact": "Known as 'The Big House', it was deliberately built below ground level to reduce visible exterior mass and construction costs."
+      },
+      {
+        "file": "capacity/wimbeldon_center_court.jpg",
+        "subject": "Wimbledon Centre Court, London",
+        "answer": 14979,
+        "fun_fact": "The grass is cut to exactly 8 millimeters during the tournament and the roof can close in about 10 minutes."
+      },
+      {
+        "file": "capacity/TGV_Duplex.jpg",
+        "subject": "TGV Duplex, France",
+        "answer": 510,
+        "fun_fact": "Its double-decker design nearly doubles capacity compared to single-level TGVs while maintaining speeds over 300 km/h."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-19",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Dmc_de_lorean_1.jpg",
+        "subject": "DeLorean DMC-12",
+        "answer": 1981,
+        "fun_fact": "Only about 9,000 were ever made before the company went bankrupt; the unpainted stainless steel body means no two panels look exactly alike."
+      },
+      {
+        "file": "age/playstation_1.jpg",
+        "subject": "PlayStation 1, Sony",
+        "answer": 1994,
+        "fun_fact": "It originated from a failed Nintendo partnership, turning Sony from ally to gaming's fiercest rival."
+      },
+      {
+        "file": "capacity/bejing_stadium.jpg",
+        "subject": "Beijing National Stadium",
+        "answer": 2008,
+        "fun_fact": "Known as the Bird's Nest, it used 42,000 tonnes of steel but no internal columns — the interlocking structure supports itself."
+      },
+      {
+        "file": "age/beatles_Abbey_Road.jpg",
+        "subject": "Abbey Road, The Beatles",
+        "answer": 1969,
+        "fun_fact": "It was the last album the Beatles recorded together, though Let It Be was released later."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-20",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "height/shanghai_World_Financial_Center.jpeg",
+        "subject": "Shanghai World Financial Center, Shanghai",
+        "answer": 492,
+        "fun_fact": "Its top aperture was originally circular but was redesigned because citizens thought it resembled Japan's rising sun flag."
       },
       {
         "file": "height/Marina_Bay_Sands.jpg",
@@ -824,10 +402,432 @@
         "fun_fact": "Over 500 adjustable jack legs beneath the rooftop pool compensate for the towers gradually settling into the earth."
       },
       {
+        "file": "height/the_shard_london.jpg",
+        "subject": "The Shard, London",
+        "answer": 310,
+        "fun_fact": "During construction, a fox named Romeo was found living near the top, surviving on builders' food scraps."
+      },
+      {
+        "file": "age_and_height/St_Basils_Cathedral.jpg",
+        "subject": "St. Basil's Cathedral, Moscow",
+        "answer": 65,
+        "fun_fact": "Each of its nine onion domes is unique in shape, size, and color — no two are alike."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/ping_pong_original_video_game.png",
+        "subject": "Pong, Atari",
+        "answer": 1972,
+        "fun_fact": "The first arcade prototype broke because its coin mechanism jammed from too many quarters."
+      },
+      {
+        "file": "age/minecraft.jpg",
+        "subject": "Minecraft, Mojang",
+        "answer": 2009,
+        "fun_fact": "Notch created the first playable version in just six days during May 2009."
+      },
+      {
+        "file": "age/super_mario_bros.jpg",
+        "subject": "Super Mario Bros, Nintendo",
+        "answer": 1985,
+        "fun_fact": "Clouds and bushes in the game are the same graphic, just recolored green or white."
+      },
+      {
+        "file": "age/dancing_house_prague.jpg",
+        "subject": "Dancing House, Prague",
+        "answer": 1996,
+        "fun_fact": "Designed by Frank Gehry and Vlado Milunic, it's nicknamed 'Fred and Ginger' after the famous dance duo."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-22",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/the_sphere_las_vegas.jpeg",
+        "subject": "The Sphere, Las Vegas",
+        "answer": 18600,
+        "fun_fact": "Its interior LED screen is the largest in the world, covering 580,000 square feet and wrapping around the audience for an immersive experience."
+      },
+      {
+        "file": "capacity/London_Wembley.jpg",
+        "subject": "Wembley Stadium, London",
+        "answer": 90000,
+        "fun_fact": "Its iconic arch spans 317 meters and supports the entire north roof — no internal columns block any spectator's view."
+      },
+      {
+        "file": "capacity/Guangzhou_Opera_House.jpg",
+        "subject": "Guangzhou Opera House",
+        "answer": 1804,
+        "fun_fact": "Designed by Zaha Hadid, its twin-boulder shape was inspired by pebbles in the Pearl River, smoothed by centuries of flowing water."
+      },
+      {
+        "file": "capacity_and_height/Oasis_of_the_Seas.jpg",
+        "subject": "Oasis of the Seas",
+        "answer": 6296,
+        "fun_fact": "When launched in 2009, it was so large that no existing dry dock could service it — one had to be specially modified."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/metal_gear_solid.jpg",
+        "subject": "Metal Gear Solid, Konami",
+        "answer": 1998,
+        "fun_fact": "One boss fight required players to plug the controller into port 2 to win."
+      },
+      {
+        "file": "age/Lamborghini_Countach.png",
+        "subject": "Lamborghini Countach",
+        "answer": 1974,
+        "fun_fact": "Its name comes from a Piedmontese exclamation of astonishment; the rear visibility was so poor that drivers had to open the door to reverse."
+      },
+      {
+        "file": "age/first_gameboy.jpeg",
+        "subject": "Nintendo Game Boy",
+        "answer": 1989,
+        "fun_fact": "Its low-resolution green screen was chosen over color to extend battery life to over 30 hours on 4 AA batteries."
+      },
+      {
+        "file": "age/original-iphone-2007.jpg",
+        "subject": "Apple iPhone",
+        "answer": 2007,
+        "fun_fact": "The original had no App Store, no copy-paste, and no GPS — all were added in later updates. It still sold 6 million units."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-24",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "capacity_and_height/AIDAcosma.jpg",
+        "subject": "AIDACosma",
+        "answer": 67,
+        "fun_fact": "One of the first cruise ships powered by liquefied natural gas, reducing particulate emissions by nearly 100%."
+      },
+      {
+        "file": "age_and_height/Lakhta_Centre_st_petersburg.jpg",
+        "subject": "Lakhta Centre, St. Petersburg",
+        "answer": 462,
+        "fun_fact": "The tallest building in Europe and the northernmost skyscraper over 100 meters."
+      },
+      {
+        "file": "height/beijing_cctv_tower.jpg",
+        "subject": "CCTV Headquarters, Beijing",
+        "answer": 234,
+        "fun_fact": "Its unusual looped shape earned it the nickname 'Big Pants' among locals."
+      },
+      {
+        "file": "age_and_height/eiffel_paris.jpg",
+        "subject": "Eiffel Tower, Paris",
+        "answer": 330,
+        "fun_fact": "Built in 1889, it was the world's tallest structure for 41 years until the Chrysler Building surpassed it."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-25",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age_and_height/elephant_tower_bangkok.jpeg",
+        "subject": "Elephant Tower, Bangkok",
+        "answer": 1997,
+        "fun_fact": "The 32-story building incorporates functional rooms inside the elephant's eyes and tusks."
+      },
+      {
+        "file": "age/nokia_1100.png",
+        "subject": "Nokia 1100",
+        "answer": 2003,
+        "fun_fact": "With over 250 million units sold, it remains the best-selling single handset model in history."
+      },
+      {
+        "file": "age/nirvana_nevermind.jpg",
+        "subject": "Nevermind, Nirvana",
+        "answer": 1991,
+        "fun_fact": "It unexpectedly dethroned Michael Jackson's Dangerous from the Billboard number-one spot in January 1992."
+      },
+      {
+        "file": "age/apple_II.jpg",
+        "subject": "Apple II",
+        "answer": 1977,
+        "fun_fact": "One of the first mass-produced personal computers; its open architecture let hobbyists add expansion cards, creating an entire accessory ecosystem."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-26",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity_and_age/metlife.jpg",
+        "subject": "MetLife Stadium, New Jersey",
+        "answer": 82500,
+        "fun_fact": "Home to both the NY Giants and NY Jets — the only NFL stadium shared by two teams."
+      },
+      {
+        "file": "capacity/sydney_opera.jpg",
+        "subject": "Sydney Opera House",
+        "answer": 5738,
+        "fun_fact": "Its iconic roof shells are covered with over 1 million tiles, self-cleaning thanks to their smooth Swedish-made ceramic glaze."
+      },
+      {
+        "file": "capacity/elbphilharmonie.jpg",
+        "subject": "Elbphilharmonie, Hamburg",
+        "answer": 2100,
+        "fun_fact": "The Grand Hall's vineyard-style seating means no audience member is more than 30 meters from the conductor."
+      },
+      {
+        "file": "capacity/rupp_arena_kentucky.jpeg",
+        "subject": "Rupp Arena, Kentucky",
+        "answer": 20500,
+        "fun_fact": "It once recorded a massive crowd roar of 126.4 decibels, hitting a temporary Guinness World Record for the loudest indoor sports crowd."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-27",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/need_for_speed_underground.jpg",
+        "subject": "Need for Speed: Underground, EA",
+        "answer": 2003,
+        "fun_fact": "It was the first Need for Speed game to completely remove police chases from gameplay."
+      },
+      {
+        "file": "age/c64.jpg",
+        "subject": "Commodore 64",
+        "answer": 1982,
+        "fun_fact": "Holds the Guinness record for best-selling single computer model with an estimated 12.5 to 17 million units sold."
+      },
+      {
+        "file": "age/super_mario_64.jpg",
+        "subject": "Super Mario 64, Nintendo",
+        "answer": 1996,
+        "fun_fact": "Shigeru Miyamoto spent months just perfecting Mario's movement before any levels were designed."
+      },
+      {
+        "file": "age/pacman.jpg",
+        "subject": "Pac-Man, Namco",
+        "answer": 1980,
+        "fun_fact": "Creator Toru Iwatani was inspired by looking at a pizza with one slice removed."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-28",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "height/Burj_al_Arab.jpg",
+        "subject": "Burj Al Arab, Dubai",
+        "answer": 321,
+        "fun_fact": "Its site was called 'Chicago Beach,' named after the Chicago Bridge and Iron Company that once welded oil tanks there."
+      },
+      {
         "file": "height/Bahrain_World_Trade_Center.jpg",
         "subject": "Bahrain World Trade Center, Manama",
         "answer": 240,
         "fun_fact": "Its sail-shaped towers funnel wind to three turbines that supply up to 15% of the building's electricity."
+      },
+      {
+        "file": "age_and_height/Taj_Mahal.jpg",
+        "subject": "Taj Mahal, Agra",
+        "answer": 73,
+        "fun_fact": "Its central dome rises to 73 meters, surrounded by four minarets that lean slightly outward to protect the tomb if they fall."
+      },
+      {
+        "file": "height/steinway_tower_new_york.jpeg",
+        "subject": "Steinway Tower, New York",
+        "answer": 435,
+        "fun_fact": "The most slender skyscraper in the world with a width-to-height ratio of 1:24."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-29",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/nokia_3210.jpg",
+        "subject": "Nokia 3210",
+        "answer": 1999,
+        "fun_fact": "It was the first Nokia phone with a fully internal antenna and sold over 160 million units."
+      },
+      {
+        "file": "capacity_and_age/walt-disney-concert-hall-01.jpg",
+        "subject": "Walt Disney Concert Hall, Los Angeles",
+        "answer": 2003,
+        "fun_fact": "Its reflective steel panels once focused sunlight so intensely that nearby sidewalks reached dangerous temperatures, requiring some panels to be sanded down."
+      },
+      {
+        "file": "age/first_ipod.jpeg",
+        "subject": "Apple iPod",
+        "answer": 2001,
+        "fun_fact": "Steve Jobs announced it with '1,000 songs in your pocket'; its scroll wheel was inspired by a Bang & Olufsen telephone."
+      },
+      {
+        "file": "age/Tamagotchi.jpeg",
+        "subject": "Tamagotchi",
+        "answer": 1996,
+        "fun_fact": "Created by Aki Maita at Bandai, it sold 40 million units in its first year and was briefly banned in schools worldwide."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/Al-Janoub-Stadium-1.jpg",
+        "subject": "Al Janoub Stadium, Qatar",
+        "answer": 40000,
+        "fun_fact": "Designed by Zaha Hadid, its retractable roof resembles the sails of a traditional dhow boat."
+      },
+      {
+        "file": "capacity/NSW_Tennis_Centre.jpg",
+        "subject": "Ken Rosewall Arena, Sydney",
+        "answer": 10500,
+        "fun_fact": "Named after Australian tennis legend Ken Rosewall, it hosted tennis and volleyball events during the 2000 Sydney Olympics."
+      },
+      {
+        "file": "capacity/bejing_stadium.jpg",
+        "subject": "Beijing National Stadium",
+        "answer": 80000,
+        "fun_fact": "After the 2008 Olympics its capacity was reduced from 91,000 by removing temporary seating and adding luxury boxes."
+      },
+      {
+        "file": "capacity/Yankee_Stadium.jpg",
+        "subject": "Yankee Stadium, New York",
+        "answer": 46537,
+        "fun_fact": "The original 1923 stadium was nicknamed 'The House That Ruth Built' after Babe Ruth; this new stadium opened in 2009 across the street."
+      }
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "height/petronas_twin_towers.jpeg",
+        "subject": "Petronas Twin Towers, Kuala Lumpur",
+        "answer": 452,
+        "fun_fact": "Each tower was built by a different construction company from a different country, and they had to adjust when the towers were found to be slightly off-center."
+      },
+      {
+        "file": "capacity_and_height/icon_of_the_sea.jpeg",
+        "subject": "Icon of the Seas",
+        "answer": 72,
+        "fun_fact": "The world's largest cruise ship, it has the largest waterpark at sea with six waterslides and a swim-up bar."
+      },
+      {
+        "file": "capacity/London_Wembley.jpg",
+        "subject": "Wembley Stadium, London",
+        "answer": 133,
+        "fun_fact": "Its steel lattice arch is the longest single-span roof structure in the world and is visible across London's skyline."
+      },
+      {
+        "file": "age_and_height/moscow_state_university.jpg",
+        "subject": "Moscow State University",
+        "answer": 240,
+        "fun_fact": "The main tower has 36 floors and is topped by a 57-meter spire crowned with a star."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/IGA_Stadium.jpeg",
+        "subject": "Stade IGA, Montreal",
+        "answer": 11812,
+        "fun_fact": "Home to the Canadian Open, one of the oldest tennis tournaments in the world, first held in 1881."
+      },
+      {
+        "file": "capacity/allianz_arena.jpg",
+        "subject": "Allianz Arena, Munich",
+        "answer": 75024,
+        "fun_fact": "Home to FC Bayern Munich, it can display the team colors across its entire exterior with 300,000 LEDs."
+      },
+      {
+        "file": "capacity/mercedes_benz_stadium_atlanta.jpg",
+        "subject": "Mercedes-Benz Stadium, Atlanta",
+        "answer": 71000,
+        "fun_fact": "Features a retractable roof inspired by the Roman Pantheon's oculus, made of eight translucent petals."
+      },
+      {
+        "file": "capacity/Estadio_Santiago_Bernabeu.jpg",
+        "subject": "Santiago Bernabeu, Madrid",
+        "answer": 78297,
+        "fun_fact": "Its 2024 renovation added a retractable pitch that slides under the stands, allowing the stadium to host concerts without damaging the grass."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-06",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "capacity/bejing_stadium.jpg",
+        "subject": "Beijing National Stadium",
+        "answer": 69,
+        "fun_fact": "The interwoven steel beams were inspired by Chinese ceramics and give the structure its 'Bird's Nest' nickname."
+      },
+      {
+        "file": "height/Bitexco_Financial_Tower.jpeg",
+        "subject": "Bitexco Financial Tower, Ho Chi Minh City",
+        "answer": 262,
+        "fun_fact": "Its 250-ton helipad was manufactured in South Korea and required road closures to hoist into place."
+      },
+      {
+        "file": "height/empire_state_building.jpg",
+        "subject": "Empire State Building, New York",
+        "answer": 381,
+        "fun_fact": "It has its own ZIP code (10118), one of only 43 New York City buildings with their own postal code."
+      },
+      {
+        "file": "height/bank_of_china_hongkong.jpg",
+        "subject": "Bank of China, Hong Kong",
+        "answer": 367,
+        "fun_fact": "Its triangular design was inspired by bamboo shoots, a symbol of growth and prosperity in Chinese culture."
       }
     ]
   }
