@@ -352,6 +352,10 @@
       scoreValue.classList.add('low');
     }
 
+    if (score === 1000) {
+      launchConfetti();
+    }
+
     let answerText = '';
     if (currentRound.category === 'how_old') {
       answerText = photo.subject + ' is from ' + answer + '. You guessed ' + guess + '.';
@@ -705,6 +709,68 @@
       document.querySelector('.review-mode').classList.add('hidden');
       document.querySelector('.no-round').classList.remove('hidden');
     }
+  }
+
+  // --- Confetti ---
+
+  function launchConfetti() {
+    var canvas = document.getElementById('confetti-canvas');
+    var ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    var particles = [];
+    var colors = ['#e94560', '#4ecdc4', '#ffe66d', '#ff6b81', '#95e1d3', '#ffffff'];
+
+    for (var i = 0; i < 150; i++) {
+      particles.push({
+        x: canvas.width / 2 + (Math.random() - 0.5) * 200,
+        y: canvas.height / 2,
+        vx: (Math.random() - 0.5) * 15,
+        vy: Math.random() * -18 - 5,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        size: Math.random() * 8 + 4,
+        rotation: Math.random() * 360,
+        rotationSpeed: (Math.random() - 0.5) * 10,
+        gravity: 0.4 + Math.random() * 0.2,
+        opacity: 1
+      });
+    }
+
+    var startTime = performance.now();
+    var duration = 2500;
+
+    function animate(now) {
+      var elapsed = now - startTime;
+      if (elapsed > duration) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        return;
+      }
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        p.x += p.vx;
+        p.vy += p.gravity;
+        p.y += p.vy;
+        p.rotation += p.rotationSpeed;
+        p.vx *= 0.98;
+        p.opacity = Math.max(0, 1 - elapsed / duration);
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation * Math.PI / 180);
+        ctx.globalAlpha = p.opacity;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+        ctx.restore();
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
   }
 
   // --- Toast ---
