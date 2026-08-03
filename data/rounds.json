@@ -370,7 +370,7 @@
         "fun_fact": "Long dismissed as a copy, the painting was authenticated as a genuine Leonardo da Vinci and sold in 2017 for about 450 million dollars, the highest price ever paid for an artwork at auction."
       },
       {
-        "file": "age/Nighthawksat#22_.jpeg",
+        "file": "age/Nighthawksat.jpeg",
         "subject": "Nighthawks, Edward Hopper",
         "answer": 1942,
         "fun_fact": "Hopper painted it shortly after the attack on Pearl Harbor, and the diner depicted has no visible door, reinforcing the sense of isolation between the figures and the outside world."
@@ -1196,6 +1196,12 @@
         "fun_fact": "The film popularized 'bullet time,' a visual effect achieved by arranging dozens of still cameras around the actors and firing them in sequence to simulate a moving camera around frozen action."
       },
       {
+        "file": "age/c64.jpg",
+        "subject": "Commodore 64",
+        "answer": 1982,
+        "fun_fact": "Holds the Guinness record for best-selling single computer model with an estimated 12.5 to 17 million units sold."
+      },
+      {
         "file": "age/The_Godfather.jpg",
         "subject": "The Godfather",
         "answer": 1972,
@@ -1206,12 +1212,6 @@
         "subject": "Nevermind, Nirvana",
         "answer": 1991,
         "fun_fact": "It unexpectedly dethroned Michael Jackson's Dangerous from the Billboard number-one spot in January 1992."
-      },
-      {
-        "file": "age/Dmc_de_lorean_1.jpg",
-        "subject": "DeLorean DMC-12",
-        "answer": 1981,
-        "fun_fact": "Only about 9,000 were ever made before the company went bankrupt; the unpainted stainless steel body means no two panels look exactly alike."
       }
     ]
   },
@@ -1228,10 +1228,10 @@
         "fun_fact": "Director Tony Kaye was so unhappy with the studio-approved final cut that he unsuccessfully tried to have his name removed and replaced with the pseudonym 'Humpty Dumpty'."
       },
       {
-        "file": "age/c64.jpg",
-        "subject": "Commodore 64",
-        "answer": 1982,
-        "fun_fact": "Holds the Guinness record for best-selling single computer model with an estimated 12.5 to 17 million units sold."
+        "file": "age/Dmc_de_lorean_1.jpg",
+        "subject": "DeLorean DMC-12",
+        "answer": 1981,
+        "fun_fact": "Only about 9,000 were ever made before the company went bankrupt; the unpainted stainless steel body means no two panels look exactly alike."
       },
       {
         "file": "age/playstation_1.jpg",
@@ -1292,16 +1292,16 @@
         "fun_fact": "It was the first entirely computer-animated feature film ever released, produced using roughly 800,000 machine hours of rendering time across Pixar's render farm."
       },
       {
+        "file": "age/nintendo64.jpg",
+        "subject": "Nintendo 64",
+        "answer": 1996,
+        "fun_fact": "One of the last major consoles to use cartridges instead of CDs; this limited game sizes but eliminated load times entirely."
+      },
+      {
         "file": "age/keith_haring_dancing_figures.jpg",
         "subject": "Keith Haring's Dancing Figures",
         "answer": 1982,
         "fun_fact": "Haring's radiant, dancing figures grew out of the chalk drawings he made in New York City subway stations, often filling blank black advertising panels before they could legally be reused."
-      },
-      {
-        "file": "age/mao-andy_warhole.jpg",
-        "subject": "Andy Warhol's Mao",
-        "answer": 1972,
-        "fun_fact": "Warhol created the series after U.S. President Nixon's historic visit to China, applying his celebrity-portrait silkscreen technique to the era's most reproduced political image."
       },
       {
         "file": "age_and_height/elephant_tower_bangkok.jpeg",
@@ -1324,10 +1324,10 @@
         "fun_fact": "Shigeru Miyamoto spent months just perfecting Mario's movement before any levels were designed."
       },
       {
-        "file": "age/nintendo64.jpg",
-        "subject": "Nintendo 64",
-        "answer": 1996,
-        "fun_fact": "One of the last major consoles to use cartridges instead of CDs; this limited game sizes but eliminated load times entirely."
+        "file": "age/mao-andy_warhole.jpg",
+        "subject": "Andy Warhol's Mao",
+        "answer": 1972,
+        "fun_fact": "Warhol created the series after U.S. President Nixon's historic visit to China, applying his celebrity-portrait silkscreen technique to the era's most reproduced political image."
       },
       {
         "file": "age/titanic_movie.jpeg",
