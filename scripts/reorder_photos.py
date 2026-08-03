@@ -8,6 +8,7 @@ Reorder photos in data/rounds.json while respecting:
 
 import argparse
 import json
+import math
 import random
 import sys
 from datetime import datetime
@@ -84,6 +85,29 @@ def answer_diversity_score(photos, category):
         return total_ratio * 10 + min_ratio * 5
 
 
+def round_value(photos, category):
+    """Compute a representative value for a round used by global mixing."""
+    answers = [p["answer"] for p in photos]
+    if category == "how_many":
+        return math.log(sum(answers) / len(answers) + 1)
+    return sum(answers) / len(answers)
+
+
+def global_mix_bonus(photos, category, last_center):
+    """Prefer combos that move the category average away from the previous same-category round."""
+    if last_center is None:
+        return 0
+    center = round_value(photos, category)
+    diff = abs(center - last_center)
+    if category == "how_old":
+        return min(diff, 100) * 6
+    if category == "how_tall":
+        return min(diff, 200) * 2
+    if category == "how_many":
+        return min(diff, 2.0) * 80
+    return diff
+
+
 def collect_photo_pool(rounds):
     """
     Collect all unique photos per category, tracking how many times each photo
@@ -128,6 +152,7 @@ def reorder_photos(rounds, min_gap_days):
 
         # Track when each photo was last used (across all categories)
         last_used = {}
+        last_center_by_cat = {}
         result = []
         failed = False
 
@@ -152,12 +177,14 @@ def reorder_photos(rounds, min_gap_days):
             best_combo = None
             best_score = -1
 
+            last_center = last_center_by_cat.get(category)
             if len(available) <= 15:
                 for combo in combinations(available, 4):
                     combo = list(combo)
                     if not is_diverse_enough(combo, category):
                         continue
                     score = answer_diversity_score(combo, category)
+                    score += global_mix_bonus(combo, category, last_center)
                     if score > best_score:
                         best_score = score
                         best_combo = combo
@@ -170,6 +197,7 @@ def reorder_photos(rounds, min_gap_days):
                     if not is_diverse_enough(combo, category):
                         continue
                     score = answer_diversity_score(combo, category)
+                    score += global_mix_bonus(combo, category, last_center)
                     if score > best_score:
                         best_score = score
                         best_combo = combo
@@ -206,6 +234,8 @@ def reorder_photos(rounds, min_gap_days):
                 last_used[key] = date_str
                 if remaining[category].get(key, 0) > 0:
                     remaining[category][key] -= 1
+
+            last_center_by_cat[category] = round_value(best_combo, category)
 
             # Build round
             original = next(r for r in rounds if r["date"] == date_str)
