@@ -511,7 +511,7 @@
     });
 
     document.querySelector('.game-round-counter').textContent =
-      (currentPhotoIndex + 1) + '/4';
+      Math.min(currentPhotoIndex + 1, 4) + '/4';
 
     var runningTotal = roundScores.reduce(function (a, b) { return a + b; }, 0);
     document.querySelector('.game-running-score').textContent = runningTotal + ' pts';
@@ -810,6 +810,20 @@
         btn.textContent = '✓ Email copied to clipboard!';
         setTimeout(function () { btn.textContent = original; }, 2000);
       });
+    });
+    var confirmOverlay = document.getElementById('confirm-reset-overlay');
+    document.getElementById('welcome-reset').addEventListener('click', function () {
+      confirmOverlay.classList.remove('hidden');
+    });
+    document.getElementById('confirm-reset-cancel').addEventListener('click', function () {
+      confirmOverlay.classList.add('hidden');
+    });
+    document.getElementById('confirm-reset-confirm').addEventListener('click', function () {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    });
+    confirmOverlay.addEventListener('click', function (e) {
+      if (e.target === confirmOverlay) confirmOverlay.classList.add('hidden');
     });
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) dismiss();

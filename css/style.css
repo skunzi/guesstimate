@@ -355,6 +355,15 @@ body.modal-open {
   background: var(--color-border);
 }
 
+.btn-danger {
+  background: #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #a71d2a;
+}
+
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -964,6 +973,76 @@ body.modal-open {
   opacity: 0.7;
   background: transparent !important;
   border: none !important;
+}
+
+.welcome-reset {
+  margin-top: 16px;
+  padding: 6px 0;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, color 0.2s;
+  width: 100%;
+  text-align: center;
+}
+
+.welcome-reset:hover {
+  opacity: 1;
+  color: #dc3545;
+}
+
+/* Reset Confirmation Modal */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.15s ease;
+}
+
+.confirm-overlay.hidden {
+  display: none;
+}
+
+.confirm-dialog {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  max-width: 340px;
+  width: 90%;
+  text-align: center;
+}
+
+.confirm-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+.confirm-message {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 20px;
+  line-height: 1.4;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-actions .btn {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 0.9rem;
 }
 
 @keyframes fadeIn {

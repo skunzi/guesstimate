@@ -205,6 +205,19 @@
       <div class="welcome-footer">
         <button class="btn btn-primary welcome-got-it" id="welcome-got-it">Got it!</button>
         <button class="btn btn-secondary welcome-feedback" id="welcome-feedback">Feedback / Report a Bug</button>
+        <button class="welcome-reset" id="welcome-reset">Reset All Progress</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reset Confirmation Modal -->
+  <div class="confirm-overlay hidden" id="confirm-reset-overlay">
+    <div class="confirm-dialog">
+      <p class="confirm-title">Reset All Progress</p>
+      <p class="confirm-message">This will permanently delete all your scores and progress. This cannot be undone.</p>
+      <div class="confirm-actions">
+        <button class="btn btn-secondary" id="confirm-reset-cancel">Cancel</button>
+        <button class="btn btn-danger" id="confirm-reset-confirm">Delete Everything</button>
       </div>
     </div>
   </div>
