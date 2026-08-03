@@ -2,6 +2,7 @@
 """Validate data/rounds.json schema for pre-commit."""
 
 import json
+import os
 import re
 import sys
 
@@ -9,6 +10,7 @@ VALID_CATEGORIES = {"how_many", "how_tall", "how_old"}
 VALID_UNITS = {"people", "meters", "year"}
 
 GAME_JS = "js/game.js"
+MEDIA_DIR = "media"
 
 
 def parse_slider_ranges():
@@ -110,6 +112,10 @@ def validate():
                         )
                 if "file" in p and not isinstance(p["file"], str):
                     errors.append(f"{pp}: file must be a string")
+                elif "file" in p:
+                    path = os.path.join(MEDIA_DIR, p["file"])
+                    if not os.path.isfile(path):
+                        errors.append(f'{pp}: media file "{path}" does not exist')
 
     if errors:
         report(errors)

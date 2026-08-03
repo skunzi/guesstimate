@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROUNDS_PATH = Path(__file__).parent.parent / "data" / "rounds.json"
 START_DATE = date(2026, 7, 8)
-CATEGORY_PATTERN = ["how_tall", "how_old", "how_many", "how_old"]
+CATEGORY_PATTERN = ["how_tall", "how_old", "how_old", "how_many", "how_old", "how_old"]
 MIN_PHOTO_SEPARATION_DAYS = 7
 
 
