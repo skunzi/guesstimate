@@ -2,5 +2,5 @@
 
 run in analytics folder
 ```
-wrangler d1 execute guessit-analytics --command "SELECT * FROM events" --json > events.json
+wrangler d1 execute guessit-analytics --command "SELECT * FROM events" --json --remote > events.json
 ```

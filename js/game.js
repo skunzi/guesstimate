@@ -872,15 +872,21 @@
       if (e.target === confirmOverlay) confirmOverlay.classList.add('hidden');
     });
     overlay.addEventListener('click', function (e) {
-      if (e.target === overlay) dismiss();
+      if (e.target === overlay && localStorage.getItem('guessit_welcomed')) dismiss();
     });
     document.getElementById('help-btn').addEventListener('click', function () {
       var analyticsSection = document.querySelector('.welcome-analytics');
       if (analyticsSection) analyticsSection.classList.add('hidden');
+      document.getElementById('welcome-close').classList.remove('hidden');
+      document.getElementById('welcome-feedback').classList.remove('hidden');
+      document.getElementById('welcome-reset').classList.remove('hidden');
       show();
     });
 
     if (!localStorage.getItem('guessit_welcomed')) {
+      document.getElementById('welcome-close').classList.add('hidden');
+      document.getElementById('welcome-feedback').classList.add('hidden');
+      document.getElementById('welcome-reset').classList.add('hidden');
       show();
     }
   }
