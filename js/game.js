@@ -826,6 +826,14 @@
     function dismiss() {
       overlay.classList.add('hidden');
       document.body.classList.remove('modal-open');
+      if (!localStorage.getItem('guessit_welcomed') && window.GuessitAnalytics) {
+        var checkbox = document.getElementById('welcome-analytics-checkbox');
+        if (checkbox.checked) {
+          window.GuessitAnalytics.grantConsent();
+        } else {
+          window.GuessitAnalytics.revokeConsent();
+        }
+      }
       localStorage.setItem('guessit_welcomed', 'true');
     }
 
@@ -866,33 +874,21 @@
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) dismiss();
     });
-    document.getElementById('help-btn').addEventListener('click', show);
+    document.getElementById('help-btn').addEventListener('click', function () {
+      var analyticsSection = document.querySelector('.welcome-analytics');
+      if (analyticsSection) analyticsSection.classList.add('hidden');
+      show();
+    });
 
     if (!localStorage.getItem('guessit_welcomed')) {
       show();
     }
   }
 
-  function setupConsentBanner() {
-    var banner = document.getElementById('consent-banner');
-    if (!window.GuessitAnalytics || window.GuessitAnalytics.hasConsent() || localStorage.getItem('guessit_analytics_consent') === 'false') {
-      return;
-    }
-    banner.classList.remove('hidden');
-    document.getElementById('consent-accept').addEventListener('click', function () {
-      window.GuessitAnalytics.grantConsent();
-      banner.classList.add('hidden');
-    });
-    document.getElementById('consent-decline').addEventListener('click', function () {
-      window.GuessitAnalytics.revokeConsent();
-      banner.classList.add('hidden');
-    });
-  }
 
   async function init() {
     await loadRounds();
     setupWelcomeModal();
-    setupConsentBanner();
 
     // Navigation
     document.querySelectorAll('.nav-btn').forEach(function (btn) {

@@ -955,6 +955,29 @@ body.modal-open {
   margin-top: 1px;
 }
 
+.welcome-analytics {
+  padding: 12px 24px 0;
+}
+
+.analytics-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.analytics-toggle input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
 .welcome-footer {
   padding: 16px 24px 20px;
   border-top: 1px solid var(--color-border);
@@ -1276,40 +1299,3 @@ body.modal-open {
   }
 }
 
-/* Consent Banner */
-.consent-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 150;
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
-  padding: 16px;
-  animation: slideUp 0.3s ease-out;
-}
-
-.consent-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.consent-content p {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-
-.consent-actions {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-}
-
-.consent-actions .btn {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-}
