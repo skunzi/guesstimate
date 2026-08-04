@@ -7,6 +7,14 @@
     "ecmaVersion": "latest",
     "sourceType": "script"
   },
+  "overrides": [
+    {
+      "files": ["analytics/**/*.js"],
+      "parserOptions": {
+        "sourceType": "module"
+      }
+    }
+  ],
   "rules": {
     "no-undef": "error",
     "no-unused-vars": ["warn", { "vars": "all", "args": "none" }],

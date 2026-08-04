@@ -1,0 +1,8 @@
+name = "guessit-analytics"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "guessit-analytics"
+database_id = "ef4d6b9c-b876-46ce-bd2b-b8b6d10261ed"

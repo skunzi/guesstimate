@@ -1275,3 +1275,41 @@ body.modal-open {
     font-size: max(1.2rem, 16px);
   }
 }
+
+/* Consent Banner */
+.consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 150;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+  padding: 16px;
+  animation: slideUp 0.3s ease-out;
+}
+
+.consent-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.consent-content p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.consent-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.consent-actions .btn {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}

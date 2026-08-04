@@ -14,6 +14,7 @@
   let roundScores = [];
   let roundGuesses = [];
   let calendarDate = new Date();
+  let photoRevealedAt = null;
 
   // --- Obfuscation ---
 
@@ -131,6 +132,14 @@
     document.querySelector('.category-title').textContent = getCategoryLabel(round.category);
     updateProgressDots();
     showCurrentPhoto();
+
+    if (window.GuessitAnalytics && currentPhotoIndex === 0) {
+      window.GuessitAnalytics.track('game_start', {
+        round_date: round.date,
+        category: round.category,
+        round_hash: window.GuessitAnalytics.hashRound(round)
+      });
+    }
   }
 
   function getCategoryLabel(category) {
@@ -269,6 +278,7 @@
       if (photoLoadTimeout) { clearTimeout(photoLoadTimeout); photoLoadTimeout = null; }
       img.style.opacity = '1';
       guessSection.classList.remove('hidden');
+      photoRevealedAt = performance.now();
     }
 
     var retried = false;
@@ -325,6 +335,21 @@
     const score = calculateScore(guess, answer, currentRound.category);
     roundScores.push(score);
     roundGuesses.push(guess);
+
+    var timeToGuess = photoRevealedAt ? Math.round(performance.now() - photoRevealedAt) : null;
+
+    if (window.GuessitAnalytics) {
+      window.GuessitAnalytics.track('guess_submit', {
+        round_date: currentRound.date,
+        photo_index: currentPhotoIndex,
+        category: currentRound.category,
+        score: score,
+        guess: guess,
+        answer: answer,
+        time_to_guess_ms: timeToGuess,
+        round_hash: window.GuessitAnalytics.hashRound(currentRound)
+      });
+    }
 
     saveProgress(currentRound.date, roundScores, roundGuesses, currentPhotoIndex + 1, currentRound.category);
 
@@ -419,6 +444,15 @@
 
     saveRoundResult(currentRound.date, roundScores, roundGuesses, currentRound.category);
     updateProgressDots();
+
+    if (window.GuessitAnalytics) {
+      window.GuessitAnalytics.track('game_complete', {
+        round_date: currentRound.date,
+        category: currentRound.category,
+        total_score: total,
+        round_hash: window.GuessitAnalytics.hashRound(currentRound)
+      });
+    }
   }
 
   // --- Review Mode (already played) ---
@@ -819,6 +853,10 @@
       confirmOverlay.classList.add('hidden');
     });
     document.getElementById('confirm-reset-confirm').addEventListener('click', function () {
+      if (window.GuessitAnalytics) {
+        var count = window.GuessitAnalytics.incrementResetCount();
+        window.GuessitAnalytics.track('progress_reset', { reset_count: count });
+      }
       localStorage.removeItem(STORAGE_KEY);
       location.reload();
     });
@@ -835,9 +873,26 @@
     }
   }
 
+  function setupConsentBanner() {
+    var banner = document.getElementById('consent-banner');
+    if (!window.GuessitAnalytics || window.GuessitAnalytics.hasConsent() || localStorage.getItem('guessit_analytics_consent') === 'false') {
+      return;
+    }
+    banner.classList.remove('hidden');
+    document.getElementById('consent-accept').addEventListener('click', function () {
+      window.GuessitAnalytics.grantConsent();
+      banner.classList.add('hidden');
+    });
+    document.getElementById('consent-decline').addEventListener('click', function () {
+      window.GuessitAnalytics.revokeConsent();
+      banner.classList.add('hidden');
+    });
+  }
+
   async function init() {
     await loadRounds();
     setupWelcomeModal();
+    setupConsentBanner();
 
     // Navigation
     document.querySelectorAll('.nav-btn').forEach(function (btn) {
