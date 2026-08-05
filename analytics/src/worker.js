@@ -15,26 +15,22 @@ function getCorsHeaders(request) {
   if (ALLOWED_ORIGINS.includes(origin)) {
     return {
       'Access-Control-Allow-Origin': origin,
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     };
   }
   return {
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
   };
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const corsHeaders = getCorsHeaders(request);
 
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders });
-    }
-
-    if (request.method !== 'POST') {
-      return new Response('Method not allowed', { status: 405, headers: corsHeaders });
     }
 
     const origin = request.headers.get('Origin') || '';
@@ -44,7 +40,11 @@ export default {
 
     const url = new URL(request.url);
 
-    if (url.pathname === '/events') {
+    if (request.method === 'GET' && url.pathname === '/distribution') {
+      return handleDistribution(url, env, corsHeaders, ctx);
+    }
+
+    if (request.method === 'POST' && url.pathname === '/events') {
       return handleEvents(request, env, corsHeaders);
     }
 
@@ -109,6 +109,120 @@ function validateEvent(e) {
   }
 
   return null;
+}
+
+const BASE_SYNTHETIC = [0, 0, 0, 2, 5, 9, 14, 18, 20, 20, 18, 14, 9, 5, 2, 0];
+const BLEND_THRESHOLD = 30;
+const BIN_COUNT = 16;
+const BIN_WIDTH = 250;
+
+function hashDate(dateStr) {
+  let h = 0;
+  for (let i = 0; i < dateStr.length; i++) {
+    h = ((h << 5) - h) + dateStr.charCodeAt(i);
+    h |= 0;
+  }
+  return h >>> 0;
+}
+
+function seededRandom(seed) {
+  let s = seed;
+  return function () {
+    s = (s * 1664525 + 1013904223) & 0xFFFFFFFF;
+    return (s >>> 0) / 0xFFFFFFFF;
+  };
+}
+
+function getSyntheticDistribution(date) {
+  const seed = hashDate(date);
+  const rng = seededRandom(seed);
+
+  const shiftAmount = rng() * 4 - 2;
+  const noised = new Array(BIN_COUNT);
+  for (let i = 0; i < BIN_COUNT; i++) {
+    const srcIdx = i - shiftAmount;
+    const lo = Math.floor(srcIdx);
+    const hi = lo + 1;
+    const frac = srcIdx - lo;
+    const loVal = (lo >= 0 && lo < BIN_COUNT) ? BASE_SYNTHETIC[lo] : 0;
+    const hiVal = (hi >= 0 && hi < BIN_COUNT) ? BASE_SYNTHETIC[hi] : 0;
+    const base = loVal * (1 - frac) + hiVal * frac;
+    const noise = (rng() - 0.5) * 4;
+    noised[i] = Math.max(0, Math.round(base + noise));
+  }
+  return noised;
+}
+
+async function handleDistribution(url, env, corsHeaders, ctx) {
+  const date = url.searchParams.get('date');
+  if (!date || !DATE_RE.test(date)) {
+    return jsonResponse({ error: 'Invalid or missing date parameter' }, 400, corsHeaders);
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  if (date > today) {
+    return jsonResponse({ error: 'Cannot query future dates' }, 400, corsHeaders);
+  }
+
+  const cacheKey = new Request(`https://cache-internal/distribution/${date}`, { method: 'GET' });
+  const cache = caches.default;
+  const cached = await cache.match(cacheKey);
+  if (cached) {
+    const body = await cached.text();
+    return new Response(body, {
+      headers: { 'Content-Type': 'application/json', ...corsHeaders },
+    });
+  }
+
+  const result = await env.DB.prepare(`
+    SELECT
+      CAST(total_score / ? AS INTEGER) AS bin,
+      COUNT(DISTINCT user_id) AS count
+    FROM events
+    WHERE event_type = 'game_complete'
+      AND round_date = ?
+    GROUP BY bin
+    ORDER BY bin
+  `).bind(BIN_WIDTH, date).all();
+
+  const realBins = new Array(BIN_COUNT).fill(0);
+  let totalPlayers = 0;
+  for (const row of result.results) {
+    const idx = Math.min(row.bin, BIN_COUNT - 1);
+    realBins[idx] = row.count;
+    totalPlayers += row.count;
+  }
+
+  const synth = getSyntheticDistribution(date);
+  const realWeight = Math.min(1, totalPlayers / BLEND_THRESHOLD);
+  const synthWeight = 1 - realWeight;
+  const synthSum = synth.reduce((a, b) => a + b, 0) || 1;
+
+  const bins = new Array(BIN_COUNT);
+  for (let i = 0; i < BIN_COUNT; i++) {
+    bins[i] = Math.round(
+      realBins[i] * realWeight +
+      synth[i] * synthWeight * (BLEND_THRESHOLD / synthSum)
+    );
+  }
+
+  const responseData = {
+    date,
+    bins,
+    bin_width: BIN_WIDTH,
+    total_players: totalPlayers,
+  };
+
+  const responseBody = JSON.stringify(responseData);
+  const response = new Response(responseBody, {
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'max-age=60', ...corsHeaders },
+  });
+
+  ctx.waitUntil(cache.put(cacheKey, new Response(responseBody, {
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'max-age=60' },
+  })));
+
+  return response;
 }
 
 async function handleEvents(request, env, corsHeaders) {

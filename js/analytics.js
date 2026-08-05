@@ -108,6 +108,7 @@
   }
 
   window.GuessitAnalytics = {
+    ENDPOINT: ANALYTICS_ENDPOINT,
     track: track,
     hasConsent: hasConsent,
     grantConsent: grantConsent,

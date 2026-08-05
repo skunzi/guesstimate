@@ -453,6 +453,8 @@
         round_hash: window.GuessitAnalytics.hashRound(currentRound)
       });
     }
+
+    loadAndRenderDistribution(currentRound.date, total, 'frequency-polygon');
   }
 
   // --- Review Mode (already played) ---
@@ -524,6 +526,8 @@
         '</div>';
       grid.appendChild(card);
     });
+
+    loadAndRenderDistribution(round.date, playedData.total, 'review-frequency-polygon');
   }
 
   function hideReview() {
@@ -760,6 +764,92 @@
       document.querySelector('.review-mode').classList.add('hidden');
       document.querySelector('.no-round').classList.remove('hidden');
     }
+  }
+
+  // --- Frequency Polygon ---
+
+  function renderFrequencyPolygon(bins, playerScore, container) {
+    var viewW = 320;
+    var viewH = 140;
+    var pad = { top: 10, bottom: 25, left: 10, right: 10 };
+    var chartW = viewW - pad.left - pad.right;
+    var chartH = viewH - pad.top - pad.bottom;
+    var binCount = bins.length;
+
+    var maxBin = Math.max.apply(null, bins);
+    if (maxBin === 0) maxBin = 1;
+
+    var pts = [];
+    for (var i = 0; i < binCount; i++) {
+      pts.push({
+        x: pad.left + (i + 0.5) * (chartW / binCount),
+        y: pad.top + chartH - (bins[i] / maxBin) * chartH
+      });
+    }
+
+    var baseY = pad.top + chartH;
+    var tension = 0.3;
+    var curvePath = 'M' + pts[0].x + ',' + pts[0].y;
+    for (var j = 1; j < pts.length; j++) {
+      var p0 = pts[Math.max(0, j - 2)];
+      var p1 = pts[j - 1];
+      var p2 = pts[j];
+      var p3 = pts[Math.min(pts.length - 1, j + 1)];
+      var cp1x = p1.x + (p2.x - p0.x) * tension;
+      var cp1y = Math.min(baseY, p1.y + (p2.y - p0.y) * tension);
+      var cp2x = p2.x - (p3.x - p1.x) * tension;
+      var cp2y = Math.min(baseY, p2.y - (p3.y - p1.y) * tension);
+      curvePath += ' C' + cp1x + ',' + cp1y + ' ' + cp2x + ',' + cp2y + ' ' + p2.x + ',' + p2.y;
+    }
+
+    var fillPath = curvePath + ' L' + pts[pts.length - 1].x + ',' + baseY +
+      ' L' + pts[0].x + ',' + baseY + ' Z';
+
+    var playerX = pad.left + (playerScore / 4000) * chartW;
+
+    var axisLabels = '';
+    for (var a = 0; a <= 4000; a += 1000) {
+      var lx = pad.left + (a / 4000) * chartW;
+      axisLabels += '<text x="' + lx + '" y="' + (viewH - 2) + '" text-anchor="middle" ' +
+        'font-size="9" fill="var(--color-text-muted)">' + a + '</text>';
+    }
+
+    var svg = '<svg viewBox="0 0 ' + viewW + ' ' + viewH + '" xmlns="http://www.w3.org/2000/svg" ' +
+      'role="img" aria-label="Score distribution of all players today">' +
+      '<path d="' + fillPath + '" fill="var(--color-surface-alt)" opacity="0.6"/>' +
+      '<path d="' + curvePath + '" fill="none" stroke="var(--color-text-muted)" stroke-width="2"/>' +
+      '<line x1="' + playerX + '" y1="' + pad.top + '" x2="' + playerX + '" y2="' + baseY + '" ' +
+        'stroke="var(--color-primary)" stroke-width="2.5" stroke-dasharray="4 3"/>' +
+      '<text x="' + playerX + '" y="' + (pad.top - 1) + '" text-anchor="middle" ' +
+        'font-size="10" font-weight="bold" fill="var(--color-primary)">You</text>' +
+      axisLabels +
+      '</svg>';
+
+    var existing = container.querySelector('svg');
+    if (existing) existing.remove();
+    container.insertAdjacentHTML('beforeend', svg);
+  }
+
+  function loadAndRenderDistribution(date, playerScore, containerId) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    var oldSvg = container.querySelector('svg');
+    if (oldSvg) oldSvg.remove();
+    container.classList.remove('visible');
+
+    var endpoint = window.GuessitAnalytics && window.GuessitAnalytics.ENDPOINT;
+    if (!endpoint) return;
+
+    fetch(endpoint + '/distribution?date=' + date)
+      .then(function (resp) {
+        if (!resp.ok) throw new Error('fetch failed');
+        return resp.json();
+      })
+      .then(function (data) {
+        renderFrequencyPolygon(data.bins, playerScore, container);
+        container.classList.add('visible');
+      })
+      .catch(function () {});
   }
 
   // --- Confetti ---
