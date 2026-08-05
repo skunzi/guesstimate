@@ -1585,6 +1585,11 @@ body.modal-open {
   color: var(--color-primary);
 }
 
+.friends-days-played {
+  font-size: 0.75em;
+  opacity: 0.6;
+}
+
 .friends-standings-actions {
   display: flex;
   gap: 8px;

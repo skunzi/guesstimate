@@ -406,13 +406,22 @@
         return;
       }
       var userId = getUserId();
+      var isAverage = period === 'average';
+      var scoreHeader = isAverage ? 'Avg Score' : 'Score';
       body.innerHTML =
         '<table class="friends-standings-table">' +
-          '<thead><tr><th>#</th><th>Player</th><th>Score</th></tr></thead>' +
+          '<thead><tr><th>#</th><th>Player</th><th>' + scoreHeader + '</th></tr></thead>' +
           '<tbody>' +
             data.standings.map(function (s) {
               var isMe = s.user_id === userId;
-              var scoreText = s.score != null ? s.score : '-';
+              var scoreText;
+              if (s.score != null) {
+                scoreText = isAverage && s.days_played != null
+                  ? s.score + ' <span class="friends-days-played">(' + s.days_played + 'd)</span>'
+                  : String(s.score);
+              } else {
+                scoreText = '-';
+              }
               return '<tr class="' + (isMe ? 'friends-me' : '') + '">' +
                 '<td>' + s.rank + '</td>' +
                 '<td>' + escapeHtml(s.display_name) + (isMe ? ' (you)' : '') + '</td>' +

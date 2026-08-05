@@ -360,14 +360,14 @@ async function handleGetStandings(url, env, corsHeaders, leaderboard_id) {
       SELECT m.user_id, u.display_name,
         CASE WHEN COUNT(s.total_score) > 0
           THEN ROUND(CAST(SUM(s.total_score) AS REAL) / COUNT(s.total_score))
-          ELSE 0 END as score,
+          ELSE NULL END as score,
         COUNT(s.total_score) as days_played
       FROM leaderboard_members m
       JOIN users u ON u.user_id = m.user_id
       LEFT JOIN scores s ON s.user_id = m.user_id
       WHERE m.leaderboard_id = ?
       GROUP BY m.user_id
-      ORDER BY score DESC
+      ORDER BY score DESC NULLS LAST
     `).bind(leaderboard_id).all();
   } else {
     const today = new Date().toISOString().slice(0, 10);
