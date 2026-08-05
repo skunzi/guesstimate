@@ -111,7 +111,7 @@ function validateEvent(e) {
   return null;
 }
 
-const BASE_SYNTHETIC = [0, 0, 0, 2, 5, 9, 14, 18, 20, 20, 18, 14, 9, 5, 2, 0];
+const BASE_SYNTHETIC = [0, 0, 0, 2, 5, 9, 14, 18, 20, 20, 18, 14, 9, 5, 0, 0];
 const BLEND_THRESHOLD = 30;
 const BIN_COUNT = 16;
 const BIN_WIDTH = 250;
