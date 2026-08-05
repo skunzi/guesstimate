@@ -691,6 +691,23 @@
       document.getElementById('stat-worst').parentElement.querySelector('.stat-date').textContent = '';
     }
 
+    var barsContainer = document.getElementById('distribution-bars');
+    barsContainer.innerHTML = '';
+    var bins = [0, 0, 0, 0, 0, 0, 0, 0];
+    scores.forEach(function (s) {
+      var idx = Math.min(Math.floor(s / 500), 7);
+      bins[idx]++;
+    });
+    var maxBin = Math.max.apply(null, bins) || 1;
+    bins.forEach(function (count) {
+      var bar = document.createElement('div');
+      bar.className = 'distribution-bar';
+      var pct = (count / maxBin) * 100;
+      bar.style.height = pct + '%';
+      bar.setAttribute('data-count', count);
+      barsContainer.appendChild(bar);
+    });
+
     const historyList = document.querySelector('.history-list');
     historyList.innerHTML = '';
     const sortedDates = played.sort().reverse().slice(0, 10);
