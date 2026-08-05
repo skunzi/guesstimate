@@ -54,58 +54,66 @@ export default {
       return jsonResponse({ error: 'Forbidden' }, 403, corsHeaders);
     }
 
-    const url = new URL(request.url);
-    const path = url.pathname;
-
-    // Existing endpoints
-    if (request.method === 'GET' && path === '/distribution') {
-      return handleDistribution(url, env, corsHeaders, ctx);
+    try {
+      return await handleRequest(request, env, ctx, corsHeaders);
+    } catch (err) {
+      return jsonResponse({ error: 'Internal server error' }, 500, corsHeaders);
     }
-
-    if (request.method === 'POST' && path === '/events') {
-      return handleEvents(request, env, corsHeaders);
-    }
-
-    // Leaderboard endpoints
-    if (request.method === 'PUT' && path === '/users') {
-      return handleSetUser(request, env, corsHeaders);
-    }
-
-    if (request.method === 'POST' && path === '/scores') {
-      return handleSubmitScore(request, env, corsHeaders);
-    }
-
-    if (request.method === 'POST' && path === '/leaderboards') {
-      return handleCreateLeaderboard(request, env, corsHeaders);
-    }
-
-    if (request.method === 'GET' && path === '/leaderboards') {
-      return handleListLeaderboards(url, env, corsHeaders);
-    }
-
-    const joinMatch = path.match(/^\/leaderboards\/([a-z0-9]{8})\/join$/);
-    if (request.method === 'POST' && joinMatch) {
-      return handleJoinLeaderboard(request, env, corsHeaders, joinMatch[1]);
-    }
-
-    const inviteMatch = path.match(/^\/leaderboards\/([a-z0-9]{8})$/);
-    if (request.method === 'GET' && inviteMatch) {
-      return handleGetLeaderboardByCode(env, corsHeaders, inviteMatch[1]);
-    }
-
-    const standingsMatch = path.match(/^\/leaderboards\/(\d+)\/standings$/);
-    if (request.method === 'GET' && standingsMatch) {
-      return handleGetStandings(url, env, corsHeaders, parseInt(standingsMatch[1]));
-    }
-
-    const leaveMatch = path.match(/^\/leaderboards\/(\d+)\/leave$/);
-    if (request.method === 'DELETE' && leaveMatch) {
-      return handleLeaveLeaderboard(request, env, corsHeaders, parseInt(leaveMatch[1]));
-    }
-
-    return jsonResponse({ error: 'Not found' }, 404, corsHeaders);
   }
 };
+
+async function handleRequest(request, env, ctx, corsHeaders) {
+  const url = new URL(request.url);
+  const path = url.pathname;
+
+  // Existing endpoints
+  if (request.method === 'GET' && path === '/distribution') {
+    return handleDistribution(url, env, corsHeaders, ctx);
+  }
+
+  if (request.method === 'POST' && path === '/events') {
+    return handleEvents(request, env, corsHeaders);
+  }
+
+  // Leaderboard endpoints
+  if (request.method === 'PUT' && path === '/users') {
+    return handleSetUser(request, env, corsHeaders);
+  }
+
+  if (request.method === 'POST' && path === '/scores') {
+    return handleSubmitScore(request, env, corsHeaders);
+  }
+
+  if (request.method === 'POST' && path === '/leaderboards') {
+    return handleCreateLeaderboard(request, env, corsHeaders);
+  }
+
+  if (request.method === 'GET' && path === '/leaderboards') {
+    return handleListLeaderboards(url, env, corsHeaders);
+  }
+
+  const joinMatch = path.match(/^\/leaderboards\/([a-z0-9]{8})\/join$/);
+  if (request.method === 'POST' && joinMatch) {
+    return handleJoinLeaderboard(request, env, corsHeaders, joinMatch[1]);
+  }
+
+  const inviteMatch = path.match(/^\/leaderboards\/([a-z0-9]{8})$/);
+  if (request.method === 'GET' && inviteMatch) {
+    return handleGetLeaderboardByCode(env, corsHeaders, inviteMatch[1]);
+  }
+
+  const standingsMatch = path.match(/^\/leaderboards\/(\d+)\/standings$/);
+  if (request.method === 'GET' && standingsMatch) {
+    return handleGetStandings(url, env, corsHeaders, parseInt(standingsMatch[1]));
+  }
+
+  const leaveMatch = path.match(/^\/leaderboards\/(\d+)\/leave$/);
+  if (request.method === 'DELETE' && leaveMatch) {
+    return handleLeaveLeaderboard(request, env, corsHeaders, parseInt(leaveMatch[1]));
+  }
+
+  return jsonResponse({ error: 'Not found' }, 404, corsHeaders);
+}
 
 // --- User management ---
 
@@ -335,6 +343,7 @@ async function handleGetStandings(url, env, corsHeaders, leaderboard_id) {
   }
 
   const date = url.searchParams.get('date');
+  const period = url.searchParams.get('period');
   let standings;
 
   if (date && DATE_RE.test(date)) {
@@ -346,6 +355,20 @@ async function handleGetStandings(url, env, corsHeaders, leaderboard_id) {
       WHERE m.leaderboard_id = ?
       ORDER BY s.total_score DESC NULLS LAST
     `).bind(date, leaderboard_id).all();
+  } else if (period === 'average') {
+    standings = await env.DB.prepare(`
+      SELECT m.user_id, u.display_name,
+        CASE WHEN COUNT(s.total_score) > 0
+          THEN ROUND(CAST(SUM(s.total_score) AS REAL) / COUNT(s.total_score))
+          ELSE 0 END as score,
+        COUNT(s.total_score) as days_played
+      FROM leaderboard_members m
+      JOIN users u ON u.user_id = m.user_id
+      LEFT JOIN scores s ON s.user_id = m.user_id
+      WHERE m.leaderboard_id = ?
+      GROUP BY m.user_id
+      ORDER BY score DESC
+    `).bind(leaderboard_id).all();
   } else {
     const today = new Date().toISOString().slice(0, 10);
     const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);

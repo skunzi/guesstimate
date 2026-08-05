@@ -101,9 +101,10 @@
     });
   }
 
-  function getStandings(leaderboardId, date) {
+  function getStandings(leaderboardId, date, period) {
     var params = '?user_id=' + encodeURIComponent(getUserId());
     if (date) params += '&date=' + encodeURIComponent(date);
+    if (period) params += '&period=' + encodeURIComponent(period);
     return api('GET', '/leaderboards/' + leaderboardId + '/standings' + params);
   }
 
@@ -125,10 +126,16 @@
     return document.getElementById('friends-content');
   }
 
+  var pendingInvite = null;
+
   function show() {
     var name = getDisplayName();
     if (!name) {
       renderNameSetup();
+    } else if (pendingInvite) {
+      var code = pendingInvite;
+      pendingInvite = null;
+      renderJoinForm(code);
     } else {
       renderLeaderboardList();
     }
@@ -157,7 +164,13 @@
       btn.textContent = 'Saving...';
       saveDisplayName(val).then(function () {
         backfillScores().then(function () {
-          checkPendingJoin() || renderLeaderboardList();
+          if (checkPendingJoin()) {
+            var code = pendingInvite;
+            pendingInvite = null;
+            renderJoinForm(code);
+          } else {
+            renderLeaderboardList();
+          }
         });
       }).catch(function (err) {
         btn.disabled = false;
@@ -328,6 +341,7 @@
         '<div class="friends-standings-tabs">' +
           '<button class="friends-tab active" data-period="today">Today</button>' +
           '<button class="friends-tab" data-period="week">This Week</button>' +
+          '<button class="friends-tab" data-period="average">Average</button>' +
         '</div>' +
         '<div id="friends-standings-body" class="friends-standings-body">' +
           '<p class="friends-loading">Loading...</p>' +
@@ -368,18 +382,25 @@
         tabs.forEach(function (t) { t.classList.remove('active'); });
         tab.classList.add('active');
         state.standingsPeriod = tab.dataset.period;
-        loadStandings(lb.id, tab.dataset.period === 'today' ? today : null);
+        var period = tab.dataset.period;
+        if (period === 'today') {
+          loadStandings(lb.id, today, null);
+        } else if (period === 'average') {
+          loadStandings(lb.id, null, 'average');
+        } else {
+          loadStandings(lb.id, null, null);
+        }
       });
     });
 
-    loadStandings(lb.id, today);
+    loadStandings(lb.id, today, null);
   }
 
-  function loadStandings(leaderboardId, date) {
+  function loadStandings(leaderboardId, date, period) {
     var body = document.getElementById('friends-standings-body');
     body.innerHTML = '<p class="friends-loading">Loading...</p>';
 
-    getStandings(leaderboardId, date).then(function (data) {
+    getStandings(leaderboardId, date, period).then(function (data) {
       if (!data.standings || data.standings.length === 0) {
         body.innerHTML = '<p class="friends-empty">No standings yet.</p>';
         return;
@@ -422,17 +443,15 @@
     if (joinCode && /^[a-z0-9]{8}$/.test(joinCode)) {
       history.replaceState(null, '', window.location.pathname);
       if (!getDisplayName()) {
-        renderNameSetup();
         localStorage.setItem('guessit_pending_join', joinCode);
-        return true;
       }
-      renderJoinForm(joinCode);
+      pendingInvite = joinCode;
       return true;
     }
     var pending = localStorage.getItem('guessit_pending_join');
     if (pending) {
       localStorage.removeItem('guessit_pending_join');
-      renderJoinForm(pending);
+      pendingInvite = pending;
       return true;
     }
     return false;
