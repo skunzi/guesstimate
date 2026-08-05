@@ -24,6 +24,7 @@
         <button class="nav-btn active" data-view="game">Play</button>
         <button class="nav-btn" data-view="calendar">Calendar</button>
         <button class="nav-btn" data-view="stats">Stats</button>
+        <button class="nav-btn" data-view="friends">Friends</button>
         <button class="nav-btn nav-btn-help" id="help-btn" title="How to Play">?</button>
       </nav>
     </header>
@@ -133,6 +134,11 @@
           <span class="legend-item"><span class="legend-dot legend-how_old"></span> How Old?</span>
           <span class="legend-item"><span class="legend-dot legend-played"></span> Played</span>
         </div>
+      </section>
+
+      <!-- Friends View -->
+      <section id="view-friends" class="view">
+        <div id="friends-content" class="friends-content"></div>
       </section>
 
       <!-- Stats View -->
@@ -253,6 +259,7 @@
 
 
   <script src="js/analytics.js"></script>
+  <script src="js/friends.js"></script>
   <script src="js/game.js"></script>
 </body>
 </html>

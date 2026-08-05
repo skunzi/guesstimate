@@ -454,6 +454,10 @@
       });
     }
 
+    if (window.GuessitFriends) {
+      window.GuessitFriends.submitScore(currentRound.date, total);
+    }
+
     loadAndRenderDistribution(currentRound.date, total, 'frequency-polygon');
   }
 
@@ -743,6 +747,7 @@
     if (viewName !== 'game' && (reviewRound || reviewData)) hideReview();
     if (viewName === 'calendar') renderCalendar();
     if (viewName === 'stats') renderStats();
+    if (viewName === 'friends' && window.GuessitFriends) window.GuessitFriends.show();
     if (viewName === 'game' && !currentRound && !reviewRound) {
       loadGameView();
     }
@@ -1057,6 +1062,10 @@
     } else {
       document.querySelector('.game-area').classList.add('hidden');
       document.querySelector('.no-round').classList.remove('hidden');
+    }
+
+    if (window.GuessitFriends && window.GuessitFriends.checkPendingJoin()) {
+      switchToView('friends');
     }
   }
 

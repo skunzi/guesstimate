@@ -1381,3 +1381,345 @@ body.modal-open {
   }
 }
 
+/* Friends / Leaderboards */
+.friends-content {
+  max-width: 100%;
+}
+
+.friends-name-setup,
+.friends-create-view,
+.friends-join-view {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.friends-name-setup h2,
+.friends-create-view h2,
+.friends-join-view h2,
+.friends-standings-view h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.friends-name-setup p {
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.friends-input-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.friends-input-group input {
+  flex: 1;
+  max-width: 250px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.friends-input-group input:focus {
+  border-color: var(--color-primary);
+}
+
+.friends-hint {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.friends-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-top: 12px;
+}
+
+.friends-username {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.friends-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.friends-boards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.friends-board-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  color: var(--color-text);
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.friends-board-item:hover {
+  border-color: var(--color-primary);
+  background: var(--color-surface-alt);
+}
+
+.friends-board-name {
+  font-weight: 600;
+}
+
+.friends-board-members {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.friends-empty,
+.friends-error {
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.friends-loading {
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.friends-standings-view {
+  padding-top: 8px;
+}
+
+.friends-standings-tabs {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.friends-tab {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.friends-tab.active {
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+}
+
+.friends-standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.friends-standings-table th {
+  text-align: left;
+  padding: 8px 12px;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.friends-standings-table th:last-child {
+  text-align: right;
+}
+
+.friends-standings-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+}
+
+.friends-standings-table td:first-child {
+  width: 40px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.friends-standings-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.friends-standings-table tr.friends-me td {
+  color: var(--color-primary);
+}
+
+.friends-standings-table tr.friends-me td:first-child {
+  color: var(--color-primary);
+}
+
+.friends-standings-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.friends-join-preview-card {
+  margin-top: 16px;
+  padding: 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.friends-join-preview-card strong {
+  font-size: 1.1rem;
+}
+
+.friends-join-preview-card span {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+/* Friend buttons */
+.btn-primary {
+  padding: 10px 20px;
+  border: none;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-text-muted);
+}
+
+.btn-danger {
+  padding: 10px 20px;
+  border: 1px solid var(--color-poor);
+  background: transparent;
+  color: var(--color-poor);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-danger:hover {
+  background: var(--color-poor);
+  color: white;
+}
+
+.btn-icon {
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s;
+}
+
+.btn-icon:hover {
+  color: var(--color-text);
+}
+
+.btn-back {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s;
+}
+
+.btn-back:hover {
+  color: var(--color-text);
+}
+
+/* Friends toast */
+.friends-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.friends-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+

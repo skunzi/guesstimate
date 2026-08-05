@@ -9,20 +9,36 @@ const VALID_EVENT_TYPES = ['game_start', 'guess_submit', 'game_complete', 'progr
 const VALID_CATEGORIES = ['how_many', 'how_tall', 'how_old'];
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const INVITE_CODE_RE = /^[a-z0-9]{8}$/;
+const DISPLAY_NAME_RE = /^[\p{L}\p{N}\p{Emoji}_\- ]{1,20}$/u;
+const LEADERBOARD_NAME_RE = /^.{1,30}$/;
+
+const MAX_LEADERBOARDS_PER_USER = 20;
+const MAX_MEMBERS_PER_LEADERBOARD = 50;
 
 function getCorsHeaders(request) {
   const origin = request.headers.get('Origin') || '';
   if (ALLOWED_ORIGINS.includes(origin)) {
     return {
       'Access-Control-Allow-Origin': origin,
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     };
   }
   return {
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
   };
+}
+
+function generateInviteCode() {
+  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let code = '';
+  const bytes = crypto.getRandomValues(new Uint8Array(8));
+  for (let i = 0; i < 8; i++) {
+    code += chars[bytes[i] % chars.length];
+  }
+  return code;
 }
 
 export default {
@@ -39,18 +55,360 @@ export default {
     }
 
     const url = new URL(request.url);
+    const path = url.pathname;
 
-    if (request.method === 'GET' && url.pathname === '/distribution') {
+    // Existing endpoints
+    if (request.method === 'GET' && path === '/distribution') {
       return handleDistribution(url, env, corsHeaders, ctx);
     }
 
-    if (request.method === 'POST' && url.pathname === '/events') {
+    if (request.method === 'POST' && path === '/events') {
       return handleEvents(request, env, corsHeaders);
+    }
+
+    // Leaderboard endpoints
+    if (request.method === 'PUT' && path === '/users') {
+      return handleSetUser(request, env, corsHeaders);
+    }
+
+    if (request.method === 'POST' && path === '/scores') {
+      return handleSubmitScore(request, env, corsHeaders);
+    }
+
+    if (request.method === 'POST' && path === '/leaderboards') {
+      return handleCreateLeaderboard(request, env, corsHeaders);
+    }
+
+    if (request.method === 'GET' && path === '/leaderboards') {
+      return handleListLeaderboards(url, env, corsHeaders);
+    }
+
+    const joinMatch = path.match(/^\/leaderboards\/([a-z0-9]{8})\/join$/);
+    if (request.method === 'POST' && joinMatch) {
+      return handleJoinLeaderboard(request, env, corsHeaders, joinMatch[1]);
+    }
+
+    const inviteMatch = path.match(/^\/leaderboards\/([a-z0-9]{8})$/);
+    if (request.method === 'GET' && inviteMatch) {
+      return handleGetLeaderboardByCode(env, corsHeaders, inviteMatch[1]);
+    }
+
+    const standingsMatch = path.match(/^\/leaderboards\/(\d+)\/standings$/);
+    if (request.method === 'GET' && standingsMatch) {
+      return handleGetStandings(url, env, corsHeaders, parseInt(standingsMatch[1]));
+    }
+
+    const leaveMatch = path.match(/^\/leaderboards\/(\d+)\/leave$/);
+    if (request.method === 'DELETE' && leaveMatch) {
+      return handleLeaveLeaderboard(request, env, corsHeaders, parseInt(leaveMatch[1]));
     }
 
     return jsonResponse({ error: 'Not found' }, 404, corsHeaders);
   }
 };
+
+// --- User management ---
+
+async function handleSetUser(request, env, corsHeaders) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400, corsHeaders);
+  }
+
+  const { user_id, display_name } = body;
+  if (!user_id || !UUID_RE.test(user_id)) {
+    return jsonResponse({ error: 'Invalid user_id' }, 422, corsHeaders);
+  }
+  if (!display_name || !DISPLAY_NAME_RE.test(display_name.trim())) {
+    return jsonResponse({ error: 'Invalid display_name (1-20 characters)' }, 422, corsHeaders);
+  }
+
+  const name = display_name.trim();
+  await env.DB.prepare(`
+    INSERT INTO users (user_id, display_name) VALUES (?, ?)
+    ON CONFLICT(user_id) DO UPDATE SET display_name = ?, updated_at = datetime('now')
+  `).bind(user_id, name, name).run();
+
+  return jsonResponse({ ok: true, display_name: name }, 200, corsHeaders);
+}
+
+// --- Score submission ---
+
+async function handleSubmitScore(request, env, corsHeaders) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400, corsHeaders);
+  }
+
+  if (Array.isArray(body)) {
+    if (body.length === 0 || body.length > 100) {
+      return jsonResponse({ error: 'Send 1-100 scores per request' }, 400, corsHeaders);
+    }
+    for (const s of body) {
+      const err = validateScore(s);
+      if (err) return jsonResponse({ error: err }, 422, corsHeaders);
+    }
+    const stmt = env.DB.prepare(`
+      INSERT INTO scores (user_id, round_date, total_score) VALUES (?, ?, ?)
+      ON CONFLICT(user_id, round_date) DO UPDATE SET total_score = ?, submitted_at = datetime('now')
+    `);
+    const batch = body.map(s => stmt.bind(s.user_id, s.round_date, s.total_score, s.total_score));
+    await env.DB.batch(batch);
+    return jsonResponse({ ok: true, inserted: body.length }, 200, corsHeaders);
+  }
+
+  const err = validateScore(body);
+  if (err) return jsonResponse({ error: err }, 422, corsHeaders);
+
+  await env.DB.prepare(`
+    INSERT INTO scores (user_id, round_date, total_score) VALUES (?, ?, ?)
+    ON CONFLICT(user_id, round_date) DO UPDATE SET total_score = ?, submitted_at = datetime('now')
+  `).bind(body.user_id, body.round_date, body.total_score, body.total_score).run();
+
+  return jsonResponse({ ok: true }, 200, corsHeaders);
+}
+
+function validateScore(s) {
+  if (!s || typeof s !== 'object') return 'Score must be an object';
+  if (!s.user_id || !UUID_RE.test(s.user_id)) return 'Invalid user_id';
+  if (!s.round_date || !DATE_RE.test(s.round_date)) return 'Invalid round_date';
+  if (!Number.isInteger(s.total_score) || s.total_score < 0 || s.total_score > 4000) return 'Invalid total_score';
+  return null;
+}
+
+// --- Leaderboard CRUD ---
+
+async function handleCreateLeaderboard(request, env, corsHeaders) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400, corsHeaders);
+  }
+
+  const { user_id, name } = body;
+  if (!user_id || !UUID_RE.test(user_id)) {
+    return jsonResponse({ error: 'Invalid user_id' }, 422, corsHeaders);
+  }
+  if (!name || !LEADERBOARD_NAME_RE.test(name.trim())) {
+    return jsonResponse({ error: 'Invalid name (1-30 characters)' }, 422, corsHeaders);
+  }
+
+  const user = await env.DB.prepare('SELECT user_id FROM users WHERE user_id = ?').bind(user_id).first();
+  if (!user) {
+    return jsonResponse({ error: 'User must set a display name first' }, 403, corsHeaders);
+  }
+
+  const countResult = await env.DB.prepare(
+    'SELECT COUNT(*) as cnt FROM leaderboard_members WHERE user_id = ?'
+  ).bind(user_id).first();
+  if (countResult.cnt >= MAX_LEADERBOARDS_PER_USER) {
+    return jsonResponse({ error: `Maximum ${MAX_LEADERBOARDS_PER_USER} leaderboards per user` }, 429, corsHeaders);
+  }
+
+  const invite_code = generateInviteCode();
+  const lbName = name.trim();
+
+  const result = await env.DB.prepare(`
+    INSERT INTO leaderboards (name, invite_code, created_by) VALUES (?, ?, ?)
+  `).bind(lbName, invite_code, user_id).run();
+
+  const leaderboard_id = result.meta.last_row_id;
+
+  await env.DB.prepare(`
+    INSERT INTO leaderboard_members (leaderboard_id, user_id) VALUES (?, ?)
+  `).bind(leaderboard_id, user_id).run();
+
+  return jsonResponse({ id: leaderboard_id, name: lbName, invite_code }, 201, corsHeaders);
+}
+
+async function handleListLeaderboards(url, env, corsHeaders) {
+  const user_id = url.searchParams.get('user_id');
+  if (!user_id || !UUID_RE.test(user_id)) {
+    return jsonResponse({ error: 'Invalid user_id' }, 422, corsHeaders);
+  }
+
+  const results = await env.DB.prepare(`
+    SELECT l.id, l.name, l.invite_code,
+      (SELECT COUNT(*) FROM leaderboard_members WHERE leaderboard_id = l.id) as member_count
+    FROM leaderboards l
+    JOIN leaderboard_members m ON m.leaderboard_id = l.id
+    WHERE m.user_id = ?
+    ORDER BY l.created_at DESC
+  `).bind(user_id).all();
+
+  return jsonResponse({ leaderboards: results.results }, 200, corsHeaders);
+}
+
+async function handleGetLeaderboardByCode(env, corsHeaders, invite_code) {
+  const lb = await env.DB.prepare(`
+    SELECT l.id, l.name, l.created_by, u.display_name as created_by_name,
+      (SELECT COUNT(*) FROM leaderboard_members WHERE leaderboard_id = l.id) as member_count
+    FROM leaderboards l
+    LEFT JOIN users u ON u.user_id = l.created_by
+    WHERE l.invite_code = ?
+  `).bind(invite_code).first();
+
+  if (!lb) {
+    return jsonResponse({ error: 'Leaderboard not found' }, 404, corsHeaders);
+  }
+
+  return jsonResponse({
+    id: lb.id,
+    name: lb.name,
+    member_count: lb.member_count,
+    created_by_name: lb.created_by_name,
+  }, 200, corsHeaders);
+}
+
+async function handleJoinLeaderboard(request, env, corsHeaders, invite_code) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400, corsHeaders);
+  }
+
+  const { user_id } = body;
+  if (!user_id || !UUID_RE.test(user_id)) {
+    return jsonResponse({ error: 'Invalid user_id' }, 422, corsHeaders);
+  }
+
+  const user = await env.DB.prepare('SELECT user_id FROM users WHERE user_id = ?').bind(user_id).first();
+  if (!user) {
+    return jsonResponse({ error: 'User must set a display name first' }, 403, corsHeaders);
+  }
+
+  const lb = await env.DB.prepare('SELECT id, name FROM leaderboards WHERE invite_code = ?').bind(invite_code).first();
+  if (!lb) {
+    return jsonResponse({ error: 'Leaderboard not found' }, 404, corsHeaders);
+  }
+
+  const memberCount = await env.DB.prepare(
+    'SELECT COUNT(*) as cnt FROM leaderboard_members WHERE leaderboard_id = ?'
+  ).bind(lb.id).first();
+  if (memberCount.cnt >= MAX_MEMBERS_PER_LEADERBOARD) {
+    return jsonResponse({ error: `Leaderboard is full (max ${MAX_MEMBERS_PER_LEADERBOARD} members)` }, 429, corsHeaders);
+  }
+
+  const userLbCount = await env.DB.prepare(
+    'SELECT COUNT(*) as cnt FROM leaderboard_members WHERE user_id = ?'
+  ).bind(user_id).first();
+  if (userLbCount.cnt >= MAX_LEADERBOARDS_PER_USER) {
+    return jsonResponse({ error: `You are in too many leaderboards (max ${MAX_LEADERBOARDS_PER_USER})` }, 429, corsHeaders);
+  }
+
+  const existing = await env.DB.prepare(
+    'SELECT 1 FROM leaderboard_members WHERE leaderboard_id = ? AND user_id = ?'
+  ).bind(lb.id, user_id).first();
+  if (existing) {
+    return jsonResponse({ ok: true, leaderboard: { id: lb.id, name: lb.name }, already_member: true }, 200, corsHeaders);
+  }
+
+  await env.DB.prepare(
+    'INSERT INTO leaderboard_members (leaderboard_id, user_id) VALUES (?, ?)'
+  ).bind(lb.id, user_id).run();
+
+  return jsonResponse({ ok: true, leaderboard: { id: lb.id, name: lb.name } }, 200, corsHeaders);
+}
+
+async function handleGetStandings(url, env, corsHeaders, leaderboard_id) {
+  const user_id = url.searchParams.get('user_id');
+  if (!user_id || !UUID_RE.test(user_id)) {
+    return jsonResponse({ error: 'Invalid user_id' }, 422, corsHeaders);
+  }
+
+  const membership = await env.DB.prepare(
+    'SELECT 1 FROM leaderboard_members WHERE leaderboard_id = ? AND user_id = ?'
+  ).bind(leaderboard_id, user_id).first();
+  if (!membership) {
+    return jsonResponse({ error: 'Not a member of this leaderboard' }, 403, corsHeaders);
+  }
+
+  const lb = await env.DB.prepare('SELECT id, name FROM leaderboards WHERE id = ?').bind(leaderboard_id).first();
+  if (!lb) {
+    return jsonResponse({ error: 'Leaderboard not found' }, 404, corsHeaders);
+  }
+
+  const date = url.searchParams.get('date');
+  let standings;
+
+  if (date && DATE_RE.test(date)) {
+    standings = await env.DB.prepare(`
+      SELECT m.user_id, u.display_name, s.total_score as score
+      FROM leaderboard_members m
+      JOIN users u ON u.user_id = m.user_id
+      LEFT JOIN scores s ON s.user_id = m.user_id AND s.round_date = ?
+      WHERE m.leaderboard_id = ?
+      ORDER BY s.total_score DESC NULLS LAST
+    `).bind(date, leaderboard_id).all();
+  } else {
+    const today = new Date().toISOString().slice(0, 10);
+    const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+    standings = await env.DB.prepare(`
+      SELECT m.user_id, u.display_name, COALESCE(SUM(s.total_score), 0) as score,
+        COUNT(s.total_score) as days_played
+      FROM leaderboard_members m
+      JOIN users u ON u.user_id = m.user_id
+      LEFT JOIN scores s ON s.user_id = m.user_id AND s.round_date >= ? AND s.round_date <= ?
+      WHERE m.leaderboard_id = ?
+      GROUP BY m.user_id
+      ORDER BY score DESC
+    `).bind(weekAgo, today, leaderboard_id).all();
+  }
+
+  const ranked = standings.results.map((row, i) => ({
+    ...row,
+    rank: i + 1,
+  }));
+
+  return jsonResponse({
+    leaderboard: { id: lb.id, name: lb.name },
+    standings: ranked,
+    period: date || 'week',
+  }, 200, corsHeaders);
+}
+
+async function handleLeaveLeaderboard(request, env, corsHeaders, leaderboard_id) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400, corsHeaders);
+  }
+
+  const { user_id } = body;
+  if (!user_id || !UUID_RE.test(user_id)) {
+    return jsonResponse({ error: 'Invalid user_id' }, 422, corsHeaders);
+  }
+
+  const membership = await env.DB.prepare(
+    'SELECT 1 FROM leaderboard_members WHERE leaderboard_id = ? AND user_id = ?'
+  ).bind(leaderboard_id, user_id).first();
+  if (!membership) {
+    return jsonResponse({ error: 'Not a member of this leaderboard' }, 404, corsHeaders);
+  }
+
+  await env.DB.prepare(
+    'DELETE FROM leaderboard_members WHERE leaderboard_id = ? AND user_id = ?'
+  ).bind(leaderboard_id, user_id).run();
+
+  const remaining = await env.DB.prepare(
+    'SELECT COUNT(*) as cnt FROM leaderboard_members WHERE leaderboard_id = ?'
+  ).bind(leaderboard_id).first();
+
+  if (remaining.cnt === 0) {
+    await env.DB.prepare('DELETE FROM leaderboards WHERE id = ?').bind(leaderboard_id).run();
+  }
+
+  return jsonResponse({ ok: true, deleted_leaderboard: remaining.cnt === 0 }, 200, corsHeaders);
+}
+
+// --- Existing: Analytics events ---
 
 function validateEvent(e) {
   if (!e || typeof e !== 'object') return 'Event must be an object';
@@ -110,6 +468,8 @@ function validateEvent(e) {
 
   return null;
 }
+
+// --- Existing: Distribution ---
 
 const BASE_SYNTHETIC = [0, 0, 0, 2, 5, 9, 14, 18, 20, 20, 18, 14, 9, 5, 0, 0];
 const BLEND_THRESHOLD = 30;
