@@ -1374,5 +1374,1125 @@
         "fun_fact": "Its spire was secretly assembled inside the building, then raised in just 90 minutes to beat a rival for tallest title."
       }
     ]
+  },
+  {
+    "date": "2026-08-20",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/2001_A_Space_Odyssey.jpg",
+        "subject": "2001: A Space Odyssey",
+        "answer": 1968,
+        "fun_fact": "Stanley Kubrick worked with NASA consultants and futurists to design technology for the film, and its depiction of tablet-like devices and video calls is often cited as eerily predictive."
+      },
+      {
+        "file": "age/acdc_back_in_black.jpg",
+        "subject": "AC/DC - Back in Black",
+        "answer": 1980,
+        "fun_fact": "The album was recorded as a tribute to former singer Bon Scott, who had died earlier that year, and its all-black cover was chosen as a symbol of mourning."
+      },
+      {
+        "file": "age/A_Clockwork_Orange.png",
+        "subject": "A Clockwork Orange",
+        "answer": 1971,
+        "fun_fact": "Stanley Kubrick personally withdrew the film from distribution in the United Kingdom in 1973 after it was blamed for copycat violence, and it wasn't legally shown there again until after his death in 1999."
+      },
+      {
+        "file": "age/amadeus.jpg",
+        "subject": "Amadeus",
+        "answer": 1984,
+        "fun_fact": "Tom Hulce learned to convincingly mimic piano and conducting technique for the role of Mozart, and the production used real 18th-century candlelit palaces in Prague in place of Vienna, which had changed too much."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/apple_newton.jpg",
+        "subject": "Apple Newton MessagePad",
+        "answer": 1993,
+        "fun_fact": "The Newton popularized the term 'personal digital assistant,' but its handwriting recognition software was so unreliable at launch that it became a running joke, famously parodied on The Simpsons."
+      },
+      {
+        "file": "age/apple_quicktake_100.jpg",
+        "subject": "Apple QuickTake 100",
+        "answer": 1994,
+        "fun_fact": "Co-developed with Kodak, it was one of the first consumer digital cameras sold in the United States, storing only about eight full-resolution images at a time on its internal memory."
+      },
+      {
+        "file": "age/argo.jpg",
+        "subject": "Argo",
+        "answer": 2012,
+        "fun_fact": "The film dramatizes a real 1980 CIA operation that used a fake Hollywood science-fiction film as cover to extract six American diplomats from Iran, and much of that cover story was genuinely produced for the ruse."
+      },
+      {
+        "file": "age/Atari_2600.jpg",
+        "subject": "Atari 2600",
+        "answer": 1977,
+        "fun_fact": "It was originally sold under the name Atari Video Computer System, and its swappable cartridges helped establish the idea that a single console could play many different games."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-22",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/Aviva_Stadium_dublin.jpg",
+        "subject": "Aviva Stadium, Dublin",
+        "answer": 51700,
+        "fun_fact": "Built on the site of Lansdowne Road, which opened in 1872, making this one of the world's oldest continuously used sports grounds."
+      },
+      {
+        "file": "capacity/Pancho_Arena-Felcsut.jpg",
+        "subject": "Pancho Arena, Felcsút",
+        "answer": 3816,
+        "fun_fact": "Located in a village of just 1,800 residents, making it one of the few stadiums in the world with a capacity larger than the local population."
+      },
+      {
+        "file": "capacity/signal-iduna-park-dortmund.jpg",
+        "subject": "Signal Iduna Park, Dortmund",
+        "answer": 81365,
+        "fun_fact": "Home to the famous 'Yellow Wall' (Südtribüne), Europe's largest free-standing terrace holding 24,454 standing fans on match day."
+      },
+      {
+        "file": "capacity/shanghai-masters-tennis-qizhong-arena.jpg",
+        "subject": "Qizhong Forest Sports City Arena, Shanghai",
+        "answer": 15000,
+        "fun_fact": "Its retractable roof consists of eight steel 'petals' that open and close like a magnolia flower, Shanghai's official city flower."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-23",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/atari-lynx.jpg",
+        "subject": "Atari Lynx",
+        "answer": 1989,
+        "fun_fact": "It was the first handheld game console with a full-color backlit LCD screen, beating Nintendo's monochrome Game Boy on visuals but suffering from a much shorter battery life."
+      },
+      {
+        "file": "age/bambi.jpg",
+        "subject": "Bambi",
+        "answer": 1942,
+        "fun_fact": "Animators studied real deer at a small zoo set up on the studio lot, and the forest fire sequence was considered so intense that it was trimmed for younger audiences on some early releases."
+      },
+      {
+        "file": "age/banksy_flower_thrower.jpg",
+        "subject": "Banksy's Flower Thrower (Love is in the Air)",
+        "answer": 2003,
+        "fun_fact": "The stencil depicts a masked rioter hurling a bouquet instead of a weapon and was originally painted on a wall in Bethlehem, becoming one of Banksy's most reproduced images."
+      },
+      {
+        "file": "age/banksy_little_girl_with_red_balloon.png",
+        "subject": "Banksy's Girl with Balloon",
+        "answer": 2002,
+        "fun_fact": "A print of this image partially shredded itself moments after selling at a Sotheby's auction in 2018 via a hidden mechanism Banksy had built into the frame years earlier."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-24",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Bell_DataPhone_300.jpeg",
+        "subject": "Bell Dataphone (300 series)",
+        "answer": 1962,
+        "fun_fact": "AT&T's Dataphone 300 series modem could send data at 300 bits per second over ordinary phone lines, laying groundwork for the encoding scheme still referred to today as 'Bell 103 modulation.'"
+      },
+      {
+        "file": "age/ben_hur.jpg",
+        "subject": "Ben-Hur",
+        "answer": 1959,
+        "fun_fact": "The nine-minute chariot race took months to film and used a purpose-built five-acre arena, and it remains one of the most expensive and elaborate action sequences ever shot practically."
+      },
+      {
+        "file": "age/black_sabbath_paranoid.jpg",
+        "subject": "Black Sabbath - Paranoid",
+        "answer": 1970,
+        "fun_fact": "The title track was written and recorded in about 25 minutes as filler because the album was running short, yet it became the band's biggest hit single."
+      },
+      {
+        "file": "age/braveheart.jpg",
+        "subject": "Braveheart",
+        "answer": 1995,
+        "fun_fact": "Mel Gibson directed and starred in the film, and thousands of Irish Army reservists were used as extras for the massive battle scenes since Scotland's own reserve force was too small."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-25",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "age_and_height/palace_of_westminster_Elizabeth_Tower.jpg",
+        "subject": "Elizabeth Tower (Big Ben), Palace of Westminster, London",
+        "answer": 96,
+        "fun_fact": "Although the whole clock tower is popularly nicknamed 'Big Ben,' that name officially refers only to the Great Bell housed inside it, not the tower itself."
+      },
+      {
+        "file": "age_and_height/Sidu_River_Bridge.webp",
+        "subject": "Sidu River Bridge, China",
+        "answer": 496,
+        "fun_fact": "When it opened in 2009, its deck sat 496 meters above the river, briefly making it the highest bridge in the world, and workers used a rocket to fire the first cable across the canyon."
+      },
+      {
+        "file": "age_and_height/Transamerica_Pyramid.jpeg",
+        "subject": "Transamerica Pyramid, San Francisco",
+        "answer": 260,
+        "fun_fact": "Its distinctive pyramid shape was chosen partly to let more daylight reach the streets below than a conventional boxy skyscraper of the same size would allow, and it was the tallest building in San Francisco for decades."
+      },
+      {
+        "file": "height/ulmer_muenster.jpg",
+        "subject": "Ulmer Münster, Germany",
+        "answer": 161,
+        "fun_fact": " It took over 500 years to finish, with a massive 300-year break in construction during the middle centuries before finally being completed in 1890."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-26",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/britney_spears_Baby_One_More_Time.jpg",
+        "subject": "...Baby One More Time, Britney Spears",
+        "answer": 1999,
+        "fun_fact": "The album's title track was originally offered to and turned down by other pop acts including TLC before Britney Spears recorded it, launching her career."
+      },
+      {
+        "file": "age/Bruce_Springsteen_Born_in_the_USA.jpg",
+        "subject": "Bruce Springsteen - Born in the U.S.A.",
+        "answer": 1984,
+        "fun_fact": "Despite its anthemic sound, the title track is a bitter song about a disillusioned Vietnam veteran, a nuance often missed by politicians who have tried to use it as a campaign song."
+      },
+      {
+        "file": "age/Casablanca.jpg",
+        "subject": "Casablanca",
+        "answer": 1942,
+        "fun_fact": "The film's screenplay was still being rewritten during production, and the cast reportedly didn't know until near the end of shooting which man Ilsa would ultimately leave with."
+      },
+      {
+        "file": "age/combo_coexist.jpg",
+        "subject": "Coexist logo",
+        "answer": 2000,
+        "fun_fact": "Polish graphic designer Piotr Mlodozeniec created the design, spelling the word with religious symbols, as an entry for an art competition on the theme of coexistence in Jerusalem."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-27",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Curiosity_Rover.jpg",
+        "subject": "Curiosity Rover",
+        "answer": 2012,
+        "fun_fact": "The rover's landing used an unprecedented 'sky crane' maneuver that lowered it to the Martian surface on cables from a hovering rocket stage, a sequence NASA engineers nicknamed 'seven minutes of terror.'"
+      },
+      {
+        "file": "age/das_boot.jpg",
+        "subject": "Das Boot",
+        "answer": 1981,
+        "fun_fact": "The production built a full-scale, functional replica of a German U-boat, and director Wolfgang Petersen shot much of the claustrophobic interior action with handheld cameras to heighten the tension."
+      },
+      {
+        "file": "age/die_hard.jpg",
+        "subject": "Die Hard",
+        "answer": 1988,
+        "fun_fact": "Bruce Willis reportedly wasn't the studio's first choice, and the film was based on a novel that was itself a sequel to an earlier book, only loosely connected to the movie's plot."
+      },
+      {
+        "file": "age/douglas_dc-3.jpg",
+        "subject": "Douglas DC-3",
+        "answer": 1935,
+        "fun_fact": "The rugged, twin-engine airliner is credited with making passenger air travel profitable for the first time, and hundreds of surviving examples are still flying commercially today."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-28",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/Caesars_Superdome_New_Orleans.jpg",
+        "subject": "Caesars Superdome, New Orleans",
+        "answer": 73208,
+        "fun_fact": "Served as a shelter of last resort for thousands during Hurricane Katrina in 2005, sustaining significant damage to its roof during the storm."
+      },
+      {
+        "file": "capacity/Forsyth_Barr_Dunedin.jpg",
+        "subject": "Forsyth Barr Stadium, Dunedin",
+        "answer": 30748,
+        "fun_fact": "The first stadium in the world with a natural grass pitch under a permanent fully enclosed roof, made from transparent ETFE panels."
+      },
+      {
+        "file": "capacity/Providence_Park-Portland.jpg",
+        "subject": "Providence Park, Portland",
+        "answer": 25218,
+        "fun_fact": "One of the oldest purpose-built soccer venues in the US, originally opened in 1926 and later expanded underground to add 4,000 seats below street level."
+      },
+      {
+        "file": "capacity/Tórsvøllur_stadium.jpg",
+        "subject": "Tórsvøllur, Tórshavn",
+        "answer": 6000,
+        "fun_fact": "Located on one of the most remote archipelagos in Europe, where matches can be interrupted by sudden ocean fog rolling in from the North Atlantic."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-29",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/drake_take_care.jpg",
+        "subject": "Drake - Take Care",
+        "answer": 2011,
+        "fun_fact": "The album's title track samples a Jamie xx remix of a Gil Scott-Heron song, and the record won the Grammy Award for Best Rap Album."
+      },
+      {
+        "file": "age/dumb_and_dumber.jpeg",
+        "subject": "Dumb and Dumber",
+        "answer": 1994,
+        "fun_fact": "Jim Carrey took a pay cut for the role, accepting a flat fee instead of his usual asking price, a decision that paid off handsomely once the film became a massive box-office hit."
+      },
+      {
+        "file": "age/electric-typewriter-ibm-selectric-circa-1967-828549-small.jpg",
+        "subject": "IBM Selectric electric typewriter",
+        "answer": 1961,
+        "fun_fact": "Instead of individual swinging type bars, the Selectric used a interchangeable spherical 'golf ball' typing element that moved across the page, letting users swap fonts in seconds."
+      },
+      {
+        "file": "age/Eminem-Marshall-Mathers.jpg",
+        "subject": "Eminem - The Marshall Mathers LP",
+        "answer": 2000,
+        "fun_fact": "The album became one of the fastest-selling solo albums in U.S. history at the time of its release and drew significant controversy in Congress over its explicit lyrics."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-30",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Everything_Everywhere_All_at_Once.jpg",
+        "subject": "Everything Everywhere All at Once",
+        "answer": 2022,
+        "fun_fact": "Michelle Yeoh trained extensively in martial arts and absurdist physical comedy for the film, which went on to sweep major categories at the Academy Awards, including Best Picture."
+      },
+      {
+        "file": "age/ferraris_f40.jpg",
+        "subject": "Ferrari F40",
+        "answer": 1987,
+        "fun_fact": "It was the last Ferrari personally approved by company founder Enzo Ferrari before his death, and it was the first production car to break the 200 mph barrier."
+      },
+      {
+        "file": "age/Ferrari_Testarossa.jpg",
+        "subject": "Ferrari Testarossa",
+        "answer": 1984,
+        "fun_fact": "Its name means 'redhead' in Italian, referencing the red-painted cylinder heads of the engine, and its dramatic side strakes were designed to feed air to side-mounted radiators."
+      },
+      {
+        "file": "age/fight_club.jpg",
+        "subject": "Fight Club",
+        "answer": 1999,
+        "fun_fact": "The soap bar props used in the film were made with a small amount of real fat to give them an authentic, slightly translucent appearance."
+      }
+    ]
+  },
+  {
+    "date": "2026-08-31",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "age_and_height/blue-mosque_istanbul.jpg",
+        "subject": "Blue Mosque, Istanbul",
+        "answer": 64,
+        "fun_fact": "Its six minarets, the tallest reaching 64 meters, caused controversy when built since only the mosque in Mecca had that many at the time, so the sultan funded a seventh minaret there to resolve the dispute."
+      },
+      {
+        "file": "age_and_height/Duge_Bridge.jpeg",
+        "subject": "Duge Bridge, China",
+        "answer": 565,
+        "fun_fact": "The bridge's deck sits 565 meters above the Beipan River gorge, roughly the height of a 200-story building, and its design won engineering's Gustav Lindenthal Gold Medal, sometimes called the 'Nobel Prize of bridges.'"
+      },
+      {
+        "file": "age_and_height/duomo_florence.jpeg",
+        "subject": "Florence Cathedral (Duomo), Florence",
+        "answer": 114,
+        "fun_fact": "Filippo Brunelleschi engineered the dome without any wooden supporting scaffolding, inventing new construction machinery and a herringbone brick pattern to make it self-supporting as it rose."
+      },
+      {
+        "file": "age_and_height/golden_gate_bridge.webp",
+        "subject": "Golden Gate Bridge, San Francisco",
+        "answer": 227,
+        "fun_fact": "When completed in 1937, its towers made it the tallest bridge in the world, and its distinctive 'International Orange' color was chosen partly because it stands out clearly in San Francisco's frequent fog."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-01",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/finding_nemo.jpg",
+        "subject": "Finding Nemo",
+        "answer": 2003,
+        "fun_fact": "Pixar animators studied real fish anatomy and ocean footage extensively, then deliberately made some scientifically inaccurate choices, like Nemo's damaged fin, to serve the story."
+      },
+      {
+        "file": "age/For_a_Few_Dollars_More.jpg",
+        "subject": "For a Few Dollars More",
+        "answer": 1965,
+        "fun_fact": "It was the second film in Sergio Leone's 'Dollars Trilogy,' and its pocket watch motif inspired the famous extended standoff musical cues later used throughout the series."
+      },
+      {
+        "file": "age/ford_model_t.webp",
+        "subject": "Ford Model T",
+        "answer": 1908,
+        "fun_fact": "Henry Ford's moving assembly line, introduced a few years after the car's debut, eventually cut the time to build one Model T from over 12 hours to about 93 minutes."
+      },
+      {
+        "file": "age/full_metal_jacket.jpg",
+        "subject": "Full Metal Jacket",
+        "answer": 1987,
+        "fun_fact": "R. Lee Ermey, a former Marine drill instructor hired as a technical advisor, improvised much of his character's dialogue and was cast in the role after Kubrick was impressed by his ad-libbing."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-02",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/goodfellas.jpg",
+        "subject": "Goodfellas",
+        "answer": 1990,
+        "fun_fact": "The famous Copacabana tracking shot was filmed in a single unbroken take, following the actors through the kitchen and into the club to avoid a long line at the front entrance."
+      },
+      {
+        "file": "age/Good_will_hunting.jpg",
+        "subject": "Good Will Hunting",
+        "answer": 1997,
+        "fun_fact": "Matt Damon and Ben Affleck wrote the screenplay together as young actors, originally envisioning it as more of a thriller before reshaping it into the drama that won them an Academy Award."
+      },
+      {
+        "file": "age/Hooray_for_Boobies_the_bloodhound_gang.png",
+        "subject": "Hooray for Boobies, Bloodhound Gang",
+        "answer": 1999,
+        "fun_fact": "The album's biggest single, 'The Bad Touch,' became an unlikely worldwide hit despite, or perhaps because of, its irreverent lyrics about human mating rituals."
+      },
+      {
+        "file": "age/hubble_telescope_1990.jpg",
+        "subject": "Hubble Space Telescope",
+        "answer": 1990,
+        "fun_fact": "Shortly after launch, engineers discovered its primary mirror had a flaw just 1/50th the width of a human hair, which astronauts corrected in 1993 by installing corrective optics, essentially giving the telescope glasses."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-03",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/Docklands_Stadium_Melbourn.jpg",
+        "subject": "Docklands Stadium, Melbourne",
+        "answer": 53359,
+        "fun_fact": "Features the first fully retractable roof in the Southern Hemisphere, which takes just eight minutes to open or close."
+      },
+      {
+        "file": "capacity/Principality_Stadium_Cardiff.jpg",
+        "subject": "Principality Stadium, Cardiff",
+        "answer": 73931,
+        "fun_fact": "Was the first stadium in the UK to have a fully retractable roof, and sits in the heart of the city center just minutes from the main train station."
+      },
+      {
+        "file": "capacity/Stadion_Kantrida.jpeg",
+        "subject": "Stadion Kantrida, Rijeka",
+        "answer": 10600,
+        "fun_fact": "Built dramatically into a cliff face directly overlooking the Adriatic Sea, offering spectators views of both the match and the coastline."
+      },
+      {
+        "file": "capacity/toyota_stadium_japan.jpg",
+        "subject": "Toyota Stadium, Toyota City",
+        "answer": 45000,
+        "fun_fact": "The city itself was renamed from Koromo to Toyota in 1959 after the car manufacturer, making this one of the few stadiums named after both its sponsor and host city simultaneously."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-04",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/indiana_jones_last-crusade.jpg",
+        "subject": "Indiana Jones and the Last Crusade",
+        "answer": 1989,
+        "fun_fact": "Sean Connery was cast as Indiana Jones's father despite being only twelve years older than Harrison Ford, and his ad-libbed comic timing reshaped much of the role during filming."
+      },
+      {
+        "file": "age/intelics_national_solid_state.jpg",
+        "subject": "National Intelics solid-state radio",
+        "answer": 1972,
+        "fun_fact": "Marketed under Panasonic's 'National' brand, the Intelics line was part of the wave of compact solid-state transistor radios that replaced bulkier vacuum-tube sets in the early 1970s."
+      },
+      {
+        "file": "age/jurassic_park.webp",
+        "subject": "Jurassic Park",
+        "answer": 1993,
+        "fun_fact": "The film mixed then-groundbreaking CGI with practical animatronic dinosaurs built by Stan Winston's studio, and many of the close-up dinosaur shots are actually the physical puppets, not computer effects."
+      },
+      {
+        "file": "age/kill_bill_the_whole_bloody_affair_2006.jpg",
+        "subject": "Kill Bill: The Whole Bloody Affair",
+        "answer": 2006,
+        "fun_fact": "This was a special one-time theatrical cut that combined both volumes of Kill Bill into a single film with restored footage, including the previously censored anime sequence in color."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-05",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/kiss_alive.jpg",
+        "subject": "Kiss - Alive!",
+        "answer": 1975,
+        "fun_fact": "The double live album was largely re-recorded and enhanced in the studio afterward, but it captured the band's theatrical stage show and became the breakthrough hit that launched their mainstream career."
+      },
+      {
+        "file": "age/Life_is_beautiful.jpg",
+        "subject": "Life Is Beautiful",
+        "answer": 1997,
+        "fun_fact": "Roberto Benigni both directed and starred in the film, which blends comedy with the story of a father shielding his son from the horrors of a Nazi concentration camp, and it won three Academy Awards."
+      },
+      {
+        "file": "age/lord-of-the-rings-return-of-the-king-2003.jpg",
+        "subject": "The Lord of the Rings: The Return of the King",
+        "answer": 2003,
+        "fun_fact": "The film swept all eleven Academy Awards it was nominated for, tying the record for the most Oscar wins for a single film."
+      },
+      {
+        "file": "age/magic-wand_1968.jpg",
+        "subject": "Hitachi Magic Wand",
+        "answer": 1968,
+        "fun_fact": "Hitachi originally marketed the corded device purely as a muscle and back massager, and it was later named one of Time magazine's most influential gadgets of all time."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-06",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "age_and_height/Hijime-Castle.jpg",
+        "subject": "Himeji Castle, Japan",
+        "answer": 46,
+        "fun_fact": "Despite standing for centuries through wars, earthquakes, and World War II bombing raids on the surrounding city, the castle keep itself has never actually been attacked."
+      },
+      {
+        "file": "age_and_height/Huajiang_Canyon_Bridge.JPG",
+        "subject": "Huajiang Canyon Bridge, China",
+        "answer": 625,
+        "fun_fact": "Opened in 2025, it became the first bridge in the world to break the 600-meter height barrier, surpassing the previous record holder, the Duge Bridge, by 60 meters."
+      },
+      {
+        "file": "age_and_height/lake_palace_Udaipur.jpg",
+        "subject": "Lake Palace, Udaipur",
+        "answer": 30,
+        "fun_fact": "Built entirely of white marble on a small island in Lake Pichola, the low, sprawling palace was designed to seem to float on the water, and it later served as a filming location for the James Bond film Octopussy."
+      },
+      {
+        "file": "age_and_height/leaning-tower-pisa.jpg",
+        "subject": "Leaning Tower of Pisa, Italy",
+        "answer": 56,
+        "fun_fact": "The tower's tilt actually varies along its height because builders tried to compensate for the lean mid-construction by making upper stories slightly taller on the short side, giving the tower a subtle banana-like curve."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-07",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Magnavox_Videomatic.jpg",
+        "subject": "Magnavox Videomatic",
+        "answer": 1961,
+        "fun_fact": "Videomatic was Magnavox's long-running line of automatic-tuning color television consoles, advertised for decades as offering hands-free brightness and contrast adjustment via an early photocell 'eye.'"
+      },
+      {
+        "file": "age/metallica_master_of_puppets.jpg",
+        "subject": "Metallica - Master of Puppets",
+        "answer": 1986,
+        "fun_fact": "It was the last album recorded with bassist Cliff Burton, who died in a tour bus accident shortly after its release, and it's widely regarded as one of the defining thrash metal records."
+      },
+      {
+        "file": "age/metropolis.jpg",
+        "subject": "Metropolis",
+        "answer": 1927,
+        "fun_fact": "The film's ambitious production nearly bankrupted its studio, and a nearly complete print thought lost for decades was rediscovered in a museum in Buenos Aires in 2008."
+      },
+      {
+        "file": "age/minerva_radio_505.jpg",
+        "subject": "Minerva Radio 505",
+        "answer": 1950,
+        "fun_fact": "Minerva was an Austrian radio brand with production also based in Paris and Milan, and the 505 series were tube-based superheterodyne sets typical of the vacuum-tube radios sold across Europe in the early 1950s."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-08",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Motorola_Dynatac_8000x.jpg",
+        "subject": "Motorola DynaTAC 8000X",
+        "answer": 1983,
+        "fun_fact": "It was the first handheld commercial cell phone, weighed about two and a half pounds, offered roughly 30 minutes of talk time, and cost nearly $4,000 at launch."
+      },
+      {
+        "file": "age/nas_illmatic.jpeg",
+        "subject": "Nas - Illmatic",
+        "answer": 1994,
+        "fun_fact": "Despite modest initial sales, the album is now widely regarded as one of the greatest hip-hop records ever made, built from productions by a rotating team of celebrated New York producers."
+      },
+      {
+        "file": "age/Nintendo_Entertainment_System.jpg",
+        "subject": "Nintendo Entertainment System",
+        "answer": 1985,
+        "fun_fact": "To distance itself from the video game industry crash of 1983, Nintendo marketed the NES less as a game console and more as an 'entertainment system,' even including a robotic accessory called R.O.B."
+      },
+      {
+        "file": "age/no-1-brownie-model-b1_1901.jpg",
+        "subject": "No. 1 Brownie, Model B",
+        "answer": 1901,
+        "fun_fact": "Named after characters from a popular children's book series, the Brownie was designed to be so simple and cheap that Kodak could market photography directly to children."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "category": "how_many",
+    "question": "How many people can it hold?",
+    "unit": "people",
+    "photos": [
+      {
+        "file": "capacity/Natl-Stadium-Taiwan.jpg",
+        "subject": "National Stadium, Kaohsiung",
+        "answer": 55000,
+        "fun_fact": "Designed by Japanese architect Toyo Ito to resemble a dragon, its roof is covered with 8,844 solar panels that generate enough electricity to power the surrounding neighborhood."
+      },
+      {
+        "file": "capacity/San_Siro-Milan.jpg",
+        "subject": "San Siro, Milan",
+        "answer": 75923,
+        "fun_fact": "Uniquely shared by fierce city rivals AC Milan and Inter Milan since 1947, with each club calling it home on alternating weekends."
+      },
+      {
+        "file": "capacity/Stadion_Energa_-Gdansk.jpeg",
+        "subject": "Stadion Energa Gdańsk",
+        "answer": 43615,
+        "fun_fact": "Built for Euro 2012, its amber-colored facade was inspired by the Baltic amber for which Gdańsk has been famous for centuries."
+      },
+      {
+        "file": "capacity/Strawberry_Arena_Stockholm.jpg",
+        "subject": "Strawberry Arena, Stockholm",
+        "answer": 33000,
+        "fun_fact": "Its exterior is covered with 13,500 LED light panels that can display animations visible across the city skyline."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-10",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/nobody-likes-you-I-heart-street-art.jpg",
+        "subject": "Nobody Likes Me, street art by I Heart",
+        "answer": 2014,
+        "fun_fact": "Canadian street artist I Heart stenciled this piece of a boy shrieking at his phone in Vancouver, satirizing the anxiety of checking social media likes."
+      },
+      {
+        "file": "age/oceans_eleven.jpg",
+        "subject": "Ocean's Eleven",
+        "answer": 2001,
+        "fun_fact": "This remake reunited an ensemble cast including George Clooney, Brad Pitt, and Julia Roberts, and several real Las Vegas casinos allowed filming on their actual gaming floors."
+      },
+      {
+        "file": "age/Osborne_1.jpg",
+        "subject": "Osborne 1",
+        "answer": 1981,
+        "fun_fact": "It was the first commercially successful portable computer, weighing about 24 pounds and bundled with thousands of dollars worth of software included in its price."
+      },
+      {
+        "file": "age/parasite.jpg",
+        "subject": "Parasite",
+        "answer": 2019,
+        "fun_fact": "It became the first non-English-language film to win the Academy Award for Best Picture, and director Bong Joon-ho had a nearly full-scale replica of the wealthy family's house built specifically for filming."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-11",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/pet_shop_boys_actually.jpeg",
+        "subject": "Pet Shop Boys - Actually",
+        "answer": 1987,
+        "fun_fact": "The album's artwork famously features Neil Tennant looking bored in every photo, a deadpan aesthetic the duo cultivated deliberately as part of their image."
+      },
+      {
+        "file": "age/Philips_N1500_VCR.jpg",
+        "subject": "Philips N1500 VCR",
+        "answer": 1972,
+        "fun_fact": "It was the first videocassette recorder sold for home use, though its bulky cassettes could hold only about 30 to 60 minutes of recording time."
+      },
+      {
+        "file": "age/pink_floyd_the_wall.jpg",
+        "subject": "Pink Floyd - The Wall",
+        "answer": 1979,
+        "fun_fact": "The album is a rock opera built around themes of isolation, and its accompanying stage shows famously involved building a literal wall of cardboard bricks across the stage during the performance."
+      },
+      {
+        "file": "age/Polaroid_EE_33.jpg",
+        "subject": "Polaroid EE33",
+        "answer": 1976,
+        "fun_fact": "It was a simple, low-cost instant camera aimed at casual snapshooters, using Polaroid's Type 88 pack film and an electric-eye exposure system for point-and-shoot simplicity."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-12",
+    "category": "how_tall",
+    "question": "How tall is this structure?",
+    "unit": "meters",
+    "photos": [
+      {
+        "file": "age_and_height/Mike_OCallaghan–Pat_Tillman_Memorial_Bridge.jpg",
+        "subject": "Mike O'Callaghan-Pat Tillman Memorial Bridge, Nevada/Arizona",
+        "answer": 270,
+        "fun_fact": "It is the highest concrete arch bridge in the world, and its roadway was built roughly 1,500 feet downstream of Hoover Dam specifically so drivers wouldn't be tempted to gawk at the dam while driving."
+      },
+      {
+        "file": "age_and_height/Millau_Viaduct.jpeg",
+        "subject": "Millau Viaduct, France",
+        "answer": 343,
+        "fun_fact": "Its tallest mast rises higher than the Eiffel Tower, making it the tallest bridge structure on Earth, even though its road deck itself sits somewhat lower above the Tarn River valley below."
+      },
+      {
+        "file": "age_and_height/Mont_Saint-Michel_Normandy.jpg",
+        "subject": "Mont-Saint-Michel Abbey, Normandy",
+        "answer": 170,
+        "fun_fact": "The gilded statue of the Archangel Michael crowning the spire is itself about 4.5 meters tall, and legend holds the archangel appeared in a dream instructing a local bishop to build the sanctuary."
+      },
+      {
+        "file": "age_and_height/oriental_pearl_tower_shanghai.jpg",
+        "subject": "Oriental Pearl Tower, Shanghai",
+        "answer": 468,
+        "fun_fact": "Its distinctive design links eleven spheres of different sizes along the structure, a concept its architects said was inspired by the classical Chinese poetic image of pearls dropping onto a jade plate."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-13",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Polaroid_SX-70.jpeg",
+        "subject": "Polaroid SX-70",
+        "answer": 1972,
+        "fun_fact": "It was the first fully automatic, folding, single-lens reflex instant camera, ejecting self-developing photos that visibly developed in front of the photographer's eyes."
+      },
+      {
+        "file": "age/prince_1999_album.jpg",
+        "subject": "Prince - 1999",
+        "answer": 1982,
+        "fun_fact": "The title track was released as a single ahead of Y2K anxieties and became an enduring anthem, re-charting decades later whenever the actual year 1999 or 2000 approached."
+      },
+      {
+        "file": "age/pulsar_calculator_watch_1975.jpg",
+        "subject": "Pulsar calculator watch",
+        "answer": 1975,
+        "fun_fact": "Pulsar's calculator watch let wearers punch in basic math using a tiny stylus stored in the watchband, and it was an expensive novelty status symbol of the mid-1970s digital watch boom."
+      },
+      {
+        "file": "age/purple-rain-prince.jpg",
+        "subject": "Prince - Purple Rain",
+        "answer": 1984,
+        "fun_fact": "The album served as the soundtrack to Prince's semi-autobiographical film of the same name and spent 24 consecutive weeks at number one on the Billboard 200."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-14",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/ramones_ramones.jpeg",
+        "subject": "Ramones - Ramones",
+        "answer": 1976,
+        "fun_fact": "The band's debut album was recorded in about a week for roughly $6,400, and its stripped-down, fast, three-chord songs are widely credited with helping ignite the punk rock movement."
+      },
+      {
+        "file": "age/rear_window.jpg",
+        "subject": "Rear Window",
+        "answer": 1954,
+        "fun_fact": "Alfred Hitchcock shot almost the entire film from the confined point of view of a photographer with a broken leg, using a single, elaborately constructed courtyard set built on a soundstage."
+      },
+      {
+        "file": "age/Sampo_Solid_state_TV.jpg",
+        "subject": "Sampo solid-state television",
+        "answer": 1970,
+        "fun_fact": "Taiwanese electronics maker Sampo built solid-state, transistorized televisions during the shift away from vacuum-tube sets in the 1960s and 1970s, later partnering with Sony and Sharp on manufacturing in Taiwan."
+      },
+      {
+        "file": "age/Saving_Private_Ryan.webp",
+        "subject": "Saving Private Ryan",
+        "answer": 1998,
+        "fun_fact": "The opening Omaha Beach sequence used veteran consultants and a stripped-down camera process to mimic the look of World War II combat newsreel footage, and it's still cited as one of the most realistic battle scenes ever filmed."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-15",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/schindlers_list.jpeg",
+        "subject": "Schindler's List",
+        "answer": 1993,
+        "fun_fact": "Steven Spielberg shot the film almost entirely in black and white and largely on location in Poland, including scenes filmed just outside the gates of the real Auschwitz."
+      },
+      {
+        "file": "age/Singin_in_the_Rain.jpg",
+        "subject": "Singin' in the Rain",
+        "answer": 1952,
+        "fun_fact": "Gene Kelly performed the iconic title dance number while running a high fever, and the milk mixed into the rainwater on set was added to help it show up better on camera."
+      },
+      {
+        "file": "age/Slumdog_Millionaire.jpg",
+        "subject": "Slumdog Millionaire",
+        "answer": 2008,
+        "fun_fact": "Large portions of the film were shot on location in Mumbai's real slums with local child actors, and it went on to win eight Academy Awards including Best Picture."
+      },
+      {
+        "file": "age/Sony_Discman_D50.jpg",
+        "subject": "Sony Discman D-50",
+        "answer": 1984,
+        "fun_fact": "It was the first portable CD player ever sold, roughly the size of four stacked CD cases, and it helped kick off the format's shift from a home audio novelty to a mainstream product."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Sony_Micro_TV_5-303.jpg",
+        "subject": "Sony Micro TV 5-303",
+        "answer": 1962,
+        "fun_fact": "At the time of its release it was the world's smallest and lightest television set, and Frank Sinatra was reportedly so impressed by a demo unit that Sony personally delivered one to him at Paramount Pictures."
+      },
+      {
+        "file": "age/Sony_Trinitron.jpg",
+        "subject": "Sony Trinitron",
+        "answer": 1968,
+        "fun_fact": "Sony's Trinitron used a single electron gun with three cathodes instead of the usual three separate guns, producing sharper, brighter images that earned the technology an Emmy Award in 1973."
+      },
+      {
+        "file": "age/sony_walkman_original.jpg",
+        "subject": "Sony Walkman (original TPS-L2)",
+        "answer": 1979,
+        "fun_fact": "Sony co-founder Akio Morita reportedly pushed the idea through despite skepticism from other executives, wanting a way to listen to music privately while walking, which is how the product got its name."
+      },
+      {
+        "file": "age/Sony_Walkman_Professional_WM-D6C.jpg",
+        "subject": "Sony Walkman Professional WM-D6C",
+        "answer": 1984,
+        "fun_fact": "Prized by audio professionals and field recordists for its unusually high-fidelity cassette mechanism, this model remained in production for over two decades, far longer than most Walkman models."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/Star_Wars_Episode_IV-A_New_Hope.jpg",
+        "subject": "Star Wars: Episode IV - A New Hope",
+        "answer": 1977,
+        "fun_fact": "Industrial Light & Magic was founded specifically to create the film's groundbreaking special effects, and it grew into one of the most influential visual effects studios in film history."
+      },
+      {
+        "file": "age/Star_Wars_Episode_VI-Return_of_the_Jedi.jpg",
+        "subject": "Star Wars: Episode VI - Return of the Jedi",
+        "answer": 1983,
+        "fun_fact": "Practical effects and puppetry were used extensively for creatures like Jabba the Hutt, whose large animatronic body required a team of puppeteers to operate."
+      },
+      {
+        "file": "age/Star_Wars_Episode_V-The_Empire_Strikes_Back.jpg",
+        "subject": "Star Wars: Episode V - The Empire Strikes Back",
+        "answer": 1980,
+        "fun_fact": "The now-famous 'I am your father' line is frequently misquoted; Darth Vader's actual line in the film never includes the words 'Luke, I am your father.'"
+      },
+      {
+        "file": "age/the_departed.jpg",
+        "subject": "The Departed",
+        "answer": 2006,
+        "fun_fact": "The film is a remake of the Hong Kong thriller Infernal Affairs, and it finally won Martin Scorsese his first competitive Academy Award for directing."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/the_great_escape.jpg",
+        "subject": "The Great Escape",
+        "answer": 1963,
+        "fun_fact": "The story is based on a real mass escape by Allied prisoners of war from a German camp, though the film compresses and dramatizes events, including adding Steve McQueen's famous motorcycle chase, which never happened in reality."
+      },
+      {
+        "file": "age/The_Intouchables.jpg",
+        "subject": "The Intouchables",
+        "answer": 2011,
+        "fun_fact": "The film is based on the real friendship between a wealthy quadriplegic man and his caregiver, and it became one of the highest-grossing non-English-language films ever released."
+      },
+      {
+        "file": "age/the_lion_king.jpg",
+        "subject": "The Lion King",
+        "answer": 1994,
+        "fun_fact": "Animators studied real lion behavior at wildlife parks, and the film's story draws loose inspiration from both Hamlet and the Biblical story of Joseph."
+      },
+      {
+        "file": "age/the_pianist.jpg",
+        "subject": "The Pianist",
+        "answer": 2002,
+        "fun_fact": "Director Roman Polanski, himself a Holocaust survivor, drew on his own childhood memories of the Warsaw Ghetto to shape the film's depiction of survival."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-19",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/the_rolling_stones_sticky_fingers.jpg",
+        "subject": "The Rolling Stones - Sticky Fingers",
+        "answer": 1971,
+        "fun_fact": "The original vinyl packaging featured a working zipper on a close-up photo of denim-clad jeans, a design by Andy Warhol that damaged album covers stacked in shipping crates."
+      },
+      {
+        "file": "age/the_shining.jpg",
+        "subject": "The Shining",
+        "answer": 1980,
+        "fun_fact": "Stanley Kubrick was notorious for demanding dozens of takes, and actress Shelley Duvall has said the exhausting shoot, which lasted over a year, took a significant physical and emotional toll on her."
+      },
+      {
+        "file": "age/The_Silence_of_the_Lambs.jpg",
+        "subject": "The Silence of the Lambs",
+        "answer": 1991,
+        "fun_fact": "It remains one of only three films to win all five major Academy Awards, including Best Picture, Director, Actor, Actress, and Screenplay."
+      },
+      {
+        "file": "age/the_sixth_sense.jpg",
+        "subject": "The Sixth Sense",
+        "answer": 1999,
+        "fun_fact": "The film's twist ending prompted a wave of repeat viewings in theaters, as audiences went back specifically to catch the subtle clues planted earlier in the story."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-20",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/the_truman_show.jpg",
+        "subject": "The Truman Show",
+        "answer": 1998,
+        "fun_fact": "The fictional town of Seahaven was filmed in the real planned community of Seaside, Florida, whose deliberately idyllic architecture made it an ideal stand-in for a manufactured world."
+      },
+      {
+        "file": "age/the_who_whos_next.jpg",
+        "subject": "The Who - Who's Next",
+        "answer": 1971,
+        "fun_fact": "The album emerged from the ashes of Pete Townshend's abandoned multimedia rock opera project 'Lifehouse,' and its synthesizer-driven opening track became one of rock's most sampled recordings."
+      },
+      {
+        "file": "age/thriller-michael-jackson.jpg",
+        "subject": "Michael Jackson - Thriller",
+        "answer": 1982,
+        "fun_fact": "It remains the best-selling album of all time worldwide, and its accompanying music video, directed by John Landis, is often credited with transforming music videos into a serious art form."
+      },
+      {
+        "file": "age/up_movie.jpg",
+        "subject": "Up",
+        "answer": 2009,
+        "fun_fact": "The film's opening montage depicting a couple's life together is frequently cited as one of the most emotionally powerful sequences in animation history, told almost entirely without dialogue."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age/wall_e.jpg",
+        "subject": "WALL-E",
+        "answer": 2008,
+        "fun_fact": "The film's first act contains almost no dialogue, relying instead on sound design and physical animation to tell its story, an unusual choice for a major studio release."
+      },
+      {
+        "file": "age/wolf_of_wall_street.jpg",
+        "subject": "The Wolf of Wall Street",
+        "answer": 2013,
+        "fun_fact": "The film is based on the real memoir of stockbroker Jordan Belfort, and Leonardo DiCaprio trained extensively to perform the exaggerated physical comedy of the Quaalude scene himself."
+      },
+      {
+        "file": "age/wright_flyer_1904.jpg",
+        "subject": "Wright Flyer II",
+        "answer": 1904,
+        "fun_fact": "Built as an improvement on the original 1903 Flyer, this aircraft made the first-ever complete circular flight by an airplane, piloted by Wilbur Wright at Huffman Prairie, Ohio."
+      },
+      {
+        "file": "age/wu-tang_clan_enter_the_wu-tang.jpg",
+        "subject": "Wu-Tang Clan - Enter the Wu-Tang (36 Chambers)",
+        "answer": 1993,
+        "fun_fact": "The album was recorded on a shoestring budget in a Staten Island basement studio and is now widely regarded as one of the most influential hip-hop records ever made."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-22",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age_and_height/blue-mosque_istanbul.jpg",
+        "subject": "Blue Mosque, Istanbul",
+        "answer": 1616,
+        "fun_fact": "The mosque is officially named the Sultan Ahmed Mosque, and it earned its popular nickname from the tens of thousands of handmade blue Iznik tiles that decorate its interior."
+      },
+      {
+        "file": "age_and_height/duomo_florence.jpeg",
+        "subject": "Florence Cathedral (Duomo)",
+        "answer": 1436,
+        "fun_fact": "Its enormous dome, engineered by Filippo Brunelleschi, was built without a wooden supporting frame using an innovative herringbone brick pattern, and it remains the largest brick dome ever constructed."
+      },
+      {
+        "file": "age_and_height/Hijime-Castle.jpg",
+        "subject": "Himeji Castle",
+        "answer": 1609,
+        "fun_fact": "Despite surviving World War II bombing raids and a major 1995 earthquake largely unscathed, the castle has never actually been attacked or besieged in its history."
+      },
+      {
+        "file": "age_and_height/lake_palace_Udaipur.jpg",
+        "subject": "Lake Palace, Udaipur",
+        "answer": 1746,
+        "fun_fact": "Built from white marble on an island in Lake Pichola as a royal summer retreat, it was later converted into a luxury hotel and has appeared as a filming location in the James Bond film Octopussy."
+      }
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "category": "how_old",
+    "question": "From which year is this?",
+    "unit": "year",
+    "photos": [
+      {
+        "file": "age_and_height/leaning-tower-pisa.jpg",
+        "subject": "Leaning Tower of Pisa",
+        "answer": 1372,
+        "fun_fact": "The tower began tilting even before construction was finished due to soft ground beneath its foundation, and engineers only stabilized its lean with major soil-correction work completed in 2001."
+      },
+      {
+        "file": "age_and_height/Mont_Saint-Michel_Normandy.jpg",
+        "subject": "Mont-Saint-Michel",
+        "answer": 708,
+        "fun_fact": "According to legend, the Archangel Michael appeared to a local bishop in a dream, instructing him to build a sanctuary on the rocky tidal island."
+      },
+      {
+        "file": "age_and_height/oriental_pearl_tower_shanghai.jpg",
+        "subject": "Oriental Pearl Tower, Shanghai",
+        "answer": 1994,
+        "fun_fact": "The tower's distinctive design links eleven spheres of varying sizes, intended by its architects to evoke pearls being dropped onto a jade plate, referencing a famous line of Chinese poetry."
+      },
+      {
+        "file": "age_and_height/palace_of_westminster_Elizabeth_Tower.jpg",
+        "subject": "Elizabeth Tower, Palace of Westminster",
+        "answer": 1859,
+        "fun_fact": "Although widely nicknamed 'Big Ben,' that name technically refers only to the tower's Great Bell, not the clock tower itself."
+      }
+    ]
   }
 ]
