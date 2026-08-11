@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  const DEBUG = new URLSearchParams(window.location.search).has('debug') &&
+    ['localhost', '127.0.0.1', ''].includes(window.location.hostname);
   const STORAGE_KEY = 'guessit_data';
   const SCORE_CONSTANTS = {
     how_many: 1.5,
@@ -622,7 +624,7 @@
 
       const round = getRoundByDate(dateStr);
 
-      if (round && dateStr <= today) {
+      if (round && (DEBUG || dateStr <= today)) {
         dayEl.classList.add('has-round');
         dayEl.classList.add('cat-' + round.category);
         if (storage.played[dateStr]) {
@@ -1055,7 +1057,9 @@
     const todayRound = getRoundByDate(today);
     const storage = loadStorage();
 
-    if (todayRound && !storage.played[today]) {
+    if (DEBUG) {
+      switchToView('calendar');
+    } else if (todayRound && !storage.played[today]) {
       startRound(todayRound, storage.inProgress[today] || null);
     } else if (todayRound && storage.played[today]) {
       showReview(todayRound, storage.played[today]);

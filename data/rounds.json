@@ -1132,16 +1132,16 @@
         "fun_fact": "Arnold Schwarzenegger was originally considered for the heroic role of Kyle Reese, but director James Cameron was so struck by him that he rewrote the villainous Terminator role for him instead."
       },
       {
-        "file": "age/memento_movie.jpg",
-        "subject": "Memento",
-        "answer": 2000,
-        "fun_fact": "Christopher Nolan structured the film in reverse chronological order to place the audience in the same short-term memory loss as its protagonist, so viewers piece the mystery together backwards."
+        "file": "age/sony_walkman_original.jpg",
+        "subject": "Sony Walkman (original TPS-L2)",
+        "answer": 1979,
+        "fun_fact": "Sony co-founder Akio Morita reportedly pushed the idea through despite skepticism from other executives, wanting a way to listen to music privately while walking, which is how the product got its name."
       },
       {
-        "file": "age/rocky_movie.jpg",
-        "subject": "Rocky",
-        "answer": 1976,
-        "fun_fact": "Sylvester Stallone wrote the script in roughly three days and refused to sell it unless he was cast as the lead, despite studios offering much more money for the script alone."
+        "file": "age/purple-rain-prince.jpg",
+        "subject": "Prince - Purple Rain",
+        "answer": 1984,
+        "fun_fact": "The album served as the soundtrack to Prince's semi-autobiographical film of the same name and spent 24 consecutive weeks at number one on the Billboard 200."
       },
       {
         "file": "age/forrest-gump-movie.jpeg",
@@ -1382,10 +1382,10 @@
     "unit": "year",
     "photos": [
       {
-        "file": "age/2001_A_Space_Odyssey.jpg",
-        "subject": "2001: A Space Odyssey",
-        "answer": 1968,
-        "fun_fact": "Stanley Kubrick worked with NASA consultants and futurists to design technology for the film, and its depiction of tablet-like devices and video calls is often cited as eerily predictive."
+        "file": "age/minerva_radio_505.jpg",
+        "subject": "Minerva Radio 505",
+        "answer": 1950,
+        "fun_fact": "Minerva was an Austrian radio brand with production also based in Paris and Milan, and the 505 series were tube-based superheterodyne sets typical of the vacuum-tube radios sold across Europe in the early 1950s."
       },
       {
         "file": "age/acdc_back_in_black.jpg",
@@ -1394,10 +1394,10 @@
         "fun_fact": "The album was recorded as a tribute to former singer Bon Scott, who had died earlier that year, and its all-black cover was chosen as a symbol of mourning."
       },
       {
-        "file": "age/A_Clockwork_Orange.png",
-        "subject": "A Clockwork Orange",
-        "answer": 1971,
-        "fun_fact": "Stanley Kubrick personally withdrew the film from distribution in the United Kingdom in 1973 after it was blamed for copycat violence, and it wasn't legally shown there again until after his death in 1999."
+        "file": "age_and_height/oriental_pearl_tower_shanghai.jpg",
+        "subject": "Oriental Pearl Tower, Shanghai",
+        "answer": 1994,
+        "fun_fact": "The tower's distinctive design links eleven spheres of varying sizes, intended by its architects to evoke pearls being dropped onto a jade plate, referencing a famous line of Chinese poetry."
       },
       {
         "file": "age/amadeus.jpg",
@@ -1420,22 +1420,22 @@
         "fun_fact": "The Newton popularized the term 'personal digital assistant,' but its handwriting recognition software was so unreliable at launch that it became a running joke, famously parodied on The Simpsons."
       },
       {
-        "file": "age/apple_quicktake_100.jpg",
-        "subject": "Apple QuickTake 100",
-        "answer": 1994,
-        "fun_fact": "Co-developed with Kodak, it was one of the first consumer digital cameras sold in the United States, storing only about eight full-resolution images at a time on its internal memory."
+        "file": "age/2001_A_Space_Odyssey.jpg",
+        "subject": "2001: A Space Odyssey",
+        "answer": 1968,
+        "fun_fact": "Stanley Kubrick worked with NASA consultants and futurists to design technology for the film, and its depiction of tablet-like devices and video calls is often cited as eerily predictive."
+      },
+      {
+        "file": "age/banksy_flower_thrower.jpg",
+        "subject": "Banksy's Flower Thrower (Love is in the Air)",
+        "answer": 2003,
+        "fun_fact": "The stencil depicts a masked rioter hurling a bouquet instead of a weapon and was originally painted on a wall in Bethlehem, becoming one of Banksy's most reproduced images."
       },
       {
         "file": "age/argo.jpg",
         "subject": "Argo",
         "answer": 2012,
         "fun_fact": "The film dramatizes a real 1980 CIA operation that used a fake Hollywood science-fiction film as cover to extract six American diplomats from Iran, and much of that cover story was genuinely produced for the ruse."
-      },
-      {
-        "file": "age/Atari_2600.jpg",
-        "subject": "Atari 2600",
-        "answer": 1977,
-        "fun_fact": "It was originally sold under the name Atari Video Computer System, and its swappable cartridges helped establish the idea that a single console could play many different games."
       }
     ]
   },
@@ -1455,7 +1455,7 @@
         "file": "capacity/Pancho_Arena-Felcsut.jpg",
         "subject": "Pancho Arena, Felcsút",
         "answer": 3816,
-        "fun_fact": "Located in a village of just 1,800 residents, making it one of the few stadiums in the world with a capacity larger than the local population."
+        "fun_fact": "Designed by architect Imre Makovecz, its organic wooden roof canopy is supported by tree-shaped pillars, giving the arena the feel of a forest glade rather than a football ground."
       },
       {
         "file": "capacity/signal-iduna-park-dortmund.jpg",
@@ -1484,22 +1484,22 @@
         "fun_fact": "It was the first handheld game console with a full-color backlit LCD screen, beating Nintendo's monochrome Game Boy on visuals but suffering from a much shorter battery life."
       },
       {
-        "file": "age/bambi.jpg",
-        "subject": "Bambi",
-        "answer": 1942,
-        "fun_fact": "Animators studied real deer at a small zoo set up on the studio lot, and the forest fire sequence was considered so intense that it was trimmed for younger audiences on some early releases."
-      },
-      {
-        "file": "age/banksy_flower_thrower.jpg",
-        "subject": "Banksy's Flower Thrower (Love is in the Air)",
-        "answer": 2003,
-        "fun_fact": "The stencil depicts a masked rioter hurling a bouquet instead of a weapon and was originally painted on a wall in Bethlehem, becoming one of Banksy's most reproduced images."
+        "file": "age/A_Clockwork_Orange.png",
+        "subject": "A Clockwork Orange",
+        "answer": 1971,
+        "fun_fact": "Stanley Kubrick personally withdrew the film from distribution in the United Kingdom in 1973 after it was blamed for copycat violence, and it wasn't legally shown there again until after his death in 1999."
       },
       {
         "file": "age/banksy_little_girl_with_red_balloon.png",
         "subject": "Banksy's Girl with Balloon",
         "answer": 2002,
         "fun_fact": "A print of this image partially shredded itself moments after selling at a Sotheby's auction in 2018 via a hidden mechanism Banksy had built into the frame years earlier."
+      },
+      {
+        "file": "age/bambi.jpg",
+        "subject": "Bambi",
+        "answer": 1942,
+        "fun_fact": "Animators studied real deer at a small zoo set up on the studio lot, and the forest fire sequence was considered so intense that it was trimmed for younger audiences on some early releases."
       }
     ]
   },
@@ -1519,7 +1519,7 @@
         "file": "age/ben_hur.jpg",
         "subject": "Ben-Hur",
         "answer": 1959,
-        "fun_fact": "The nine-minute chariot race took months to film and used a purpose-built five-acre arena, and it remains one of the most expensive and elaborate action sequences ever shot practically."
+        "fun_fact": "The galley sequence required building a full-scale Roman warship section on hydraulic rams in a studio tank, and Charlton Heston spent weeks training to row convincingly for the grueling slave scenes."
       },
       {
         "file": "age/black_sabbath_paranoid.jpg",
@@ -1580,16 +1580,16 @@
         "fun_fact": "The album's title track was originally offered to and turned down by other pop acts including TLC before Britney Spears recorded it, launching her career."
       },
       {
-        "file": "age/Bruce_Springsteen_Born_in_the_USA.jpg",
-        "subject": "Bruce Springsteen - Born in the U.S.A.",
-        "answer": 1984,
-        "fun_fact": "Despite its anthemic sound, the title track is a bitter song about a disillusioned Vietnam veteran, a nuance often missed by politicians who have tried to use it as a campaign song."
-      },
-      {
         "file": "age/Casablanca.jpg",
         "subject": "Casablanca",
         "answer": 1942,
         "fun_fact": "The film's screenplay was still being rewritten during production, and the cast reportedly didn't know until near the end of shooting which man Ilsa would ultimately leave with."
+      },
+      {
+        "file": "age/Bruce_Springsteen_Born_in_the_USA.jpg",
+        "subject": "Bruce Springsteen - Born in the U.S.A.",
+        "answer": 1984,
+        "fun_fact": "Despite its anthemic sound, the title track is a bitter song about a disillusioned Vietnam veteran, a nuance often missed by politicians who have tried to use it as a campaign song."
       },
       {
         "file": "age/combo_coexist.jpg",
@@ -1670,10 +1670,10 @@
     "unit": "year",
     "photos": [
       {
-        "file": "age/drake_take_care.jpg",
-        "subject": "Drake - Take Care",
-        "answer": 2011,
-        "fun_fact": "The album's title track samples a Jamie xx remix of a Gil Scott-Heron song, and the record won the Grammy Award for Best Rap Album."
+        "file": "age_and_height/leaning-tower-pisa.jpg",
+        "subject": "Leaning Tower of Pisa",
+        "answer": 1372,
+        "fun_fact": "The tower began tilting even before construction was finished due to soft ground beneath its foundation, and engineers only stabilized its lean with major soil-correction work completed in 2001."
       },
       {
         "file": "age/dumb_and_dumber.jpeg",
@@ -1714,10 +1714,10 @@
         "fun_fact": "It was the last Ferrari personally approved by company founder Enzo Ferrari before his death, and it was the first production car to break the 200 mph barrier."
       },
       {
-        "file": "age/Ferrari_Testarossa.jpg",
-        "subject": "Ferrari Testarossa",
-        "answer": 1984,
-        "fun_fact": "Its name means 'redhead' in Italian, referencing the red-painted cylinder heads of the engine, and its dramatic side strakes were designed to feed air to side-mounted radiators."
+        "file": "age/drake_take_care.jpg",
+        "subject": "Drake - Take Care",
+        "answer": 2011,
+        "fun_fact": "The album's title track samples a Jamie xx remix of a Gil Scott-Heron song, and the record won the Grammy Award for Best Rap Album."
       },
       {
         "file": "age/fight_club.jpg",
@@ -1746,10 +1746,10 @@
         "fun_fact": "The bridge's deck sits 565 meters above the Beipan River gorge, roughly the height of a 200-story building, and its design won engineering's Gustav Lindenthal Gold Medal, sometimes called the 'Nobel Prize of bridges.'"
       },
       {
-        "file": "age_and_height/duomo_florence.jpeg",
-        "subject": "Florence Cathedral (Duomo), Florence",
-        "answer": 114,
-        "fun_fact": "Filippo Brunelleschi engineered the dome without any wooden supporting scaffolding, inventing new construction machinery and a herringbone brick pattern to make it self-supporting as it rose."
+        "file": "age_and_height/Mont_Saint-Michel_Normandy.jpg",
+        "subject": "Mont-Saint-Michel Abbey, Normandy",
+        "answer": 170,
+        "fun_fact": "The gilded statue of the Archangel Michael crowning the spire is itself about 4.5 meters tall, and legend holds the archangel appeared in a dream instructing a local bishop to build the sanctuary."
       },
       {
         "file": "age_and_height/golden_gate_bridge.webp",
@@ -1772,10 +1772,10 @@
         "fun_fact": "Pixar animators studied real fish anatomy and ocean footage extensively, then deliberately made some scientifically inaccurate choices, like Nemo's damaged fin, to serve the story."
       },
       {
-        "file": "age/For_a_Few_Dollars_More.jpg",
-        "subject": "For a Few Dollars More",
-        "answer": 1965,
-        "fun_fact": "It was the second film in Sergio Leone's 'Dollars Trilogy,' and its pocket watch motif inspired the famous extended standoff musical cues later used throughout the series."
+        "file": "age/Sony_Micro_TV_5-303.jpg",
+        "subject": "Sony Micro TV 5-303",
+        "answer": 1962,
+        "fun_fact": "At the time of its release it was the world's smallest and lightest television set, and Frank Sinatra was reportedly so impressed by a demo unit that Sony personally delivered one to him at Paramount Pictures."
       },
       {
         "file": "age/ford_model_t.webp",
@@ -1784,10 +1784,10 @@
         "fun_fact": "Henry Ford's moving assembly line, introduced a few years after the car's debut, eventually cut the time to build one Model T from over 12 hours to about 93 minutes."
       },
       {
-        "file": "age/full_metal_jacket.jpg",
-        "subject": "Full Metal Jacket",
-        "answer": 1987,
-        "fun_fact": "R. Lee Ermey, a former Marine drill instructor hired as a technical advisor, improvised much of his character's dialogue and was cast in the role after Kubrick was impressed by his ad-libbing."
+        "file": "age_and_height/duomo_florence.jpeg",
+        "subject": "Florence Cathedral (Duomo)",
+        "answer": 1436,
+        "fun_fact": "Its enormous dome, engineered by Filippo Brunelleschi, was built without a wooden supporting frame using an innovative herringbone brick pattern, and it remains the largest brick dome ever constructed."
       }
     ]
   },
@@ -1880,10 +1880,10 @@
         "fun_fact": "The film mixed then-groundbreaking CGI with practical animatronic dinosaurs built by Stan Winston's studio, and many of the close-up dinosaur shots are actually the physical puppets, not computer effects."
       },
       {
-        "file": "age/kill_bill_the_whole_bloody_affair_2006.jpg",
-        "subject": "Kill Bill: The Whole Bloody Affair",
-        "answer": 2006,
-        "fun_fact": "This was a special one-time theatrical cut that combined both volumes of Kill Bill into a single film with restored footage, including the previously censored anime sequence in color."
+        "file": "age/Ferrari_Testarossa.jpg",
+        "subject": "Ferrari Testarossa",
+        "answer": 1984,
+        "fun_fact": "Its name means 'redhead' in Italian, referencing the red-painted cylinder heads of the engine, and its dramatic side strakes were designed to feed air to side-mounted radiators."
       }
     ]
   },
@@ -1964,6 +1964,12 @@
         "fun_fact": "Videomatic was Magnavox's long-running line of automatic-tuning color television consoles, advertised for decades as offering hands-free brightness and contrast adjustment via an early photocell 'eye.'"
       },
       {
+        "file": "age/kill_bill_the_whole_bloody_affair_2006.jpg",
+        "subject": "Kill Bill: The Whole Bloody Affair",
+        "answer": 2006,
+        "fun_fact": "This was a special one-time theatrical cut that combined both volumes of Kill Bill into a single film with restored footage, including the previously censored anime sequence in color."
+      },
+      {
         "file": "age/metallica_master_of_puppets.jpg",
         "subject": "Metallica - Master of Puppets",
         "answer": 1986,
@@ -1974,12 +1980,6 @@
         "subject": "Metropolis",
         "answer": 1927,
         "fun_fact": "The film's ambitious production nearly bankrupted its studio, and a nearly complete print thought lost for decades was rediscovered in a museum in Buenos Aires in 2008."
-      },
-      {
-        "file": "age/minerva_radio_505.jpg",
-        "subject": "Minerva Radio 505",
-        "answer": 1950,
-        "fun_fact": "Minerva was an Austrian radio brand with production also based in Paris and Milan, and the 505 series were tube-based superheterodyne sets typical of the vacuum-tube radios sold across Europe in the early 1950s."
       }
     ]
   },
@@ -1996,22 +1996,22 @@
         "fun_fact": "It was the first handheld commercial cell phone, weighed about two and a half pounds, offered roughly 30 minutes of talk time, and cost nearly $4,000 at launch."
       },
       {
+        "file": "age/Singin_in_the_Rain.jpg",
+        "subject": "Singin' in the Rain",
+        "answer": 1952,
+        "fun_fact": "Gene Kelly performed the iconic title dance number while running a high fever, and the milk mixed into the rainwater on set was added to help it show up better on camera."
+      },
+      {
         "file": "age/nas_illmatic.jpeg",
         "subject": "Nas - Illmatic",
         "answer": 1994,
         "fun_fact": "Despite modest initial sales, the album is now widely regarded as one of the greatest hip-hop records ever made, built from productions by a rotating team of celebrated New York producers."
       },
       {
-        "file": "age/Nintendo_Entertainment_System.jpg",
-        "subject": "Nintendo Entertainment System",
-        "answer": 1985,
-        "fun_fact": "To distance itself from the video game industry crash of 1983, Nintendo marketed the NES less as a game console and more as an 'entertainment system,' even including a robotic accessory called R.O.B."
-      },
-      {
-        "file": "age/no-1-brownie-model-b1_1901.jpg",
-        "subject": "No. 1 Brownie, Model B",
-        "answer": 1901,
-        "fun_fact": "Named after characters from a popular children's book series, the Brownie was designed to be so simple and cheap that Kodak could market photography directly to children."
+        "file": "age/For_a_Few_Dollars_More.jpg",
+        "subject": "For a Few Dollars More",
+        "answer": 1965,
+        "fun_fact": "It was the second film in Sergio Leone's 'Dollars Trilogy,' and its pocket watch motif inspired the famous extended standoff musical cues later used throughout the series."
       }
     ]
   },
@@ -2063,7 +2063,7 @@
         "file": "age/oceans_eleven.jpg",
         "subject": "Ocean's Eleven",
         "answer": 2001,
-        "fun_fact": "This remake reunited an ensemble cast including George Clooney, Brad Pitt, and Julia Roberts, and several real Las Vegas casinos allowed filming on their actual gaming floors."
+        "fun_fact": "Steven Soderbergh's star-studded cast reportedly all accepted lower-than-usual fees for the chance to work together, and the production was able to film inside real operating Las Vegas casinos including the Bellagio."
       },
       {
         "file": "age/Osborne_1.jpg",
@@ -2124,16 +2124,16 @@
         "fun_fact": "It is the highest concrete arch bridge in the world, and its roadway was built roughly 1,500 feet downstream of Hoover Dam specifically so drivers wouldn't be tempted to gawk at the dam while driving."
       },
       {
+        "file": "age_and_height/duomo_florence.jpeg",
+        "subject": "Florence Cathedral (Duomo), Florence",
+        "answer": 114,
+        "fun_fact": "Filippo Brunelleschi engineered the dome without any wooden supporting scaffolding, inventing new construction machinery and a herringbone brick pattern to make it self-supporting as it rose."
+      },
+      {
         "file": "age_and_height/Millau_Viaduct.jpeg",
         "subject": "Millau Viaduct, France",
         "answer": 343,
         "fun_fact": "Its tallest mast rises higher than the Eiffel Tower, making it the tallest bridge structure on Earth, even though its road deck itself sits somewhat lower above the Tarn River valley below."
-      },
-      {
-        "file": "age_and_height/Mont_Saint-Michel_Normandy.jpg",
-        "subject": "Mont-Saint-Michel Abbey, Normandy",
-        "answer": 170,
-        "fun_fact": "The gilded statue of the Archangel Michael crowning the spire is itself about 4.5 meters tall, and legend holds the archangel appeared in a dream instructing a local bishop to build the sanctuary."
       },
       {
         "file": "age_and_height/oriental_pearl_tower_shanghai.jpg",
@@ -2168,10 +2168,10 @@
         "fun_fact": "Pulsar's calculator watch let wearers punch in basic math using a tiny stylus stored in the watchband, and it was an expensive novelty status symbol of the mid-1970s digital watch boom."
       },
       {
-        "file": "age/purple-rain-prince.jpg",
-        "subject": "Prince - Purple Rain",
-        "answer": 1984,
-        "fun_fact": "The album served as the soundtrack to Prince's semi-autobiographical film of the same name and spent 24 consecutive weeks at number one on the Billboard 200."
+        "file": "age/Slumdog_Millionaire.jpg",
+        "subject": "Slumdog Millionaire",
+        "answer": 2008,
+        "fun_fact": "Large portions of the film were shot on location in Mumbai's real slums with local child actors, and it went on to win eight Academy Awards including Best Picture."
       }
     ]
   },
@@ -2220,16 +2220,16 @@
         "fun_fact": "Steven Spielberg shot the film almost entirely in black and white and largely on location in Poland, including scenes filmed just outside the gates of the real Auschwitz."
       },
       {
-        "file": "age/Singin_in_the_Rain.jpg",
-        "subject": "Singin' in the Rain",
-        "answer": 1952,
-        "fun_fact": "Gene Kelly performed the iconic title dance number while running a high fever, and the milk mixed into the rainwater on set was added to help it show up better on camera."
+        "file": "age_and_height/Mont_Saint-Michel_Normandy.jpg",
+        "subject": "Mont-Saint-Michel",
+        "answer": 708,
+        "fun_fact": "According to legend, the Archangel Michael appeared to a local bishop in a dream, instructing him to build a sanctuary on the rocky tidal island."
       },
       {
-        "file": "age/Slumdog_Millionaire.jpg",
-        "subject": "Slumdog Millionaire",
-        "answer": 2008,
-        "fun_fact": "Large portions of the film were shot on location in Mumbai's real slums with local child actors, and it went on to win eight Academy Awards including Best Picture."
+        "file": "age/memento_movie.jpg",
+        "subject": "Memento",
+        "answer": 2000,
+        "fun_fact": "Christopher Nolan structured the film in reverse chronological order to place the audience in the same short-term memory loss as its protagonist, so viewers piece the mystery together backwards."
       },
       {
         "file": "age/Sony_Discman_D50.jpg",
@@ -2246,10 +2246,10 @@
     "unit": "year",
     "photos": [
       {
-        "file": "age/Sony_Micro_TV_5-303.jpg",
-        "subject": "Sony Micro TV 5-303",
-        "answer": 1962,
-        "fun_fact": "At the time of its release it was the world's smallest and lightest television set, and Frank Sinatra was reportedly so impressed by a demo unit that Sony personally delivered one to him at Paramount Pictures."
+        "file": "age/Star_Wars_Episode_VI-Return_of_the_Jedi.jpg",
+        "subject": "Star Wars: Episode VI - Return of the Jedi",
+        "answer": 1983,
+        "fun_fact": "Practical effects and puppetry were used extensively for creatures like Jabba the Hutt, whose large animatronic body required a team of puppeteers to operate."
       },
       {
         "file": "age/Sony_Trinitron.jpg",
@@ -2258,16 +2258,16 @@
         "fun_fact": "Sony's Trinitron used a single electron gun with three cathodes instead of the usual three separate guns, producing sharper, brighter images that earned the technology an Emmy Award in 1973."
       },
       {
-        "file": "age/sony_walkman_original.jpg",
-        "subject": "Sony Walkman (original TPS-L2)",
-        "answer": 1979,
-        "fun_fact": "Sony co-founder Akio Morita reportedly pushed the idea through despite skepticism from other executives, wanting a way to listen to music privately while walking, which is how the product got its name."
+        "file": "age/The_Intouchables.jpg",
+        "subject": "The Intouchables",
+        "answer": 2011,
+        "fun_fact": "The film is based on the real friendship between a wealthy quadriplegic man and his caregiver, and it became one of the highest-grossing non-English-language films ever released."
       },
       {
-        "file": "age/Sony_Walkman_Professional_WM-D6C.jpg",
-        "subject": "Sony Walkman Professional WM-D6C",
-        "answer": 1984,
-        "fun_fact": "Prized by audio professionals and field recordists for its unusually high-fidelity cassette mechanism, this model remained in production for over two decades, far longer than most Walkman models."
+        "file": "age_and_height/Hijime-Castle.jpg",
+        "subject": "Himeji Castle",
+        "answer": 1609,
+        "fun_fact": "Despite standing for centuries through wars, earthquakes, and World War II bombing raids on the surrounding city, the castle keep itself has never actually been attacked."
       }
     ]
   },
@@ -2284,22 +2284,22 @@
         "fun_fact": "Industrial Light & Magic was founded specifically to create the film's groundbreaking special effects, and it grew into one of the most influential visual effects studios in film history."
       },
       {
-        "file": "age/Star_Wars_Episode_VI-Return_of_the_Jedi.jpg",
-        "subject": "Star Wars: Episode VI - Return of the Jedi",
-        "answer": 1983,
-        "fun_fact": "Practical effects and puppetry were used extensively for creatures like Jabba the Hutt, whose large animatronic body required a team of puppeteers to operate."
-      },
-      {
-        "file": "age/Star_Wars_Episode_V-The_Empire_Strikes_Back.jpg",
-        "subject": "Star Wars: Episode V - The Empire Strikes Back",
-        "answer": 1980,
-        "fun_fact": "The now-famous 'I am your father' line is frequently misquoted; Darth Vader's actual line in the film never includes the words 'Luke, I am your father.'"
+        "file": "age/Atari_2600.jpg",
+        "subject": "Atari 2600",
+        "answer": 1977,
+        "fun_fact": "It was originally sold under the name Atari Video Computer System, and its swappable cartridges helped establish the idea that a single console could play many different games."
       },
       {
         "file": "age/the_departed.jpg",
         "subject": "The Departed",
         "answer": 2006,
         "fun_fact": "The film is a remake of the Hong Kong thriller Infernal Affairs, and it finally won Martin Scorsese his first competitive Academy Award for directing."
+      },
+      {
+        "file": "age/Sony_Walkman_Professional_WM-D6C.jpg",
+        "subject": "Sony Walkman Professional WM-D6C",
+        "answer": 1984,
+        "fun_fact": "Prized by audio professionals and field recordists for its unusually high-fidelity cassette mechanism, this model remained in production for over two decades, far longer than most Walkman models."
       }
     ]
   },
@@ -2316,10 +2316,10 @@
         "fun_fact": "The story is based on a real mass escape by Allied prisoners of war from a German camp, though the film compresses and dramatizes events, including adding Steve McQueen's famous motorcycle chase, which never happened in reality."
       },
       {
-        "file": "age/The_Intouchables.jpg",
-        "subject": "The Intouchables",
-        "answer": 2011,
-        "fun_fact": "The film is based on the real friendship between a wealthy quadriplegic man and his caregiver, and it became one of the highest-grossing non-English-language films ever released."
+        "file": "age/Nintendo_Entertainment_System.jpg",
+        "subject": "Nintendo Entertainment System",
+        "answer": 1985,
+        "fun_fact": "To distance itself from the video game industry crash of 1983, Nintendo marketed the NES less as a game console and more as an 'entertainment system,' even including a robotic accessory called R.O.B."
       },
       {
         "file": "age/the_lion_king.jpg",
@@ -2328,10 +2328,10 @@
         "fun_fact": "Animators studied real lion behavior at wildlife parks, and the film's story draws loose inspiration from both Hamlet and the Biblical story of Joseph."
       },
       {
-        "file": "age/the_pianist.jpg",
-        "subject": "The Pianist",
-        "answer": 2002,
-        "fun_fact": "Director Roman Polanski, himself a Holocaust survivor, drew on his own childhood memories of the Warsaw Ghetto to shape the film's depiction of survival."
+        "file": "age_and_height/blue-mosque_istanbul.jpg",
+        "subject": "Blue Mosque, Istanbul",
+        "answer": 1616,
+        "fun_fact": "The mosque is officially named the Sultan Ahmed Mosque, and it earned its popular nickname from the tens of thousands of handmade blue Iznik tiles that decorate its interior."
       }
     ]
   },
@@ -2438,22 +2438,22 @@
     "unit": "year",
     "photos": [
       {
-        "file": "age_and_height/blue-mosque_istanbul.jpg",
-        "subject": "Blue Mosque, Istanbul",
-        "answer": 1616,
-        "fun_fact": "The mosque is officially named the Sultan Ahmed Mosque, and it earned its popular nickname from the tens of thousands of handmade blue Iznik tiles that decorate its interior."
+        "file": "age/Star_Wars_Episode_V-The_Empire_Strikes_Back.jpg",
+        "subject": "Star Wars: Episode V - The Empire Strikes Back",
+        "answer": 1980,
+        "fun_fact": "The now-famous 'I am your father' line is frequently misquoted; Darth Vader's actual line in the film never includes the words 'Luke, I am your father.'"
       },
       {
-        "file": "age_and_height/duomo_florence.jpeg",
-        "subject": "Florence Cathedral (Duomo)",
-        "answer": 1436,
-        "fun_fact": "Its enormous dome, engineered by Filippo Brunelleschi, was built without a wooden supporting frame using an innovative herringbone brick pattern, and it remains the largest brick dome ever constructed."
+        "file": "age/full_metal_jacket.jpg",
+        "subject": "Full Metal Jacket",
+        "answer": 1987,
+        "fun_fact": "R. Lee Ermey, a former Marine drill instructor hired as a technical advisor, improvised much of his character's dialogue and was cast in the role after Kubrick was impressed by his ad-libbing."
       },
       {
-        "file": "age_and_height/Hijime-Castle.jpg",
-        "subject": "Himeji Castle",
-        "answer": 1609,
-        "fun_fact": "Despite surviving World War II bombing raids and a major 1995 earthquake largely unscathed, the castle has never actually been attacked or besieged in its history."
+        "file": "age/the_pianist.jpg",
+        "subject": "The Pianist",
+        "answer": 2002,
+        "fun_fact": "Director Roman Polanski, himself a Holocaust survivor, drew on his own childhood memories of the Warsaw Ghetto to shape the film's depiction of survival."
       },
       {
         "file": "age_and_height/lake_palace_Udaipur.jpg",
@@ -2470,22 +2470,22 @@
     "unit": "year",
     "photos": [
       {
-        "file": "age_and_height/leaning-tower-pisa.jpg",
-        "subject": "Leaning Tower of Pisa",
-        "answer": 1372,
-        "fun_fact": "The tower began tilting even before construction was finished due to soft ground beneath its foundation, and engineers only stabilized its lean with major soil-correction work completed in 2001."
-      },
-      {
-        "file": "age_and_height/Mont_Saint-Michel_Normandy.jpg",
-        "subject": "Mont-Saint-Michel",
-        "answer": 708,
-        "fun_fact": "According to legend, the Archangel Michael appeared to a local bishop in a dream, instructing him to build a sanctuary on the rocky tidal island."
-      },
-      {
-        "file": "age_and_height/oriental_pearl_tower_shanghai.jpg",
-        "subject": "Oriental Pearl Tower, Shanghai",
+        "file": "age/apple_quicktake_100.jpg",
+        "subject": "Apple QuickTake 100",
         "answer": 1994,
-        "fun_fact": "The tower's distinctive design links eleven spheres of varying sizes, intended by its architects to evoke pearls being dropped onto a jade plate, referencing a famous line of Chinese poetry."
+        "fun_fact": "Co-developed with Kodak, it was one of the first consumer digital cameras sold in the United States, storing only about eight full-resolution images at a time on its internal memory."
+      },
+      {
+        "file": "age/rocky_movie.jpg",
+        "subject": "Rocky",
+        "answer": 1976,
+        "fun_fact": "Sylvester Stallone wrote the script in roughly three days and refused to sell it unless he was cast as the lead, despite studios offering much more money for the script alone."
+      },
+      {
+        "file": "age/no-1-brownie-model-b1_1901.jpg",
+        "subject": "No. 1 Brownie, Model B",
+        "answer": 1901,
+        "fun_fact": "Named after characters from a popular children's book series, the Brownie was designed to be so simple and cheap that Kodak could market photography directly to children."
       },
       {
         "file": "age_and_height/palace_of_westminster_Elizabeth_Tower.jpg",

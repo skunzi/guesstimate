@@ -58,6 +58,7 @@
 
   function track(eventType, data) {
     if (!ANALYTICS_ENDPOINT) return;
+    if (['localhost', '127.0.0.1', ''].includes(window.location.hostname)) return;
 
     var event = Object.assign({
       user_id: getOrCreateUserId(),
