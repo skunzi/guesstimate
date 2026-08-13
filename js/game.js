@@ -109,7 +109,12 @@
 
   function startRound(round, progress) {
     currentRound = round;
-    if (progress && progress.photoIndex < 4) {
+    if (progress && progress.photoIndex >= 4) {
+      saveRoundResult(round.date, progress.scores, progress.guesses, progress.category);
+      var storage = loadStorage();
+      showReview(round, storage.played[round.date]);
+      return;
+    } else if (progress && progress.photoIndex < 4) {
       currentPhotoIndex = progress.photoIndex;
       roundScores = progress.scores.slice();
       roundGuesses = progress.guesses.slice();
