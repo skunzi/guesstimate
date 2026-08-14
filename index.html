@@ -43,7 +43,7 @@
   <div class="app">
     <header class="header">
       <h1 class="logo"><img src="logo.svg" alt="" class="logo-icon">Guesstimate</h1>
-      <p class="logo-subtitle">Daily Challenge</p>
+      <p class="logo-subtitle">Daily Challenge <span class="header-streak hidden" id="header-streak"><span class="header-streak-fires">🔥</span> <span class="header-streak-count">0</span></span></p>
       <nav class="nav">
         <button class="nav-btn active" data-view="game">Play</button>
         <button class="nav-btn" data-view="calendar">Calendar</button>
@@ -112,6 +112,11 @@
             <h3 class="frequency-polygon-title">Global Score Distribution</h3>
           </div>
           <div class="round-summary"></div>
+          <div class="streak-display hidden" id="streak-display">
+            <span class="streak-icon">🔥</span>
+            <span class="streak-count">0</span>
+            <span class="streak-label">day streak</span>
+          </div>
           <div class="round-actions">
             <button class="btn btn-primary share-btn">Share Result</button>
             <button class="btn btn-secondary play-another">Play Another Day</button>
@@ -198,6 +203,14 @@
             <span class="stat-value" id="stat-perfect">0</span>
             <span class="stat-label">Perfect Guesses</span>
           </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-streak">0</span>
+            <span class="stat-label">Current Streak</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-best-streak">0</span>
+            <span class="stat-label">Best Streak</span>
+          </div>
         </div>
         <div class="stats-distribution">
           <h3>Score Distribution</h3>
@@ -254,6 +267,10 @@
           <li>
             <span class="welcome-step-icon">📅</span>
             <span>A new round every day. Missed one? Browse past rounds in the <strong>Calendar</strong>.</span>
+          </li>
+          <li>
+            <span class="welcome-step-icon">🔥</span>
+            <span>Play every day to build your <strong>streak</strong>. Keep it alive — miss a day and it resets!</span>
           </li>
           <li>
             <span class="welcome-step-icon">📊</span>

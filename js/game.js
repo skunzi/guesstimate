@@ -58,6 +58,104 @@
     saveStorage(data);
   }
 
+  // --- Streak ---
+
+  function getYesterdayStr(todayStr) {
+    var parts = todayStr.split('-');
+    var d = new Date(Date.UTC(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2])));
+    d.setUTCDate(d.getUTCDate() - 1);
+    return d.toISOString().split('T')[0];
+  }
+
+  function migrateStreak(data) {
+    var playDates = [];
+    Object.keys(data.played).forEach(function (roundDate) {
+      var entry = data.played[roundDate];
+      var dateStr;
+      if (entry.playedAt) {
+        dateStr = new Date(entry.playedAt).toISOString().split('T')[0];
+      } else {
+        dateStr = roundDate;
+      }
+      if (playDates.indexOf(dateStr) === -1) {
+        playDates.push(dateStr);
+      }
+    });
+    playDates.sort();
+
+    var best = 0;
+    var current = 0;
+    for (var i = 0; i < playDates.length; i++) {
+      if (i === 0) {
+        current = 1;
+      } else {
+        var expected = getYesterdayStr(playDates[i]);
+        if (playDates[i - 1] === expected) {
+          current++;
+        } else {
+          current = 1;
+        }
+      }
+      if (current > best) best = current;
+    }
+
+    var lastActive = playDates.length > 0 ? playDates[playDates.length - 1] : null;
+    data.streak = { current: current, best: best, lastActiveDate: lastActive };
+    saveStorage(data);
+    return data.streak;
+  }
+
+  function updateStreak() {
+    var data = loadStorage();
+    if (!data.streak) migrateStreak(data);
+    var today = getTodayStr();
+    var streak = data.streak;
+
+    if (streak.lastActiveDate === today) return streak;
+
+    if (streak.lastActiveDate === getYesterdayStr(today)) {
+      streak.current++;
+    } else {
+      streak.current = 1;
+    }
+    streak.lastActiveDate = today;
+    if (streak.current > streak.best) streak.best = streak.current;
+    saveStorage(data);
+    return streak;
+  }
+
+  function getDisplayStreak() {
+    var data = loadStorage();
+    if (!data.streak) migrateStreak(data);
+    var streak = data.streak;
+    if (!streak.lastActiveDate) return { current: 0, best: streak.best };
+    var today = getTodayStr();
+    if (streak.lastActiveDate === today || streak.lastActiveDate === getYesterdayStr(today)) {
+      return { current: streak.current, best: streak.best };
+    }
+    return { current: 0, best: streak.best };
+  }
+
+  function isStreakMilestone(count) {
+    return count > 0 && count % 5 === 0;
+  }
+
+  function updateHeaderStreak() {
+    var streak = getDisplayStreak();
+    var el = document.getElementById('header-streak');
+    if (streak.current >= 1) {
+      el.classList.remove('hidden');
+      var fires = '🔥';
+      if (streak.current >= 20) fires = '🔥🔥🔥🔥';
+      else if (streak.current >= 10) fires = '🔥🔥🔥';
+      else if (streak.current >= 5) fires = '🔥🔥';
+      el.querySelector('.header-streak-fires').textContent = fires;
+      el.querySelector('.header-streak-count').textContent = streak.current;
+    } else {
+      el.classList.add('hidden');
+    }
+  }
+
   // --- Scoring ---
 
   function calculateScore(guess, answer, category) {
@@ -452,6 +550,23 @@
     saveRoundResult(currentRound.date, roundScores, roundGuesses, currentRound.category);
     updateProgressDots();
 
+    var streak = updateStreak();
+    updateHeaderStreak();
+    var streakEl = document.getElementById('streak-display');
+    if (streak.current >= 1) {
+      streakEl.classList.remove('hidden');
+      streakEl.querySelector('.streak-count').textContent = streak.current;
+      streakEl.querySelector('.streak-label').textContent =
+        streak.current === 1 ? 'day streak' : 'day streak';
+      if (isStreakMilestone(streak.current)) {
+        streakEl.classList.add('streak-milestone');
+      } else {
+        streakEl.classList.remove('streak-milestone');
+      }
+    } else {
+      streakEl.classList.add('hidden');
+    }
+
     if (window.GuessitAnalytics) {
       window.GuessitAnalytics.track('game_complete', {
         round_date: currentRound.date,
@@ -581,10 +696,15 @@
       return '🔴';
     }).join(' ');
 
+    var streakInfo = getDisplayStreak();
+    var streakLine = streakInfo.current >= 2
+      ? '\n🔥 ' + streakInfo.current + '-day streak'
+      : '';
+
     const text = 'Guesstimate ' + round.date + '\n' +
       getCategoryLabel(round.category) + '\n' +
       emojis + '\n' +
-      'Score: ' + total + '/4000';
+      'Score: ' + total + '/4000' + streakLine;
 
     if (navigator.clipboard) {
       navigator.clipboard.writeText(text).then(function () {
@@ -671,6 +791,12 @@
       }
     });
     document.getElementById('stat-perfect').textContent = perfectCount;
+
+    var displayStreak = getDisplayStreak();
+    document.getElementById('stat-streak').textContent =
+      displayStreak.current > 0 ? displayStreak.current + ' 🔥' : '0';
+    document.getElementById('stat-best-streak').textContent =
+      displayStreak.best > 0 ? displayStreak.best + ' 🔥' : '0';
 
     if (scores.length > 0) {
       const avg = Math.round(scores.reduce(function (a, b) { return a + b; }, 0) / scores.length);
@@ -851,6 +977,7 @@
 
     var endpoint = window.GuessitAnalytics && window.GuessitAnalytics.ENDPOINT;
     if (!endpoint) return;
+    if (['localhost', '127.0.0.1', ''].includes(window.location.hostname)) return;
 
     fetch(endpoint + '/distribution?date=' + date)
       .then(function (resp) {
@@ -1013,6 +1140,7 @@
 
   async function init() {
     await loadRounds();
+    updateHeaderStreak();
     setupWelcomeModal();
 
     // Navigation
