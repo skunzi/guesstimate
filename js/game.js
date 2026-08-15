@@ -151,8 +151,10 @@
       else if (streak.current >= 5) fires = '🔥🔥';
       el.querySelector('.header-streak-fires').textContent = fires;
       el.querySelector('.header-streak-count').textContent = streak.current;
+      el.title = streak.current + '-day streak';
     } else {
       el.classList.add('hidden');
+      el.title = '';
     }
   }
 
@@ -1141,6 +1143,12 @@
   async function init() {
     await loadRounds();
     updateHeaderStreak();
+    document.getElementById('header-streak').addEventListener('click', function () {
+      var streak = getDisplayStreak();
+      if (streak.current >= 1) {
+        showToast(streak.current + '-day streak');
+      }
+    });
     setupWelcomeModal();
 
     // Navigation

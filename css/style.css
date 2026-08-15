@@ -1188,6 +1188,7 @@ body.modal-open {
   background: rgba(255, 230, 109, 0.1);
   border-radius: 12px;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .header-streak-count {
