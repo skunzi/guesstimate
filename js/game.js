@@ -128,12 +128,13 @@
     var data = loadStorage();
     if (!data.streak) migrateStreak(data);
     var streak = data.streak;
-    if (!streak.lastActiveDate) return { current: 0, best: streak.best };
+    var best = Math.max(streak.current, streak.best);
+    if (!streak.lastActiveDate) return { current: 0, best: best };
     var today = getTodayStr();
     if (streak.lastActiveDate === today || streak.lastActiveDate === getYesterdayStr(today)) {
-      return { current: streak.current, best: streak.best };
+      return { current: streak.current, best: best };
     }
-    return { current: 0, best: streak.best };
+    return { current: 0, best: best };
   }
 
   function isStreakMilestone(count) {
@@ -1143,11 +1144,20 @@
   async function init() {
     await loadRounds();
     updateHeaderStreak();
-    document.getElementById('header-streak').addEventListener('click', function () {
+    document.getElementById('header-streak').addEventListener('click', function (e) {
+      e.stopPropagation();
       var streak = getDisplayStreak();
       if (streak.current >= 1) {
-        showToast(streak.current + '-day streak');
+        var tooltip = document.getElementById('streak-tooltip');
+        tooltip.innerHTML =
+          '<span class="streak-tooltip-current">🔥 ' + streak.current + '-day streak</span>' +
+          '<span class="streak-tooltip-best">Best: ' + streak.best + ' days</span>';
+        tooltip.classList.remove('hidden');
+        setTimeout(function () { tooltip.classList.add('hidden'); }, 3000);
       }
+    });
+    document.addEventListener('click', function () {
+      document.getElementById('streak-tooltip').classList.add('hidden');
     });
     setupWelcomeModal();
 

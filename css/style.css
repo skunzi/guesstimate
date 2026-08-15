@@ -1177,6 +1177,7 @@ body.modal-open {
 
 /* Streak */
 .header-streak {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 2px;
@@ -1193,6 +1194,58 @@ body.modal-open {
 
 .header-streak-count {
   font-variant-numeric: tabular-nums;
+}
+
+.streak-tooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-surface);
+  border: 2px solid var(--color-warning);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  box-shadow: 0 4px 20px rgba(255, 230, 109, 0.3), var(--shadow);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  z-index: 200;
+  opacity: 1;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.streak-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: var(--color-surface);
+  border-top: 2px solid var(--color-warning);
+  border-left: 2px solid var(--color-warning);
+}
+
+.streak-tooltip.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.streak-tooltip-current {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-warning);
+  margin-bottom: 4px;
+}
+
+.streak-tooltip-best {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
 }
 
 .streak-display {
